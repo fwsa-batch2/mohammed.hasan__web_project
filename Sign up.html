@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Sign up Screen</title>
+  <style>
+  body{
+    background:url('html images/signup.jpg') no-repeat ;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    align-items:center;
+    overflow-x:hidden;
+  }
+   form input{
+    padding:5px;
+    width:200px;
+    border-radius:15px;
+    transition:width 2s;
+  }
+  a:hover{
+    color:white;
+    background: black;
+    padding:5px;
+  }
+  form input[type="text"]:hover,input[type="email"]:hover,input[type="date"]:hover,input[type="password"]:hover,input[type="number"]:hover{
+    width:300px;
+  }
+  </style>
+</head>
+<body >
+      <form action="./login.html" align=center>
+        <br>
+      <img src="Gifs/signup.gif" width=400 height=250 alt="Sign up Image">
+      <br><br><br>
+      First Name:  <input type="text" name="fname"  placeholder="First Name" required>
+      <br><br>
+      Last Name:  <input type="text" name="lname"  placeholder="Last Name" required>
+      <br><br>
+      E-mail Id:  <input type="email" name="email"placeholder="Your mail Id   eg.abcd@gmail.com" required>
+      <br><br>
+      D.O.B  :<input type="date" name="dob" required>
+      <br><br>
+      Password:  <input type="password" name="password" placeholder="Enter your password"required>
+      <br><br>
+      Confirm Password: <input type="password" name="pass" placeholder="Re-Enter your password" required>
+      <br><br>
+      Phone Number:  <input type="number" name="number"  placeholder="Enter your number" required>
+      <br><br>
+      Address:   <textarea name="address" rows="4" cols="30" required></textarea>
+      <br><br>
+      <input type="submit" name="sbmit" value="Submit">
+      <input type="reset" name="reset" value="Reset">
+    </form>
+    <div align=center><br>
+      <a href="College Details.html" target="_blank">Click here for more info
+      </a></div>
+    </body>
+  </html>
