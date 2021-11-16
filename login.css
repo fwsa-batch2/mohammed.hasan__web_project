@@ -37,9 +37,13 @@ input[type=number]{
   width:200px;
   transition: width 2s;
 }
-input[type=password]{
+.password{
   width:200px;
   transition: width 2s;
+  vertical-align: middle;
+}
+.password-show{
+   type:text;
 }
 input[type=email]:hover{
   width:300px;
@@ -49,15 +53,4 @@ input[type=password]:hover{
 }
 input[type=number]:hover{
   width:300px;
-}
-a[href="index.html"]:link{
-  border:2px solid black;
-  color:black;
-  padding:5px;
-}
-a[href="index.html"]:hover{
-  color:white;
-  background: black;
-  padding:10px;
-  border-radius: 15px;
 }
