@@ -17,11 +17,13 @@ body{
     border:2px solid black;
     background: white;
     color:red;
+    border-radius: 10px;
   }
 #signup:hover{
   border:2px solid black;
   background: white;
   color:red;
+  border-radius: 10px;
 }
 input[type=email]{
   width:200px;

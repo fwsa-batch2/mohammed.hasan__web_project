@@ -1,4 +1,5 @@
-function show() {
-    document.querySelector("password").classList.toggle("password-show");
-    getElementsByName("name");
-  }
+function show(){
+  let a = document.getElementsByName("password")[0].tagName;
+  console.log(a);
+
+}
