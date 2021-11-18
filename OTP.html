@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>OTP Verification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Comfortaa&family=Lobster&family=Rampart+One&display=swap" rel="stylesheet">
+    <style media="screen">
+      body{
+        background:url('html images/forgot.jpg') no-repeat ;
+        background-size:cover;
+        background-attachment:fixed;
+      }
+      .left{
+        background:skyblue;
+        width:40%;
+        height:50%;
+        position:absolute;
+        top:27%;
+        right:10%;
+        border-radius:20px;
+        text-align:center;
+        font-family: 'Lobster', cursive;
+        font-size:20px;
+      }
+      .title::first-letter{
+        font-size:60px;
+        animation: mymove 3s infinite;
+      }
+      @keyframes mymove{
+          transform : rotate(90deg);
+      }
+      input{
+        padding:9px;
+        border-radius:20px;
+        font-family: 'Lobster', cursive;
+        font-size:20px;
+      }
+      input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+        -webkit-appearance:none;
+
+      }
+    .title{
+      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Comfortaa', cursive;
+      font-family: 'Lobster', cursive;
+      font-family: 'Rampart One', cursive;
+    }
+    img{
+      margin-top:10%;
+      margin-left:4%;
+      border-radius:60px;
+    }
+    a:link{
+      border:2px solid white;
+      display:inline-block;
+      border-radius:10px;
+      background:black;
+      color:white;
+      padding:7px 15px;
+    }
+    a:hover{
+      border: 2px solid black;
+      background:lightgreen;
+      color:black;
+    }
+    a:visited{
+      text-color-decoration:none;
+      color:white;
+    }
+
+    </style>
+  </head>
+  <body>
+     <div class="left">
+       <h1 class="title">OTP Verification </h1>
+       <hr color='black' width='90%' align ='center'>
+       <h2> OTP has been sent to your number</h2>
+       <input style="" type="number" maxlength="9999999999" placeholder="Enter the 4-digit OTP" required><br>
+       <div style="color:purple;cursor:pointer;margin-top:15px;"> Resend OTP.?</div>
+       <br>
+      <a href="">Submit</a>
+     </div>
+     <img src="html images/login.gif" width="40%" height="40%">
+
+  </body>
+</html>

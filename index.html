@@ -7,7 +7,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Rampart+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="college.css">
-<script>alert("This is Ten Dots Official Website")</script>
+<script>
+alert("This is Ten Dots Official Website");
+function show(){
+  document.querySelector(".hov").classList.toggle("hov-open");
+}
+
+</script>
 </head>
 <body align="center">
     <h1 title='About Ten Dots University'>
@@ -45,6 +51,9 @@
    </h2>
    <img src="html images/college2.jpg" align='center' width='600px' height='350px'style="vertical-align:middle;border-radius:15px;">
    <br><br>
+   <div class="hov" onclick="show()"> Apply Now <img src="html images/arrow.svg"><hr>
+    <p class="nav-in"><a href="Fees.html"> B.Tech/M.Tech</a></p><hr><p class="nav-in"><a href="Fees.html">B.E/M.E</a></p>
+   </div>
 
    <h2 style="background-color:white;border-radius:15px;height:70px;margin-left:20px;float:left;position:relative;top:100px;padding:10px;">
      Students spend time only on Books and become stressed. So we are going to change it and make a drastic change on our students.
