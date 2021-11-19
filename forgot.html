@@ -8,84 +8,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Comfortaa&family=Lobster&family=Rampart+One&display=swap" rel="stylesheet">
-    <style media="screen">
-     body{
-       background:url('html images/forgot.jpg') no-repeat ;
-       background-size:cover;
-       background-attachment:fixed;
-     }
-     .left{
-       background:skyblue;
-       width:40%;
-       height:50%;
-       position:absolute;
-       top:27%;
-       right:10%;
-       border-radius:20px;
-       text-align:center;
-       font-family: 'Lobster', cursive;
-       font-size:20px;
-     }
-     .title::first-letter{
-       font-size:60px;
-       animation: mymove 3s infinite;
-     }
-     @keyframes mymove{
-         transform: rotate('90deg');
-     }
-   .title{
-     font-family: 'Barlow Condensed', sans-serif;
-     font-family: 'Comfortaa', cursive;
-     font-family: 'Lobster', cursive;
-     font-family: 'Rampart One', cursive;
-   }
-   input{
-     padding:9px;
-     border-radius:20px;
-     font-family: 'Lobster', cursive;
-     font-size:20px;
-   }
-   input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
-     -webkit-appearance:none;
-
-   }
-   h2{
-     margin-bottom:30px;
-   }
-   a:link{
-     border:2px solid white;
-     display:inline-block;
-     border-radius:10px;
-     margin-top:50px;
-     background:black;
-     color:white;
-     padding:7px 15px;
-   }
-   a:hover{
-     border: 2px solid black;
-     background:lightgreen;
-     color:black;
-   }
-   a:visited{
-     text-color-decoration:none;
-     color:white;
-   }
-   img{
-     margin-top:10%;
-     margin-left:4%;
-     border-radius:60px;
-   }
-    </style>
+    <link rel="stylesheet" href="forgot.css">
   </head>
   <body>
      <div class="left">
        <h1 class="title">Forgot Password ! </h1>
        <hr color='black' width='90%' align ='center'>
        <h2> Your Mobile Number</h2>
-       <input type="number" minlength="9" maxlength="1" placeholder="Enter your mobile number"><br>
-      <a href="OTP.html">Submit</a>
+       <input type="number" id="num" placeholder="Enter your Mobile number">
+       <br>
+      <a href="OTP.html" type="button" onclick="restrict()">Submit</a>
      </div>
-     <img src="html images/login.gif" width="40%" height="40%">
+     <img src="html images/forgot.webp" width="40%" height="40%">
+<script type="text/javascript">
+function restrict(){
+   let a = getElementById("num").value;
 
+   if(a.length<10){
+     alert("Please enter 10 numbers, you have entered less than 10 numbers");
+   }
+   else if(a.length>10){
+     alert("Please enter 10 numbers only. You have entered more");
+   }
+   else{
+     break;
+   }
+ }
+</script>
   </body>
 </html>
