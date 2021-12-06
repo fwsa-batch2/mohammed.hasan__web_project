@@ -16,7 +16,7 @@
   <h2 style="color:white">
     Fill Student Details
   </h2>
-  <form align=center action="./final.html">
+  <form align=center action="final.html" onsubmit="onSubmitHandler()">
     <table style="color:white" width='500' height='450' border='2' align="center">
       <tr>
         <th>Student Name:</th>
@@ -24,22 +24,25 @@
       </tr><br>
       <tr>
         <th>D.O.B:</th>
-        <td><input type="date" min="2000-12-12" max="2004-01-01" name="age" placeholder="Your age" required></td>
+        <td><input type="date" id="DOB" min="2000-12-12" max="2004-01-01" name="age" placeholder="Your age" required>
+        </td>
       </tr>
       <tr>
         <th>E-mail:</th>
-        <td><input type="email" name=mail placeholder="Your mail" required></td>
+        <td><input type="email" id="email" name=mail placeholder="Your mail" required></td>
       </tr>
       <tr>
         <th>Phone Number:</th>
-        <td><input style="width:180px;" type="number" name="number" min="999999999" max="9999999999" placeholder="Your number" required>
+        <td><input id="phone_number" style="width:180px;" type="number" name="number" min="999999999" max="9999999999"
+            placeholder="Your number" required></td>
       </tr>
       <tr>
         <th>Select state</th>
-        <td><select name="state">
+        <td><select id="state" name="state">
             <option value="state">--Select--</option>
             <option value="Tamil Nadu">Tamil Nadu</option>
             <option value="other">Other states</option>
+            </select>
         </td>
       </tr>
       <tr>
@@ -53,12 +56,12 @@
       </tr>
       <tr>
         <th>Upload 10th certificate</th>
-        <td><input type="file" name='10th'></td>
+        <td><input id="10th_Certificate" type="file" name='10th'></td>
         </th>
       </tr>
       <tr>
         <th>Upload 12th certificate</th>
-        <td><input type="file" name='10th'></td>
+        <td><input id="12th_Certificate" type="file" name='10th'></td>
         </th>
       </tr>
     </table><br><br>
