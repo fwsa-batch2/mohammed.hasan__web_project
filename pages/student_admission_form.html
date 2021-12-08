@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Admission Form of Student</title>
+    
+    <style>
+        body{
+            background: url('../assets/html\ images/adm2.jpg') no-repeat;
+            background-size: 100% 150% ;
+            background-position: center;
+            color:white;
+        }
+        *{
+          box-sizing: border-box;
+        }
+        table{
+            border: 4px solid white;
+        }
+        th,td{
+            padding:15px 0px;
+        }
+        td{
+            padding: 0px 20px;
+        }
+    </style>
+</head>
+
+<body align="center"><br /><br />
+    <h1 style="font-size: 40px;">Applicant Form</h1>
+    <hr color="white" width="17%">
+    <br /><br />
+    <table style="text-align: center;" align="center" border="4" width="30%" height="50%" style="font-size: 23px;">
+        <tr>
+            <th colspan="2">
+                <h2>Personal Details</h2>
+            </th>
+        </tr>
+        <tr>
+            <th>Name :</th>
+            <td id="displayName"> </td>
+        </tr>
+        <tr>
+            <th> D.O.B :</th>
+            <td id="displayDob"></td>
+        </tr>
+        <tr>
+            <th> E-mail : </th>
+            <td id="displayEmail"></td>
+        </tr>
+        <tr>
+            <th> Contact Number : </th>
+            <td id="displayContact"></td>
+        </tr>
+        <tr>
+            <th> State : </th>
+            <td id="displayState"></td>
+        </tr>
+        <tr>
+            <th> Course : </th>
+            <td id="displayCourse"></td>
+        </tr>
+        <tr>
+            <th> Address : </th>
+            <td id="displayAddress"></td>
+        </tr>
+    </table><br /><br />
+    <button style="font-size: 20px;" onclick="print()"> Print </button>
+    <script type="text/javascript" src="../assets/js/student_admission_form.js"></script>
+</body>
+
+</html>

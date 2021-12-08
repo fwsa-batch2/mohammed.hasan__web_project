@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Student Details</title>
-  <script src="../assets/js/Student details.js"></script>
+  <script src="../assets/js/studentdetails.js"></script>
   <link rel="stylesheet" href="../assets/css/Student details.css">
 </head>
 
@@ -16,6 +16,9 @@
   <h2 style="color:white">
     Fill Student Details
   </h2>
+  <div id="message">
+    
+  </div>
   <form align=center action="final.html" onsubmit="onSubmitHandler()">
     <table style="color:white" width='500' height='450' border='2' align="center">
       <tr>
@@ -24,7 +27,7 @@
       </tr><br>
       <tr>
         <th>D.O.B:</th>
-        <td><input type="date" id="DOB" min="2000-12-12" max="2004-01-01" name="age" placeholder="Your age" required>
+        <td><input type="date" id="dob" min="2000-12-12" max="2004-01-01" name="age" placeholder="Your age" required>
         </td>
       </tr>
       <tr>
@@ -37,21 +40,22 @@
             placeholder="Your number" required></td>
       </tr>
       <tr>
-        <th>Select state</th>
-        <td><select id="state" name="state">
-            <option value="state">--Select--</option>
+        <th> State</th>
+        <td>
+          <select id="state">
+            <option value="--Select--">--Select--</option>
             <option value="Tamil Nadu">Tamil Nadu</option>
-            <option value="other">Other states</option>
-            </select>
+            <option value="Other States">Other States </option>
+          </select>
         </td>
       </tr>
       <tr>
         <th>Courses available:</th>
-        <td><select class="course" name="course">
+        <td><select id="course" name="course">
             <option value="tech">--Select--</option>
-            <option value="btech">B.Tech</option>
-            <option value="barch">B.Arch</option>
-            <option value="bSc">B.Sc</option>
+            <option value="B.tech">B.Tech</option>
+            <option value="B.arch">B.Arch</option>
+            <option value="B.Sc">B.Sc</option>
           </select></td>
       </tr>
       <tr>
@@ -64,11 +68,22 @@
         <td><input id="12th_Certificate" type="file" name='10th'></td>
         </th>
       </tr>
+      <tr>
+        <th> Address</th>
+        <td><textarea id="address"></textarea></td>
+      </tr>
     </table><br><br>
     <input type="submit" name='submit' value="Submit">
   </form>
 
-  </a>
 </body>
+<!-- <script>
+  Validation - Error Message - red
+  document.querySelector("#message").innerHTML = "<font color='red'>Invalid Name</font>";
+
+Date
+let todayDateStr = new Date().toJSON().substr(0,10);//2021-12-07
+document.querySelector("#DOB").setAttribute("max", todayDateStr);
+</script> -->
 
 </html>

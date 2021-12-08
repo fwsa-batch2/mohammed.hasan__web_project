@@ -96,3 +96,23 @@ a:hover{
   transition: transform 1s;
 
 }
+.courses-dropdown{
+  display: none;
+  transition: display 2s;
+
+}
+.courses:hover ~ .courses-dropdown{
+  display:block;
+  width: 800px;
+  height: 600px;
+  background-color: white;
+  position: absolute;
+  right:5%;
+  z-index: 100;
+  top:6;
+  border-radius: 2%;
+
+}
+.courses-dropdown:hover .courses-dropdown{
+  display: block;
+}

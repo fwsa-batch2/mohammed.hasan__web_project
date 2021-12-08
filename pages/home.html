@@ -14,13 +14,17 @@
     function show() {
       document.querySelector(".hov").classList.toggle("hov-open");
     }
+    // function showCourse(){
+    //     document.getElementById("courses-dropdown").style.display = "block";
+    // }
 
   </script>
 </head>
 
 <body align="center">
   <h1 title='About Ten Dots University'>
-    <img src="../assets/html images/university.png" width="60px" height="70px" style="float:left;margin-left:24%;margin-top:1%;">
+    <img src="../assets/html images/university.png" width="60px" height="70px"
+      style="float:left;margin-left:24%;margin-top:1%;">
     <span id="title" style="font-family: 'Barlow Condensed', sans-serif;
       font-family: 'Rampart One', cursive;border:2px solid white;box-shadow:0px 0px 10px;font-size:75px;padding:10px;">
       TEN DOTS UNIVERSITY
@@ -36,7 +40,7 @@
       </span>
     </marquee>
   </h2>
-  <br><br>
+  <br /><br />
   <span style="padding-right:5%;border:'5'; border-color:black;">
     <a href="login.html" target="_blank">LOGIN</a>
   </span>
@@ -46,9 +50,17 @@
   <span style="padding-right:5%;border:'5'; border-color:black">
     <a href="About.html" target="_blank">ABOUT US</a>
   </span>
-  <span style="padding-right:5%">
-    <a href="Fees.html" target="_blank">COURSE DETAILS</a><br><br><br><br>
+  <span class="courses" style="padding-right:5%">
+    <a href="Fees.html"  target="_blank">COURSE DETAILS</a><br /><br /><br /><br />
   </span>
+  <div class="courses-dropdown" >
+    <dl>
+      <dt><h2>Engineering Department</h2></dt>
+      <hr color="black">
+       <dd>Mechanical Engineering</dd>
+       <dd>Civil Engineering</dd>
+    </dl>
+  </div>
   <h2 title='About our university' style="background-color:white; border-radius:15px;padding:10px;">
     The first version of TEN DOTS University formed in 1978 and various governments repeatedly kept changing the
     varsity's
@@ -56,7 +68,7 @@
   </h2>
   <img class="college-image" src="../assets/html images/college2.jpg" align='center' width='600px' height='350px'
     style="vertical-align:middle;border-radius:15px;">
-  <br><br>
+  <br /><br />
 
   <div class="hov" onclick="show()"> Apply Now <img src="../assets/html images/arrow.svg">
     <hr>
@@ -68,9 +80,9 @@
     style="background-color:white;border-radius:15px;height:70px;margin-left:20px;float:left;position:relative;top:100px;padding:10px;">
     Students spend time only on Books and become stressed. So we are going to change it and make a drastic change on our
     students.
-  </h2><br>
+  </h2><br />
   <img CLASS="gif" src="../assets/Gifs/college.gif">
-  <br><br>
+  <br /><br />
   <marquee direction=right>
     <h2 style="background:white;width:70%;">
       We don't insist students to carry bag full of books. Instead we teach in such a way that they don't need books
@@ -79,30 +91,32 @@
   </marquee>
   <div id="a" style="padding:1%">
     <figure class="left"><img src="../assets/html images/college5.jpg" width='400px' height='400px'>&nbsp
-      <br><br>
+      <br /><br />
       <figcaption>Our Class rooms</figcaption>
     </figure>
     <figure><img src="../assets/html images/college6.jpg" width='400px' height='400px'>&nbsp
-      <br><br>
+      <br /><br />
       <figcaption>Our Physics Laboratory</figcaption>
-    </figure><br><br>
+    </figure><br /><br />
     <figure class="left"><img src="../assets/html images/colllege7.jpg" width='400px' height='400px'>&nbsp
-      <br><br>
+      <br /><br />
       <figcaption>Our Library</figcaption>
     </figure>
     <figure><img src="../assets/html images/lab.jpg" width='400px' height='400px'>
-      <br><br>
+      <br /><br />
       <figcaption>Our Chemistry Laboratory</figcaption>
     </figure>
 
   </div>
-  <br><br><br>
-  <video src="../assets/videos/poster.mp4" poster="../assets/html images/POSTER.jpg" width='50%' height='30%' controls style="border-radius:15px;">
-  </video><br><br>
+  <br /><br /><br />
+  <video src="../assets/videos/poster.mp4" poster="../assets/html images/POSTER.jpg" width='50%' height='30%' controls
+    style="border-radius:15px;">
+  </video><br /><br />
   <hr color='black'>
-  <footer id="foot" style="width:100%;height:20%;line-height:30px;background:black;color:white;padding:10px;border-radius:15px;">
-    Ten Dots University. © All Copyrights reserved.<br>
-    <img src="../assets/html images/call.png" width="20px" height="20px">&nbsp&nbspContact No:9876543210<br>
+  <footer id="foot"
+    style="width:100%;height:20%;line-height:30px;background:black;color:white;padding:10px;border-radius:15px;">
+    Ten Dots University. © All Copyrights reserved.<br />
+    <img src="../assets/html images/call.png" width="20px" height="20px">&nbsp&nbspContact No:9876543210<br />
     <img src="../assets/html images/mail.jpg" width="20px" height="20px">&nbsp&nbspE-mail: tendots.univ@gmail.com
   </footer>
   <hr color='black'>
