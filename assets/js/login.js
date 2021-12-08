@@ -46,45 +46,68 @@ function check(){
   }
 
 }
-
-
-function loginInformations(){
-  event.preventDefault();
-  let email = document.getElementById("mail").value;
-  let password = document.getElementById("password").value;
-  let phoneNumber = document.getElementById("phoneNumber").value;
-  const loginInfo = {
-    "email": email,
-    "password": password,
-    "phoneNumber": phoneNumber
-  }
-  console.log(allLoginDetails);
-  allLoginDetails.push(loginInfo);
-  localStorage.setItem("loginInformations", JSON.stringify(allLoginDetails));
-  // window.location.href = "final.html";
-}
 function onRefresh(){
   const details = localStorage.getItem("loginInformations");
+  
   if(details){
-  allLoginDetails = JSON.parse(details);}
+  allLoginDetails = JSON.parse(details);
+}
   else{
     allLoginDetails = [];
   }
 }
 onRefresh();
+let signUpArray = [];
+function signUpDataGetting(){
+  let fname = document.getElementById("fname").value;
+  let lname = document.getElementById("lname").value;
+  let mail = document.getElementById("mailid").value;
+  let dob = document.getElementById("dob").value;
+  let password = document.getElementById("password").value;
+  let number = document.getElementById("number").value;
+  let address = document.getElementById("address").value;
+   const userDetails = {
+     fName : fname,
+     lName : lname,
+     mail : mail,
+     dob : dob,
+     password :password,
+     number : number,
+     address : address
+   }
+   signUpArray.push(userDetails);
+   localStorage.setItem("signUpDetails", JSON.stringify(signUpArray));
+}
+function signUpRefresh(){
+  const signUpDetails = localStorage.getItem("signUpDetails");
+  if(signUpDetails){
+    signUpArray = JSON.parse(signUpDetails);
+  }
+  else{
+    signUpArray = [];
+
+  }
+}
+
+
 function mailCheck(){
   event.preventDefault();
   let inputMail = document.getElementById("mail").value;
-  let importingInfo = JSON.parse(localStorage.getItem("loginInformations"));
+  let inputNumber = document.getElementById("phoneNumber").value;
+  let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
+
+
   for(let i=0; i < importingInfo.length; i++){
-    if(importingInfo[i].email == inputMail){
-       document.getElementById("errorMessage").innerHTML = " !! Enter valid Login Details";
-       break;
+    if(importingInfo[i].mail === inputMail && importingInfo[i].number === inputNumber ){
+       window.location.href = "final.html";
+       
     }
     else{
-        window.location.href ="final.html";
+      document.getElementById("errorMessage").innerHTML = " !! Enter valid Login Details";
+      window.location.href = "#";
     }
     
-  }
+  
+}
 
 }
