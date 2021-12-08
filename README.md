@@ -1,8 +1,8 @@
 # Ten DOTS University
-Netlify :
+### Netlify :
    * Link : https://10dotuniversityapp-ui-mohammedhasan.netlify.app/
 
-#### Features :
+### Features :
    * Login
    * Register
    * List of Courses (In Progress)
