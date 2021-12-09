@@ -2,7 +2,7 @@ function printing_all(){
     let details = localStorage.getItem("studentDetails");
     studDetails = JSON.parse(details);
     console.log(studDetails);
-     const studentDetail = studDetails[0];
+     const studentDetail = studDetails[studDetails.length - 1];
      
      const name = studentDetail.name;
      console.log(name);
