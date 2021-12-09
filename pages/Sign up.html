@@ -15,7 +15,8 @@
     <br><br>
     Last Name: <input id="lname" type="text" name="lname" placeholder="Last Name" required>
     <br><br>
-    E-mail Id: <input id="mailid" type="email" name="email" placeholder="Your mail Id   eg.abcd@gmail.com" required>
+    E-mail Id: <input id="mailid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" name="email" placeholder="Your mail Id   eg.abcd@gmail.com" required>
+    <br>   Eg: albert07@gmail.com
     <br><br>
     D.O.B :<input id="dob" type="date" min="2000-12-12" max="2004-01-01" name="dob" required>
     <br><br>
@@ -29,7 +30,7 @@
       name="pass" placeholder="Re-Enter your password" required>
     &nbsp; <img style="position:absolute;" id="images2" onclick="show1()" src="../assets/html images/eye-close.svg">
     <br><br>
-    Phone Number: <input id="number" type="number" minlength="9" maxlength="10" name="number" placeholder="Enter your number"
+    Phone Number: <input id="number" pattern="[0-9]{10}" title="Enter only numbers" type="tel" minlength="9" maxlength="10" name="number" placeholder="Enter your number"
       required>
     <br><br>
     Address: <textarea id="address" name="address" rows="4" cols="30" required></textarea>
@@ -44,7 +45,9 @@
     <a href="Fees.html">Click here for more info
     </a>
   </div>
+
   <script type="text/javascript" src="../assets/js/signUp.js"></script>
+  
 </body>
 
 </html>
