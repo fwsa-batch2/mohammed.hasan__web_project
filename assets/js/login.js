@@ -42,7 +42,7 @@ function check(){
     window.location.href = "#";
   }
   else{
-    window.location.href="Student details.html";
+    window.location.href="login.html";
   }
 
 }
