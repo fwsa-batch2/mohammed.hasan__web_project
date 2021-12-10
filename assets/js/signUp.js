@@ -80,7 +80,7 @@ function signUpDataGetting() {
       }
   
       if (isMatch) {
-        document.getElementById("errorMessage").innerHTML = "<font color=red> Invalid E-mail or Password Details !! </font>";
+        document.getElementById("errorMessage").innerHTML = "<font color=red> E-mail Id already exists or incorrect password details !! </font>";
         // break;
       }
       else {
