@@ -1,4 +1,10 @@
+body{
+  background:url('../html images/school1.jpg') no-repeat;
+  background-position: center;
+  background-size: 250% 200%;
+  background-attachment: fixed;
 
+}
 .gif{
   animation: move 6s infinite;
   vertical-align: middle;
@@ -41,12 +47,12 @@ a:hover{
  background-color: white;
  border:2px solid black;
 }
- body{
+ /* body{
    background-image:linear-gradient(#FFEBCD,white,#FFEBCD,white);
    background-repeat:'no-repeat';
    background-size:100% 100%;
    overflow-x: hidden;
- }
+ } */
  .hov{
    position:fixed;
    left:-140px;

@@ -61,10 +61,12 @@ function mailCheck() {
     for (let i = 0; i < importingInfo.length; i++) {
       if (importingInfo[i].mail === inputMail && importingInfo[i].number === inputNumber) {
         window.location.href = "Student details.html";
+        break;
       }
       else {
         document.getElementById("errorMessage").innerHTML = "Enter valid Login Details !! ";
         window.location.href = "#";
+        break;
       }
     }
   }
