@@ -14,12 +14,12 @@
     <table align="center" border="4" height="150px" width='500px' style="background-color:white">
       <tr>
         <th> E-mail Id: </th>
-        <td> <input id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" name="mail id" placeholder="Your mail-id eg.abcd@gmail.com" required></td>
+        <td> <input id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" name="mail id" placeholder="Your mail-id eg.abcd@gmail.com" autofocus required></td>
       </tr><br />
       <tr>
         <th>Password: </th>
         <td> <input id="password" pattern="[A-Za-z0-9]{12,}"
-            title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase,Number and special characers"
+            title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers"
             type="password" name="password" placeholder="Password" required>&nbsp;
           <img style="position:absolute;" id="images" onclick="show()" src="../assets/html images/eye-close.svg">
         </td>

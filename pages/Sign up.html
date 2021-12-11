@@ -11,9 +11,9 @@
     <img src="../assets/Gifs/signup.gif" width=400 height=250 alt="Sign up Image">
     <hr color='black' width='30%'>
     <br><br><br>
-    First Name: <input id="fname" type="text" pattern="[a-zA-Z]" name="fname" placeholder="First Name" required>
+    First Name: <input id="fname" type="text" autofocus pattern="[a-zA-Z]{3,}" title="Please enter more than 3 characters" name="fname" placeholder="First Name" required>
     <br><br>
-    Last Name: <input id="lname" type="text" pattern="[a-zA-Z]" name="lname" placeholder="Last Name" required>
+    Last Name: <input id="lname" type="text" pattern="[a-zA-Z]{3,}" title="Please enter more than 3 characters" name="lname" placeholder="Last Name" required>
     <br><br>
     E-mail Id: <input id="mailid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" name="email" placeholder="Your mail Id   eg.abcd@gmail.com" required>
     <br>   Eg: albert07@gmail.com
@@ -21,12 +21,12 @@
     D.O.B :<input id="dob" type="date" min="2000-12-12" max="2004-01-01" name="dob" required>
     <br><br>
     Password: <input id="password" type="password" pattern="[A-Za-z0-9]{12,}"
-      title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase,Number" name="password"
+      title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers" name="password"
       placeholder="Enter your password" required>
     &nbsp; <img style="position:absolute;" id="images" onclick="show()" src="../assets/html images/eye-close.svg">
     <br><br>
     Confirm Password: <input id="cPassword" type="password" pattern="[A-Za-z0-9]{12,}"
-      title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase,Number"
+      title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers"
       name="pass" placeholder="Re-Enter your password" required>
     &nbsp; <img style="position:absolute;" id="images2" onclick="show1()" src="../assets/html images/eye-close.svg">
     <br><br>
