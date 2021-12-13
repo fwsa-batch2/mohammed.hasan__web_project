@@ -68,7 +68,7 @@ a:hover{
    border: 2px solid black;
    transform: rotate(90deg);
    z-index: 1000;
-   transition: all .25s;
+   transition: all .5s;
  }
  .hov img{
    transform: rotate(-90deg);

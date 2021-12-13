@@ -38,17 +38,17 @@ let signUpArray = [];
 
 
 
-function onRefresh() {
-  const details = localStorage.getItem("loginInformations");
+// function onRefresh() {
+//   const details = localStorage.getItem("loginInformations");
 
-  if (details) {
-    allLoginDetails = JSON.parse(details);
-  }
-  else {
-    allLoginDetails = [];
-  }
-}
-onRefresh();
+//   if (details) {
+//     allLoginDetails = JSON.parse(details);
+//   }
+//   else {
+//     allLoginDetails = [];
+//   }
+// }
+// onRefresh();
 
 
 function mailCheck() {
@@ -57,7 +57,7 @@ function mailCheck() {
   let inputNumber = document.getElementById("phoneNumber").value;
   let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
 
-  if (importingInfo) {
+  if (importingInfo != null) {
     for (let i = 0; i < importingInfo.length; i++) {
       if (importingInfo[i].mail == inputMail && importingInfo[i].number == inputNumber) {
         window.location.href = "Student details.html";
@@ -66,7 +66,7 @@ function mailCheck() {
       else {
         document.getElementById("errorMessage").innerHTML = "Enter valid Login Details !! ";
         window.location.href = "#";
-        break;
+        
       }
     }
   }
@@ -75,3 +75,11 @@ function mailCheck() {
   }
 
 }
+
+$("document").ready(function() {
+  $("#password").on("keypress", function(e) {
+      if (e.which == 32){
+          alert("Contain spaces");
+      }
+  });
+});
