@@ -61,7 +61,8 @@ function mailCheck() {
     for (let i = 0; i < importingInfo.length; i++) {
       if (importingInfo[i].mail != inputMail || importingInfo[i].number != inputNumber) {
         document.getElementById("errorMessage").innerHTML = "Enter valid Login Details !! ";
-        window.location.href = "#";
+        // window.location.href = "#";
+        return;
    
       }
       else {
