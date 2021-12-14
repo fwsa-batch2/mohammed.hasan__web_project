@@ -20,8 +20,7 @@
       </tr><br />
       <tr>
         <th>Password: </th>
-        <td> <input id="password"
-            title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers"
+        <td> <input id="password" pattern="[A-Za-z0-9._%+-]{12,}" title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers"
             type="password" name="password" placeholder="Password" required>&nbsp;
           <img style="position:absolute;" id="images" onclick="show()" src="../assets/html images/eye-close.svg">
         </td>
@@ -57,6 +56,7 @@
 
   </script>
   
+<!-- Jquery example -->
 
 <!-- <script>
     $("document").ready(function() {
