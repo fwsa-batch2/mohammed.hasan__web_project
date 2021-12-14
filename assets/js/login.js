@@ -59,13 +59,11 @@ function mailCheck() {
 
   if (importingInfo != null) {
     for (let i = 0; i < importingInfo.length; i++) {
-      if (importingInfo[i].mail != inputMail || importingInfo[i].number != inputNumber) {
+      if (importingInfo[i].mail !== inputMail && importingInfo[i].number !== inputNumber) {
         document.getElementById("errorMessage").innerHTML = "Enter valid Login Details !! ";
-        // window.location.href = "#";
-        return;
    
       }
-      else {
+      if (importingInfo[i].mail == inputMail && importingInfo[i].number == inputNumber){
         localStorage.setItem("loggedInUser", inputMail);
         window.location.href = "Student details.html";
         break;
