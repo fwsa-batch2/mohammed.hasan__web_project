@@ -3,6 +3,7 @@ body{
   background-position: center;
   background-size: 250% 200%;
   background-attachment: fixed;
+  overflow-x: hidden;
 
 }
 .gif{
@@ -30,12 +31,26 @@ body{
    -webkit-filter:grayscale(100%);
    filter: grayscale(100%);}
 }
+.course_details{
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  color:white;
+  border: 2px solid white;
+}
+.course_details:hover{
+  color:black;
+  background-color: white;
+  border:2px solid black;
+  cursor: pointer;
+}
 a:link{
  background-color: black;
- padding: 5px;
+ padding: 10px;
  border-radius: 5px;
  color:yellow;
  border: 2px solid white;
+ font-weight: 500;
 }
 a:visited{
  background-color:black;
@@ -57,7 +72,7 @@ a:hover{
    position:fixed;
    left:-140px;
    top:50%;
-   width:150px;
+   width:160px;
    height: 170px;
    font-size: 25px;
    text-align: center;
@@ -78,7 +93,7 @@ a:hover{
  }
  .nav-in{
    font-size: 18px;
-   padding: 7px;
+   padding: 5px;
  }
 
  h2{
@@ -87,7 +102,7 @@ a:hover{
  }
  img{
    border-radius: 20px;
-   box-shadow: 10px 10px 20px black;
+   /* box-shadow: 10px 10px 20px black; */
  }
  figcaption{
    font-size: 25px;
@@ -98,13 +113,14 @@ a:hover{
   left:10%;
 }
 #a img:hover{
-  transform: scale(1.1);
-  transition: transform 1s;
+  transform: rotate(-3deg);
+  box-shadow: 0px 0px 30px ;
+  transition: transform .3s;
 
 }
 .dropdown{
   position: relative;
-  display: inline;  
+  display: inline; 
 }
 .dropdown-content{
   display: none;
@@ -120,6 +136,30 @@ a:hover{
 
 }
 .courses{
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
+  padding: 5px;
+  justify-content:left;
+}
+.courses a{
+  padding: 5px;
+  color:black;
+  background-color: white ;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+.courses a:hover{
+  background: black;
+  color: aliceblue;
+  transition: all .5s;
+}
+.courses_head{
+  margin-left: 50px;
+  box-shadow: 0px 0px 20px;
+  border-radius: 10px;
+  float: left;
+  padding: 2px 8px;
+}
+.courses_head img{
+  vertical-align: middle;
 }

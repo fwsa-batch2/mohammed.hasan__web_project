@@ -56,10 +56,14 @@ function mailCheck() {
   let inputMail = document.getElementById("mail").value;
   let inputNumber = document.getElementById("phoneNumber").value;
   let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
+  if(inputMail == "admin@gmail.com"){
+    window.location.href = "displayDetailsToAdmin.html";
+    return;
+}
 
   if (importingInfo != null) {
     for (let i = 0; i < importingInfo.length; i++) {
-      if (importingInfo[i].mail !== inputMail && importingInfo[i].number !== inputNumber) {
+      if (importingInfo[i].mail != inputMail || importingInfo[i].number != inputNumber) {
         document.getElementById("errorMessage").innerHTML = "Enter valid Login Details !! ";
    
       }
@@ -67,7 +71,6 @@ function mailCheck() {
         localStorage.setItem("loggedInUser", inputMail);
         window.location.href = "Student details.html";
         break;
-        
       }
     }
   }

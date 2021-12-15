@@ -13,6 +13,9 @@ body{
 #forgot,#signup:link{
   color:blue;
 }
+input:focus{
+  background-color :antiquewhite;
+}
 #forgot:hover{
     border:2px solid black;
     background: white;
@@ -27,7 +30,7 @@ body{
 }
 input[type=email]{
   width:200px;
-  transition: width 2s;
+  transition: width 1s;
   padding:5px;
 }
 input{
@@ -37,11 +40,11 @@ input{
 }
 input[type=number]{
   width:200px;
-  transition: width 2s;
+  transition: width 1s;
 }
 #password{
   width:200px;
-  transition: width 2s;
+  transition: width 1s;
   vertical-align: middle;
 }
 #password:hover{

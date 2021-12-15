@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Student Details</title>
+    <style>
+     
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            background-color: rgb(46, 205, 216);
+            font-size: 20px;
+        }
+        tr{
+            text-align: center;
+        }
+        th,td{
+            padding: 20px 0px;
+        }
+      
+
+    </style>
+</head>
+
+<body>
+    <table border="4">
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>D.O.B</th>
+            <th>E-Mail Address</th>
+            <th>Phone Number</th>
+            <th>Course</th>
+            <th>State</th>
+            <th>Address</th>
+
+        </tr>
+        <tr id="table">
+
+        </tr>
+       
+         
+
+        
+
+    </table>
+
+
+    <script>
+       function onLoad(){
+        let details = JSON.parse(localStorage.getItem("studentDetails"));
+        let len = details.length;
+        let table = document.querySelector('table');
+        let template = '';
+
+        for( let i = 0 ; i < len; i++){
+           template += "<tr><td>" + (i+1) +"</td>";
+           template += "<td>" + details[i].name +"</td>";
+           template += "<td>" + details[i].dob +"</td>";
+           template += "<td>" + details[i].email +"</td>";
+           template += "<td>" + details[i].contactNumber +"</td>";
+           template += "<td>" + details[i].course +"</td>";
+           template += "<td>" + details[i].state +"</td>";
+           template += "<td >" + details[i].address +"</td></tr>";
+
+        }
+        table.innerHTML += template;
+    }
+    onLoad();
+    </script>
+</body>
+
+</html>

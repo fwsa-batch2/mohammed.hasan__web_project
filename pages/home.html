@@ -16,7 +16,7 @@
     }
     function showCourses() {
       let displayProperty = document.getElementById("dropdown-content");
-      displayProperty.style.display = (displayProperty.style.display=='none') ? 'block' : 'none';
+      displayProperty.style.display = (displayProperty.style.display == 'none') ? 'block' : 'none';
     }
     // function hideCourses() {
     //   document.getElementById("dropdown-content").style.display = "none";
@@ -59,18 +59,30 @@
   <span style="padding-right:5%;border:'5'; border-color:black">
     <a href="About.html" target="_blank">ABOUT US</a>
   </span>
-  <div class="dropdown" onmouseover="showCourses()" id="dropdown" style="padding-right:0%">
-    <a href="Fees.html" target="_blank">COURSE DETAILS</a>
+  <div class="dropdown" id="dropdown" style="padding-right:0%">
+    <a class="course_details" onclick="showCourses()" target="_blank" title="Double click me">COURSE DETAILS</a>
     <div class="dropdown-content" id="dropdown-content">
       <dl>
         <h2>
-          <dt class="courses">Engineering Department</dt>
-        </h2>
+          <dt class="courses_head"><img src="../assets/html images/arrow.svg" style="margin-right:10px;border:2px solid grey">Engineering Department</dt>
+        </h2><br><br><br><br>
         <hr color="black">
         <dd class="courses"><a href="mechanical.html">Mechanical Engineering</a></dd>
         <dd class="courses"><a href="civil.html">Civil Engineering</a></dd>
-        <dd class="courses">Computer Engineering</dd>
-      </dl>
+        <dd class="courses"><a href="computer-engineering.html">Computer Engineering</a></dd>
+        <dd class="courses"><a href="IT.html">IT Engineering</a></dd>
+        <dd class="courses"><a href="EEE.html">Electrical and Electronics Engineering</a></dd>
+        <dd class="courses"><a href="ECE.html">Electronics and Communication Engineering</a></dd>
+          <h2>
+            <dt class="courses_head"><img src="../assets/html images/arrow.svg" style="margin-right:10px;border:2px solid grey">Arts Department</dt>
+          </h2><br><br><br><br>
+          <hr color="black">
+          <dd class="courses"><a href="BBA.html">Bachelor of Business Administration</a></dd>
+          <dd class="courses"><a href="BMScience.html">Bachelor of Management Studies</a></dd>
+  
+        </dl>
+
+      </div>
     </div><br /><br /><br /><br />
   </div>
 
@@ -85,9 +97,9 @@
 
   <div class="hov" onclick="show()"> Apply Now <img src="../assets/html images/arrow.svg">
     <hr>
-    <p class="nav-in"><a href="Fees.html"> B.Tech/M.Tech</a></p>
+    <p class="nav-in"><a href="Fees.html"> B.Tech / M.Tech</a></p>
     <hr>
-    <p class="nav-in"><a href="Fees.html">B.E/M.E</a></p>
+    <p class="nav-in"><a href="Fees.html">B.E / M.E</a></p>
   </div>
   <h2
     style="background-color:black;color:white;border-radius:15px;height:70px;margin-left:20px;float:left;position:relative;top:100px;padding:10px;">
