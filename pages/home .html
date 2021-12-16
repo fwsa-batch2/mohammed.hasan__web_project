@@ -9,82 +9,74 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Rampart+One&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/college.css">
-  <script>
-    alert("This is Ten Dots Official Website");
-    function show() {
-      document.querySelector(".hov").classList.toggle("hov-open");
-    }
-    function showCourses() {
-      let displayProperty = document.getElementById("dropdown-content");
-      displayProperty.style.display = (displayProperty.style.display == 'none') ? 'block' : 'none';
-    }
-    // function hideCourses() {
-    //   document.getElementById("dropdown-content").style.display = "none";
 
-    // }
-    // function showCourse(){
-    //     document.getElementById("courses-dropdown").style.display = "block";
-    // }
-
-  </script>
 </head>
 
 <body align="center">
-  <h1 title='About Ten Dots University'>
-    <img src="../assets/html images/university.png" width="60px" height="70px"
-      style="float:left;margin-left:24%;margin-top:1%;">
-    <span id="title"
-      style="font-family: 'Barlow Condensed', sans-serif;
+
+
+  <header>
+    <div class="header" title="Click on me; not around me"><a href='login.html'><img src="../assets/html images/login_icon.svg">LOGIN</a></div>
+    <div class="header" title="Click on me; not around me"><a href='Sign up.html'><img src="../assets/html images/sign_up_icon.svg">SIGN UP</a></div>
+    <div class="header" title="Click on me; not around me"><a href='support.html'><img src="../assets/html images/support.svg">HELP</a></div>
+    <div class="header" title="Click on me; not around me"><a href='About.html'><img src="../assets/html images/about.svg">ABOUT US</a></div>
+    <div class="header"  title="Click on me; not around me">
+      <div class="dropdown" id="dropdown">
+        <a href="Fees.html" target="_blank" title="Click me" style="cursor: pointer;padding: 0%;"><img
+            src="../assets/html images/courses.png" width="6%">COURSE DETAILS</a>
+        <div class="dropdown-content" id="dropdown-content">
+          <dl>
+            <h2>
+              <dt class="courses_head"><img src="../assets/html images/arrow.svg"
+                  style="border:2px solid grey">Engineering Department</dt>
+            </h2><br><br><br><br>
+            <hr color="black">
+            <dd class="courses"><a href="mechanical.html">Mechanical Engineering</a></dd>
+            <dd class="courses"><a href="civil.html">Civil Engineering</a></dd>
+            <dd class="courses"><a href="computer-engineering.html">Computer Engineering</a></dd>
+            <dd class="courses"><a href="IT.html">IT Engineering</a></dd>
+            <dd class="courses"><a href="EEE.html">Electrical and Electronics Engineering</a></dd>
+            <dd class="courses"><a href="ECE.html">Electronics and Communication Engineering</a></dd>
+            <h2>
+              <dt class="courses_head"><img src="../assets/html images/arrow.svg"
+                  style="margin-right:10px;border:2px solid grey">Arts Department</dt>
+            </h2><br><br><br><br>
+            <hr color="black">
+            <dd class="courses"><a href="BBA.html">Bachelor of Business Administration</a></dd>
+            <dd class="courses"><a href="BMScience.html">Bachelor of Management Studies</a></dd>
+
+          </dl>
+
+        </div>
+      </div>
+    </div>
+    <div class="header"><img src="../assets/html images/newsletter.png" width="7%">NEWS LETTER</div>
+    <div class="header"><img id="notification_icon" src="../assets/html images/notification_on.svg"
+        onclick="notification()">NOTIFICATIONS</div>
+    <br /><br /><br /><br />
+  </header>
+  <div class="heading" style="width: 100%;margin-left: 7%;">
+    <h1 title='About Ten Dots University'>
+      <img src="../assets/html images/university.png" class="head_image" width="60px" height="70px">
+      <span id="title"
+        style="font-family: 'Barlow Condensed', sans-serif;
       font-family: 'Rampart One', cursive;border:2px solid white;box-shadow:0px 0px 10px;font-size:75px;padding:10px;text-shadow: 0px 0px 10px white;">
-      TEN DOTS UNIVERSITY
-    </span>
-  </h1>
-  <hr color="black" style="top:10%;">
+        TEN DOTS UNIVERSITY
+      </span>
+    </h1>
+  </div>
+
   <h2>
-    <marquee style="font-style:italic;">
+
+    <marquee style="font-style:italic;float: right;z-index: -10;">
       <span style="background-color:white;padding:10px;">
-        This is our Home Page . Admissions for 2021-2022 has been started from October 1st. If you want to join our
+         Admissions for 2021-2022 has been started from October 1st. If you want to join our
         college,
         then go to the college and meet the officials
       </span>
     </marquee>
   </h2>
   <br /><br />
-  <span style="padding-right:5%;border:'5'; border-color:black;">
-    <a href="login.html" target="_blank">LOGIN</a>
-  </span>
-  <span style="padding-right:5%;">
-    <a href="#foot">SUPPORT</a>
-  </span>
-  <span style="padding-right:5%;border:'5'; border-color:black">
-    <a href="About.html" target="_blank">ABOUT US</a>
-  </span>
-  <div class="dropdown" id="dropdown" style="padding-right:0%">
-    <a class="course_details" onclick="showCourses()" target="_blank" title="Double click me">COURSE DETAILS</a>
-    <div class="dropdown-content" id="dropdown-content">
-      <dl>
-        <h2>
-          <dt class="courses_head"><img src="../assets/html images/arrow.svg" style="margin-right:10px;border:2px solid grey">Engineering Department</dt>
-        </h2><br><br><br><br>
-        <hr color="black">
-        <dd class="courses"><a href="mechanical.html">Mechanical Engineering</a></dd>
-        <dd class="courses"><a href="civil.html">Civil Engineering</a></dd>
-        <dd class="courses"><a href="computer-engineering.html">Computer Engineering</a></dd>
-        <dd class="courses"><a href="IT.html">IT Engineering</a></dd>
-        <dd class="courses"><a href="EEE.html">Electrical and Electronics Engineering</a></dd>
-        <dd class="courses"><a href="ECE.html">Electronics and Communication Engineering</a></dd>
-          <h2>
-            <dt class="courses_head"><img src="../assets/html images/arrow.svg" style="margin-right:10px;border:2px solid grey">Arts Department</dt>
-          </h2><br><br><br><br>
-          <hr color="black">
-          <dd class="courses"><a href="BBA.html">Bachelor of Business Administration</a></dd>
-          <dd class="courses"><a href="BMScience.html">Bachelor of Management Studies</a></dd>
-  
-        </dl>
-
-      </div>
-    </div><br /><br /><br /><br />
-  </div>
 
   <h2 title='About our university' style="background-color:black;color:white; border-radius:15px;padding:10px;">
     The first version of TEN DOTS University formed in 1978 and various governments repeatedly kept changing the
@@ -95,20 +87,21 @@
     style="vertical-align:middle;border-radius:15px;">
   <br /><br />
 
-  <div class="hov" onclick="show()"> Apply Now <img src="../assets/html images/arrow.svg">
+  <div class="hov" onclick="show()"> Apply Now <img src="../assets/html images/arrow.svg"
+      style="box-shadow: 0px 0px 15px;">
     <hr>
     <p class="nav-in"><a href="Fees.html"> B.Tech / M.Tech</a></p>
     <hr>
     <p class="nav-in"><a href="Fees.html">B.E / M.E</a></p>
   </div>
   <h2
-    style="background-color:black;color:white;border-radius:15px;height:70px;margin-left:20px;float:left;position:relative;top:100px;padding:10px;">
+    style="background-color:black;color:white;border-radius:15px;height:70px;margin-right:7%;float:right;position:relative;top:100px;padding:10px;">
     Students spend time only on Books and become stressed. So we are going to change it and make a drastic change on our
     students.
   </h2><br />
   <img CLASS="gif" src="../assets/Gifs/college.gif">
-  <br /><br />
-  <marquee scrollamount='13' direction=right>
+  <br /><br /><br>
+  <marquee class="gifMarquee" scrollamount='13' direction=right>
     <h2 style="background:white;width:70%;border-radius: 20px;">
       We don't insist students to carry bag full of books. Instead we teach in such a way that they don't need books
       <img src="../assets/Gifs/college2.gif" style="vertical-align:middle;background:white;">
@@ -147,7 +140,7 @@
   <hr color='black'>
 
 
-
+  <script src="./../assets/js/home.js"> </script>
 </body>
 
 </html>

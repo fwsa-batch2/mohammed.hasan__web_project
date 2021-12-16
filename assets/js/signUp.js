@@ -1,14 +1,17 @@
+console.group("Sign Up");
 function show1(){
   let pass = document.getElementById("cPassword");
   if (pass.type === "password") {
     pass.type = "text";
     document.getElementById("images2").src = "../assets/html images/eye.svg";
+    console.group("show");
+    console.log("Showing password");
 
   }
   else {
     pass.type = "password";
     document.getElementById("images2").src = "../assets/html images/eye-close.svg";
-
+    console.log("Hiding Password ");
   }
 }
 
@@ -18,12 +21,13 @@ function show(){
   if (pass.type === "password") {
     pass.type = "text";
     document.getElementById("images").src = "../assets/html images/eye.svg";
-
+    console.log("Showing Password ");
   }
   else {
     pass.type = "password";
     document.getElementById("images").src = "../assets/html images/eye-close.svg";
-
+    console.log("Hiding Password ");
+    console.groupEnd("show");
   }
 }
 
@@ -48,6 +52,9 @@ function signUpDataGetting() {
     }
     signUpArray.push(userDetails);
     localStorage.setItem("signUpDetails", JSON.stringify(signUpArray));
+    console.group("signUpDataGeting");
+    console.log("Saved user details to Array");
+    console.groupEnd("signUpDataGetting");
   
   
   }
@@ -85,10 +92,13 @@ function signUpDataGetting() {
       }
       else {
         signUpDataGetting();
-        window.location.href = "login.html";
+        // window.location.href = "login.html";
       }
   
     }
+    console.group("check");
+    console.log("Checked Validation");
+    console.groupEnd("check");
     
   }
 
@@ -97,12 +107,16 @@ function signUpDataGetting() {
     const signUpDetails = localStorage.getItem("signUpDetails");
     if (signUpDetails) {
       signUpArray = JSON.parse(signUpDetails);
+      console.table(signUpArray);
     }
     else {
       signUpArray = [];
   
     }
+    console.log("signUpRefresh");
+    
   }
+  console.groupEnd("Sign Up");
   signUpRefresh();
 
 
