@@ -1,225 +1,277 @@
-body{
-  background:url('../html images/school1.jpg') no-repeat;
-  background-position: center;
-  background-size: 250% 200%;
-  background-attachment: fixed;
-  overflow-x: hidden;
+body {
+    background: url('../html images/college1.jpg') no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
 
+header {
+    background-color: #333;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0%;
+    left: 1%;
+    z-index: 100;
 }
-header{
-  background-color: #333;
-  color: aliceblue;
-  display: flex;
-  justify-content:space-evenly;
-  padding-bottom: 5px;
-  border-radius: 10px;
-  width: 100%;
-  height: auto;
-  position: sticky;
-  top: 0%;
-  left: 1%;
-  z-index: 100;
 
+.header {
+    padding-top: 27px;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-.header{
-  padding-top: 27px;
-  font-size: 18px;
-  padding-left: 20px;
-  padding-right: 20px;
 
-  
+.header:hover {
+    background-color: #111;
+    color: white;
+    border-radius: 20px;
+    transition: all .5s;
+    transform: translateY(5px);
 }
-.header:hover{
-  background-color: #111;
-  color: white;
-  border-radius: 20px;
-  transition: all .5s;
-  transform:translateY(5px);
+
+.header a:link {
+    text-decoration: none;
+    background-color: #333;
+    border: none;
 }
-.header a:link{
-  text-decoration:none;
-  background-color:#333 ;
-  border:none;
+
+.header a:visited {
+    text-decoration: none;
+    background-color: #333;
+    border: none;
 }
-.header a:visited{
-  text-decoration:none;
-  background-color:#333 ;
-  border:none;
+
+.header a:hover {
+    background-color: #111;
+    color: white;
 }
-.header a:hover{
-  background-color: #111;
-  color:white;
+
+.header img {
+    vertical-align: bottom;
+    padding: 0px 10px;
 }
-.header img{
-  vertical-align:bottom;
-  padding: 0px 10px;
+
+.gif {
+    animation: move 6s infinite;
+    vertical-align: middle;
+    float: left;
+    margin-left: 7%;
 }
-.gif{
-  animation: move 6s infinite;
-  vertical-align: middle;
-  float: left;
-  margin-left: 7%;
+
+.gifMarquee {
+    margin-top: 20px;
 }
-.gifMarquee{
-  margin-top: 20px;
+
+#title {
+    width: 50%;
+    margin-right: 20%;
+    background: black;
+    border-radius: 20px;
+    color: aliceblue;
+    top: 0;
+    animation: mymove 7s;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Rampart One', cursive;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px;
+    font-size: 75px;
+    padding: 10px;
+    text-shadow: 0px 0px 10px white;
 }
-#title{
- width:50%;
- margin-right:20%;
- background: yellowgreen;
- border-radius: 20px;
- top:0;
- animation: mymove 7s ;
+
+.head_image {
+    margin-top: 1%;
+    margin-right: 2%;
 }
-.head_image{
-  margin-top:1%;
-  margin-right: 2%;
+
+.college-image:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
 }
-.college-image:hover{
-  transform: scale(1.1);
-  transition: transform 1s;
+
+@keyframes mymove {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: black;
+    }
 }
-@keyframes mymove{
-   from {background-color: black;}
-   to {background-color: yellowgreen;}
-}
+
 @keyframes move {
-50% {
-   -webkit-filter:grayscale(100%);
-   filter: grayscale(100%);}
+    50% {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
 }
-.course_details{
-  background-color: black;
-  padding: 10px;
-  border-radius: 5px;
-  color:white;
-  border: 2px solid white;
-}
-.course_details:hover{
-  color:black;
-  background-color: white;
-  border:2px solid black;
-  cursor: pointer;
-}
-a:link{
- background-color: black;
- padding: 10px;
- border-radius: 5px;
- color:yellow;
- border: 2px solid white;
- font-weight: 500;
-}
-a:visited{
- background-color:black;
- color:white;
- border: 2px solid white;
-}
-a:hover{
- color:black;
- background-color: white;
- border:2px solid black;
-}
-.hov{
-   position:fixed;
-   left:-140px;
-   top:50%;
-   width:160px;
-   height: 170px;
-   font-size: 25px;
-   text-align: center;
-   background-color: orange;
-   color:black;
-   padding: 10px;
-   border-radius: 10px 10px 0px 0px;
-   border: 2px solid black;
-   transform: rotate(90deg);
-   z-index: 1000;
-   transition: all .5s;
- }
- .hov img{
-   transform: rotate(-90deg);
- }
- .hov-open{
-   left:0;
- }
- .nav-in{
-   font-size: 18px;
-   padding: 5px;
- }
 
- h2{
-   width:60%;
-   float:left;
- }
- img{
-   border-radius: 20px;
-   /* box-shadow: 10px 10px 20px black; */
- }
- figcaption{
-   font-size: 25px;
- }
-.left{
-  float:left;
-  position: relative;
-  left:10%;
-  z-index: 1;
+.course_details {
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
 }
-#a img:hover{
-  transform: rotate(3deg);
-  box-shadow: 0px 0px 30px ;
-  transition: transform .3s;
 
+.course_details:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
 }
-.dropdown{
-  position: relative;
-  display: inline; 
-  z-index: 100;
-}
-.dropdown-content{
-  display: none;
-  margin:1%;
-  width: 600px;
-  height: 600px;
-  background-color: white;
-  position: absolute;
-  right: 5%;
-  z-index: 100;
-  top:10;
-  border-radius: 2%;
-  
 
+a:link {
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    color: yellow;
+    border: 2px solid white;
+    font-weight: 500;
 }
-.dropdown:hover .dropdown-content{
-  display: block;
-  transition: all 2s;
 
+a:visited {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
 }
-.courses{
-  display: flex;
-  padding: 5px;
-  justify-content:left;
+
+a:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
 }
-.courses a:link{
-  padding: 5px;
-  color:black;
-  background-color: white ;
-  font-weight: bold;
-  font-size: 18px;
-  text-decoration: none;
+
+.hov {
+    position: fixed;
+    left: -140px;
+    top: 50%;
+    width: 160px;
+    height: 170px;
+    font-size: 25px;
+    text-align: center;
+    background-color: orange;
+    color: black;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid black;
+    transform: rotate(90deg);
+    z-index: 1000;
+    transition: all .5s;
 }
-.courses a:hover{
-  background: black;
-  color: aliceblue;
-  transition: all .5s;
+
+.hov img {
+    transform: rotate(-90deg);
 }
-.courses_head{
-  margin-left: 10px;
-  box-shadow: 0px 0px 20px;
-  color: #111;
-  border-radius: 10px;
-  float: left;
-  padding: 2px 3px;
+
+.hov-open {
+    left: 0;
 }
-.courses_head img{
-  vertical-align: middle;
+
+.nav-in {
+    font-size: 18px;
+    padding: 5px;
+}
+
+h2 {
+    width: 60%;
+    float: left;
+}
+
+img {
+    border-radius: 20px;
+    /* box-shadow: 10px 10px 20px black; */
+}
+
+figcaption {
+    font-size: 25px;
+}
+
+.left {
+    float: left;
+    position: relative;
+    left: 10%;
+    z-index: 1;
+}
+
+#a img:hover {
+    transform: rotate(3deg);
+    box-shadow: 0px 0px 30px white;
+    transition: transform .3s;
+}
+
+.dropdown {
+    position: relative;
+    display: inline;
+    z-index: 100;
+}
+
+.dropdown-content {
+    display: none;
+    margin: 1%;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    position: absolute;
+    right: 5%;
+    z-index: 100;
+    top: 10;
+    border-radius: 2%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition: all 2s;
+}
+
+.courses {
+    display: flex;
+    padding: 5px;
+    justify-content: left;
+}
+
+.courses a:link {
+    padding: 5px;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.courses a:hover {
+    background: black;
+    color: aliceblue;
+    transition: all .5s;
+}
+
+.courses_head {
+    margin-left: 10px;
+    box-shadow: 0px 0px 20px;
+    color: #111;
+    border-radius: 10px;
+    float: left;
+    padding: 2px 3px;
+}
+
+.courses_head img {
+    vertical-align: middle;
+}
+
+#foot {
+    width: 100%;
+    height: 20%;
+    line-height: 30px;
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 19px;
+    font-weight: 500;
 }

@@ -15,10 +15,12 @@
             border-top-right-radius: 5px;
             font-size: 17px;
         }
+        
         .addComment:hover {
             transform: translateY(4px);
             transition: all .5S;
         }
+        
         .resetComment {
             background-color: white;
             color: black;
@@ -27,58 +29,82 @@
             border-top-right-radius: 5px;
             font-size: 17px;
         }
+        
         .resetComment:hover {
             transform: translateY(4px);
             transition: all .5S;
         }
+        
         .comments {
             grid-area: comments;
             overflow-y: scroll;
         }
-        .comments span {
+        
+        .comments>span {
             font-size: 25px;
             box-shadow: 0px 0px 20px;
             display: inline-block;
             padding: 5px 10px;
             border-radius: 10px;
         }
+        
         .comments hr {
             height: 3px;
         }
+        
         textarea {
             font-size: 15px;
             margin-bottom: 10px;
         }
+        
         .head {
             grid-area: header;
             background-color: slategrey;
             color: snow;
             font-size: 25px;
         }
+        
         .support {
             grid-area: support;
             background-color: rgb(155, 223, 223);
         }
+        
         body {
             display: grid;
             height: 98vh;
             grid-auto-rows: 15% auto auto;
-            grid-auto-columns: 80% 20%;
-            grid-template-areas: "header header"
-                "support comments"
-                "support comments"
-                "support comments";
+            grid-auto-columns: 70% 30%;
+            grid-template-areas: "header header" "support comments" "support comments" "support comments";
             text-align: center;
             font-size: 20px;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
+        
         body>div {
             border: 2px solid black;
             text-align: center;
             padding: 10px 0px 0px 0px;
         }
+        
+        input {
+            padding: 5px;
+            font-size: 20px;
+        }
+        
+        #addingComment span {
+            margin: 10px;
+        }
+        
+        #addingComment font {
+            font-size: 17px;
+        }
+        
+        #comment {
+            vertical-align: middle;
+        }
     </style>
 </head>
+
 <body>
     <div class="head">
         Support Page
@@ -87,12 +113,13 @@
     <div class="comments">
         <span>Comments</span>
         <hr color="black" width="60px"><br />
-        <form>
-            <textarea id="comment" rows="5" cols="30"></textarea>
-            <button type="button" class="addComment" onclick="addComments();"> Add Comment</button>
+
+        <form onsubmit="addComments();">
+            Your Name : <input id="name" type="text" required><br><br> Comment : <textarea id="comment" rows="5" cols="30" pattern="[A-Za-z0-9.,;]{10,}" required></textarea><br>
+            <button type="submit" class="addComment"> Add Comment</button>&nbsp;&nbsp;
             <button type="reset" class="resetComment"> Delete </button>
-        </form><br /><br>
-        <br><br>
+        </form><br>
+
         <div id="addingComment">
 
         </div>
@@ -103,28 +130,7 @@
     </div>
 
 
-    <script>
-        let commentsArray = [];
-
-        function addComments() {
-            let comments = document.getElementById("comment").value;
-            commentsArray.push(comments);
-            document.getElementById("addingComment").innerHTML += "<p>" + comments + "</p>";
-            localStorage.setItem("comments", JSON.stringify(commentsArray));
-        }
-        function onRefresh() {
-            let getComments = JSON.parse(localStorage.getItem("comments"));
-            if (getComments != null) {
-                commentsArray = getComments;
-            }
-            else {
-                commentsArray = [];
-            }
-            for (let i = 0; i < commentsArray.length; i++) {
-                document.getElementById("addingComment").innerHTML += "<p>" + commentsArray[i] + "</p>";
-            }
-        }
-        onRefresh();
+    <script src="./../assets/js/support.js">
     </script>
 
 </body>
