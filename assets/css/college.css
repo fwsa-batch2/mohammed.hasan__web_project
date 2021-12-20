@@ -148,6 +148,15 @@ a:hover {
     border: 2px solid black;
 }
 
+.upGoingImage {
+    background-color: white;
+    transform: rotate(-90deg);
+    float: right;
+    position: sticky;
+    right: 3%;
+    top: 92%;
+}
+
 .hov {
     position: fixed;
     left: -140px;
@@ -225,7 +234,7 @@ figcaption {
     border-radius: 2%;
 }
 
-.dropdown:hover .dropdown-content {
+.header:hover .dropdown-content {
     display: block;
     transition: all 2s;
 }

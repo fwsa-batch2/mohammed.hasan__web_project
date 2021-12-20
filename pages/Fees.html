@@ -1,135 +1,70 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>
-        Fees Details
-    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fees Details</title>
     <link rel="stylesheet" href="../assets/css/courses.css">
-    <script src="../assets/js/course.js"></script>
-
 </head>
 
 <body>
     <span style="font-style:italic;color:blue;font-size:40px;margin-left:42.5%;border-radius:15px;">
         Courses Details
-        <hr color="black" width='18%'>
+        <hr color="black" width='18%'><br>
     </span>
     <div class="engineer_topic">
         <dl id="engineer">
-            <h2>&nbsp;&nbsp;&nbsp;&nbsp;Engineering Department</h2>
-            <a href="mechanical.html">
-                <dd> Mechanical Engineering</dd>
-            </a>
-            <a href="EEE.html">
-                <dd> Elecrical and Electronics Engineering</dd>
-            </a>
-            <a href="ECE.html">
-                <dd> Electronics and Communication Engineering</dd>
-            </a>
-            <a href="computer-engineering.html">
-                <dd> Computer Science Engineering</dd>
-            </a>
-            <a href="IT.html">
-                <dd> Information Technology</dd>
-            </a>
-            <a href="chemical-eng.html">
-                <dd> Chemical Engineering</dd>
-            </a>
-            <a href="Bio-medical.html">
-                <dd> Bio-Medical Engineering</dd>
-            </a>
-            <a href="civil.html">
-                <dd> Civil Engineering</dd>
-            </a>
-            <a href="">
-                <dd> Automobile Engineering</dd>
-            </a>
-            <a href="">
-                <dd> Aerospace Engineering</dd>
-            </a>
-            <a href="">
-                <dd> Food Technology</dd>
-            </a>
+            <dt>
+                <h2>&nbsp;&nbsp;&nbsp;&nbsp;Engineering Department</h2>
+            </dt>
+
+            <div id="engineerCoursesTopics"></div>
+
         </dl>
         <hr color='black'>
         <dl id="arts">
-            <h2>&nbsp;&nbsp;&nbsp;&nbsp;Arts Department</h2>
-            <a href="BBA.html">
-                <dd> BBA- Bachelor of Business Administration</dd>
-            </a>
-            <a href="BMScience.html">
-                <dd> BMS- Bachelor of Management Science</dd>
-            </a>
-            <a href="">
-                <dd> BFA- Bachelor of Fine Arts</dd>
-            </a>
-            <a href="">
-                <dd> BEM- Bachelor of Event Management</dd>
-            </a>
-            <a href="">
-                <dd> BJMC- Bachelor of Journalism and Mass Communication</dd>
-            </a>
-            <a href="">
-                <dd> BFD- Bachelor of Fashion Designing</dd>
-            </a>
-            <a href="">
-                <dd> BSW- Bachelor of Social Work</dd>
-            </a>
-            <a href="">
-                <dd> BBS- Bachelor of Business Studies</dd>
-            </a>
-            <a href="">
-                <dd> BTTM- Bachelor of Travel and Tourism Management</dd>
-            </a>
-            <a href="">
-                <dd> B.Sc- Interior Design</dd>
-            </a>
-            <a href="">
-                <dd> B.Sc.- Hospitality and Hotel Administration</dd>
-            </a>
-            <a href="">
-                <dd> B. Design- Bachelor of Design</dd>
-            </a>
-            <a href="">
-                <dd>BA in History</dd>
-            </a>
+            <dt>
+                <h2>&nbsp;&nbsp;&nbsp;&nbsp;Arts Department</h2>
+            </dt>
+
+            <div id="artsCoursesTopics"></div>
+
+
         </dl>
         <hr color='black'>
         <dl id="Integrated">
             <h2>&nbsp;&nbsp;&nbsp;&nbsp;Integrated Courses</h2>
-            <a href="">
-                <dd> Integrated Law Course- BA + LL.B</dd>
-            </a>
-            <a href="">
-                <dd> Integrated Computer Science Course- B.Sc + M.Sc</dd>
-            </a>
-            <a href="">
-                <dd> Integrated Economics Course- B.Sc + M.Sc</dd>
-            </a>
-            <a href="">
-                <dd> Integrated Mathematics Course- B.Sc + M.Sc</dd>
-            </a>
-            <a href="">
-                <dd> Integrated Bio-Technology Course- B.Sc + M.Sc</dd>
-            </a>
-            <a href="">
-                <dd> Integrated Science and Law Course- B.Sc + LLB </dd>
-            </a>
+            <dd> Integrated Law Course- BA + LL.B</dd>
+
+            <dd> Integrated Computer Science Course- B.Sc + M.Sc</dd>
+
+            <dd> Integrated Economics Course- B.Sc + M.Sc</dd>
+
+            <dd> Integrated Mathematics Course- B.Sc + M.Sc</dd>
+
+            <dd> Integrated Bio-Technology Course- B.Sc + M.Sc</dd>
+
+            <dd> Integrated Science and Law Course- B.Sc + LLB </dd>
+            <dd id="integratedCoursesTopics"></dd>
+
         </dl>
         <br>
-    </div><br>
-    <div class="div2"></div><br><br>
-    <footer align='center'
-        style="width:98.5%;line-height:30px;background:darkblue;color:white;padding:15px;margin-top:71%;border-radius:15px;align-items: center;">
-        Ten Dots University. © All Copyrights reserved.<br>
-        <img src="../assets/html images/call.png" width="20px" height="20px"
-            style="vertical-align:middle;">&nbsp&nbspContact
-        No:9876543210<br>
-        <img src="../assets/html images/mail.jpg" width="20px" height="20px"
-            style="vertical-align:middle;">&nbsp&nbspE-mail:
-        tendots.univ@gmail.com
-    </footer>
-    <hr color='black'>
+    </div>
+    <div class="content">
+        <h2 class="title"></h2>
+        <div align='center' class="img"><img alt="Course Image" id="image" width="100%" height="38%">
+        </div>
+        <div class="overwrite" style="color: white;"></div>
+        <div id="details" style="margin-top:3%;"> </div>
+        <br />
+        <div id="feeDetails"></div>
+
+        <br><br>
+    </div>
+
+    <script src="../assets/js/course.js"></script>
 
 </body>
 

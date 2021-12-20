@@ -1,36 +1,27 @@
-function get() {
-  let a = document.getElementById("password");
-
-  let b = document.getElementById("mail");
-
-  let c = document.getElementById("number");
-}
 function show1() {
-  let pass = document.getElementById("cPassword");
-  if (pass.type === "password") {
-    pass.type = "text";
-    document.getElementById("images2").src = "../assets/html images/eye.svg";
+    let pass = document.getElementById("cPassword");
+    if (pass.type === "password") {
+        pass.type = "text";
+        document.getElementById("images2").src = "../assets/html images/eye.svg";
 
-  }
-  else {
-    pass.type = "password";
-    document.getElementById("images2").src = "../assets/html images/eye-close.svg";
+    } else {
+        pass.type = "password";
+        document.getElementById("images2").src = "../assets/html images/eye-close.svg";
 
-  }
+    }
 }
 
 function show() {
-  let pass = document.getElementById("password");
-  if (pass.type === "password") {
-    pass.type = "text";
-    document.getElementById("images").src = "../assets/html images/eye.svg";
+    let pass = document.getElementById("password");
+    if (pass.type === "password") {
+        pass.type = "text";
+        document.getElementById("images").src = "../assets/html images/eye.svg";
 
-  }
-  else {
-    pass.type = "password";
-    document.getElementById("images").src = "../assets/html images/eye-close.svg";
+    } else {
+        pass.type = "password";
+        document.getElementById("images").src = "../assets/html images/eye-close.svg";
 
-  }
+    }
 }
 //New JS files
 
@@ -52,38 +43,46 @@ let signUpArray = [];
 
 
 function mailCheck() {
-  event.preventDefault();
-  let inputMail = document.getElementById("mail").value;
-  let inputNumber = document.getElementById("phoneNumber").value;
-  let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
-  if(inputMail == "admin@gmail.com"){
-    window.location.href = "displayDetailsToAdmin.html";
-    return;
-}
+    event.preventDefault();
+    let inputMail = document.getElementById("mail").value;
+    let inputPassword = document.getElementById("password").value;
+    let isError = false;
+    let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
 
-  if (importingInfo != null) {
-    for (let i = 0; i < importingInfo.length; i++) {
-      if (importingInfo[i].mail != inputMail || importingInfo[i].number != inputNumber) {
-        document.getElementById("errorMessage").innerHTML = "Enter valid Login Details !! ";
-   
-      }
-      if (importingInfo[i].mail == inputMail && importingInfo[i].number == inputNumber){
-        localStorage.setItem("loggedInUser", inputMail);
-        window.location.href = "Student details.html";
-        break;
-      }
+    if (importingInfo != null) {
+        for (let i = 0; i < importingInfo.length; i++) {
+
+            if (importingInfo[i].mail == inputMail && importingInfo[i].password == inputPassword) {
+                localStorage.setItem("loggedInUser", inputMail);
+                if (importingInfo[i].role == "admin") {
+                    window.location.href = "displayDetailsToAdmin.html";
+
+                } else {
+                    window.location.href = "Student details.html";
+                    break;
+                }
+            }
+            if (importingInfo[i].mail != inputMail || importingInfo[i].password != inputPassword) {
+                isError = true;
+
+            }
+        }
+        if (isError == true) {
+            document.getElementById("errorMessage").innerHTML = "Enter valid Login Details !! ";
+
+        }
+
+
+    } else {
+        document.getElementById("errorMessage").innerHTML = "Please Sign up first";
     }
-  }
-  else {
-    document.getElementById("errorMessage").innerHTML = "Please Sign up first";
-  }
 
 }
 
 $("document").ready(function() {
-  $("#password").on("keypress", function(e) {
-      if (e.which == 32){
-          alert("Contain spaces");
-      }
-  });
+    $("#password").on("keypress", function(e) {
+        if (e.which == 32) {
+            alert("Contain spaces");
+        }
+    });
 });

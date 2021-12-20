@@ -10,15 +10,18 @@
         /* *{
             box-sizing: border-box;
         } */
-        body{
-            background-color:rgb(241, 204, 148);
+        
+        body {
+            background-color: rgb(241, 204, 148);
         }
-        .form_head{
-         font-size: 20px;
-         display: flex;
-         justify-content: center;
-         margin-top: 7% ;
+        
+        .form_head {
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            margin-top: 7%;
         }
+        
         form {
             border: 2px solid black;
             width: 600px;
@@ -26,102 +29,172 @@
             font-size: 18px;
             font-weight: 600;
             border-radius: 10px;
-            padding:15px;
+            padding: 15px;
             background-color: palegoldenrod;
         }
-        form input{
-           padding: 10px 10px;
-           border:none;
-           border-bottom: 2px solid black;
-           font-size: 16px;
-           border-radius: 10px;
-        }
-        form input:focus{
-            outline: none;
         
+        form input {
+            padding: 10px 10px;
+            border: none;
+            border-bottom: 2px solid black;
+            font-size: 16px;
+            border-radius: 10px;
         }
-        input[type="file"]{
-            border:none;
+        
+        form input:focus {
+            outline: none;
         }
-        input[type="file"]:focus{
+        
+        input[type="file"] {
+            border: none;
+        }
+        
+        input[type="file"]:focus {
             background-color: white;
         }
-        .submit{
-            padding:5px;
+        
+        .submit {
+            padding: 5px;
             font-size: 17px;
             font-weight: 700;
             border-bottom-left-radius: 10px;
             border-top-right-radius: 10px;
             background-color: black;
-            color:white;
-          
-           
+            color: white;
         }
-        .submit:hover{
+        
+        .submit:hover {
             transition: all .5s;
-            transform:translateY(5px);          
+            transform: translateY(5px);
         }
-        .label4{
+        
+        .label4 {
             display: flex;
             justify-content: center;
         }
-        #details{
-            padding:6px;
+        
+        #details {
+            padding: 6px;
             margin-left: 5px;
             width: 300px;
+        }
+        
+        select {
+            padding: 5px;
+            font-size: 17px;
+        }
+        
+        option {
+            background-color: rgb(241, 204, 148);
+            padding: 5px 0px;
+        }
+        
+        th,
+        td {
+            padding: 5px;
+        }
+        
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button {
+            appearance: none;
         }
     </style>
 </head>
 
 <body>
     <div class="form_head">
-    <img src="./../assets/html images/course_icon.png" width='3%' height="3%">
-    <h2>Add Course</h2>
+        <img src="./../assets/html images/course_icon.png" width='3%' height="3%">
+        <h2>Add Course</h2>
     </div>
     <form align='center' onsubmit="onSubmitHandler()">
 
-       <div class="label1"> Course Name :
-        <input type="text" id="courseName" pattern="[A-Za-z0-9]{5,}" required></div><br />
+        <div class="label1"> Course Name :
+            <input type="text" id="courseName" pattern="[A-Za-z ]{5,}" required>
+        </div><br /> Course Department :
+        <select name="department" id="courseDepartment">
+            <option value="engineering">Engineering</option>
+            <option value="arts">Arts</option>
+            <option value="integrated">Integrated Course</option>
 
-        <div class="label2">  Image representing Course :
-       <input type="url" id="image" required></div><br>
-       <div class="label3">
-         Image Caption :
-        <input type="text" id="caption" pattern="[A-Za-z0-9]{5,}" required></div>
+        </select><br /><br>
+
+        <div class="label2"> Image representing Course :
+            <input type="url" id="image" required>
+        </div><br>
+        <div class="label3">
+            Image Caption :
+            <input type="text" id="caption" pattern="[A-Za-z0-9]{5,}" required>
+        </div>
         <br>
         <div class="label4">
-            Course Details : 
-            <textarea rows="3" id="details" pattern="[A-Za-z0-9.+-_/ ]{5,}" title="Avoid using special characters" ></textarea>
+            Course Details :
+            <textarea rows="3" id="details" pattern="[A-Za-z0-9.+-_/ ]{5,}" title="Avoid using special characters"></textarea>
         </div>
         <br>
         <div class="label5">
-            Fee Details : 
-            <input type="" id="feeDetails">
+            Fee Details <br /><br />
+            <table border="3">
+                <thead>
+                    <tr>
+                        <th>Fee Details</th>
+                        <th>1st Semester</th>
+                        <th>2nd Semester</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st Year</td>
+                        <td><input id="1stYearone" type="number" placeholder="Fee amount"></td>
+                        <td><input id="1stYeartwo" type="number" placeholder="Fee amount"></td>
+
+                    </tr>
+                    <tr>
+                        <td>2nd Year</td>
+                        <td><input id="2ndYearone" type="number" placeholder="Fee amount"></td>
+                        <td><input id="2ndYeartwo" type="number" placeholder="Fee amount"></td>
+
+                    </tr>
+                    <tr>
+                        <td>3rd Year</td>
+                        <td><input id="3rdYearone" type="number" placeholder="Fee amount"></td>
+                        <td><input id="3rdYeartwo" type="number" placeholder="Fee amount"></td>
+
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <br>
         <button class="submit">Add Course</button>
 
     </form>
     <script>
-        function onSubmitHandler(){
+        function onSubmitHandler() {
             let courseName = document.getElementById("courseName").value;
             let image = document.getElementById("image").value;
             let caption = document.getElementById("caption").value;
             let details = document.getElementById("details").value;
-            let fee = document.getElementById("feeDetails").value;
-            let courseDetails = {
-                name : courseName,
-                image : image,
-                capiton : caption,
-                details : details,
-                fee : fee
+            let department = document.getElementById("courseDepartment").value;
+            let fees = {
+                firstSemester: document.getElementById("1stYearone").value,
+                secondSemester: document.getElementById("1stYeartwo").value,
+                thirdSemester: document.getElementById("2ndYearone").value,
+                fourthSemester: document.getElementById("2ndYeartwo").value,
+                fifthSemester: document.getElementById("3rdYearone").value,
+                sixthSemester: document.getElementById("3rdYeartwo").value
             }
-            localStorage.setItem("courseDetails",JSON.stringify(courseDetails));
-            addCourse();
-            window.location.href="./Fees.html";
-        }
-        function addCourse(){
-            
+            let courseDetails = {
+                name: courseName,
+                image: image,
+                caption: caption,
+                department: department,
+                details: details,
+                fee: fees
+            }
+            let array = [];
+            array = JSON.parse(localStorage.getItem("allCourses"));
+            array.push(courseDetails);
+            localStorage.setItem("allCourses", JSON.stringify(array));
+            window.location.href = "./Fees.html";
         }
     </script>
 
