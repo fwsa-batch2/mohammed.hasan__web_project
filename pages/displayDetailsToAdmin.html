@@ -1,87 +1,92 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Details</title>
     <style>
-     
-        table{
+        table {
             border-collapse: collapse;
             margin: 1%;
             width: 98%;
             background-color: rgb(223, 189, 96);
             font-size: 20px;
         }
-        tr{
+        
+        tr {
             text-align: center;
         }
-        th,td{
+        
+        th,
+        td {
             padding: 20px 0px;
         }
-        .addCourse{
+        
+        .addCourse {
             position: relative;
-            margin-top:25px;
+            margin-top: 25px;
             left: 42%;
         }
-        .addCourse button{
+        
+        .addCourse button {
             padding: 5px 10px;
             font-size: 24px;
-            font-weight:600;
+            font-weight: 600;
             border-radius: 10px;
             cursor: pointer;
-
         }
-      
-
     </style>
 </head>
 
 <body>
-    <table border="4">
+    <table title="Displaying Details" border="4">
         <tr>
-            <th>S.No</th>
-            <th>Name</th>
-            <th>D.O.B</th>
-            <th>E-Mail Address</th>
-            <th>Phone Number</th>
-            <th>Course</th>
-            <th>State</th>
-            <th>Address</th>
+            <th scope="col">S.No</th>
+            <th scope="col">Name</th>
+            <th scope="col">D.O.B</th>
+            <th scope="col">E-Mail Address</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Course</th>
+            <th scope="col">State</th>
+            <th scope="col">Address</th>
 
         </tr>
         <tr id="table">
 
         </tr>
-       
-        
+
+
 
     </table>
     <a class="addCourse" href="./addCourse.html">
-    <img src="../assets/html images/course_icon.png" width="2%" style="vertical-align: middle;padding: 5px;">
-    <button>Add Course</button></a>
+        <img alt="Add Course" src="../assets/html images/course_icon.png" width="2%" style="vertical-align: middle;padding: 5px;">
+        <button>Add Course</button></a>
     </div>
 
 
     <script>
-       function onLoad(){
-        let details = JSON.parse(localStorage.getItem("studentDetails"));
-        let len = details.length;
-        let table = document.querySelector('table');
-        let template = '';
+        function onLoad() {
+            let details = JSON.parse(localStorage.getItem("studentDetails"));
+            let len = details.length;
+            let table = document.querySelector('table');
+            let template = '';
 
-        for( let i = 0 ; i < len; i++){
-           template += "<tr><td>" + (i+1) +"</td>";
-           template += "<td>" + details[i].name +"</td>";
-           template += "<td>" + details[i].dob +"</td>";
-           template += "<td>" + details[i].email +"</td>";
-           template += "<td>" + details[i].contactNumber +"</td>";
-           template += "<td>" + details[i].course +"</td>";
-           template += "<td>" + details[i].state +"</td>";
-           template += "<td >" + details[i].address +"</td></tr>";
+            for (let i = 0; i < len; i++) {
+                template += "<tr><td>" + (i + 1) + "</td>";
+                template += "<td>" + details[i].name + "</td>";
+                template += "<td>" + details[i].dob + "</td>";
+                template += "<td>" + details[i].email + "</td>";
+                template += "<td>" + details[i].contactNumber + "</td>";
+                template += "<td>" + details[i].course + "</td>";
+                template += "<td>" + details[i].state + "</td>";
+                template += "<td >" + details[i].address + "</td></tr>";
 
+            }
+            table.innerHTML += template;
         }
-        table.innerHTML += template;
-    }
-    onLoad();
+        onLoad();
     </script>
 </body>
 

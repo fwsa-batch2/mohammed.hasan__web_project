@@ -2,47 +2,46 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title>Student Details</title>
-  <script src="../assets/js/studentdetails.js"></script>
-  <link rel="stylesheet" href="../assets/css/Student details.css">
+    <meta charset="utf-8">
+    <title>Student Details</title>
+    <script src="../assets/js/studentdetails.js"></script>
+    <link rel="stylesheet" href="../assets/css/Student details.css">
 </head>
 
 
 <body align='center'><br>
-  <span class="title">Admission Form</span>
-  <br><br>
-  <hr><br><br><br>
-  <h2 style="color:white">
-    Fill Student Details
-  </h2>
-  <div id="message">
-    
-  </div>
-  <form align=center action="final.html" onsubmit="onSubmitHandler()">
-    <table style="color:white" width='500' height='450' border='2' align="center">
-      <tr>
-        <th>Student Name:</th>
-        <td><input type="text" id="name" name="name" placeholder="Your name" required></td>
-      </tr><br>
-      <tr>
-        <th>D.O.B:</th>
-        <td><input type="date" id="dob" min="2000-12-12" max="2004-01-01" name="age" placeholder="Your age" required>
-        </td>
-      </tr>
-      <tr>
-        <th>E-mail:</th>
-        <td><input type="email" id="email" name=mail placeholder="Your mail" required></td>
-      </tr>
-      <tr>
-        <th>Phone Number:</th>
-        <td><input id="phone_number" style="width:180px;" type="number" name="number" min="999999999" max="9999999999"
-            placeholder="Your number" required></td>
-      </tr>
-      <tr>
-        <th> State</th>
-        <td>
-          <select id="state">
+    <span class="title">Admission Form</span>
+    <br><br>
+    <hr><br><br><br>
+    <h2 style="color:white">
+        Fill Student Details
+    </h2>
+    <div id="message">
+
+    </div>
+    <form align=center action="final.html" onsubmit="onSubmitHandler()">
+        <table title="User Details" style="color:white" width='500' height='450' border='2' align="center">
+            <tr>
+                <th scope="col">Student Name:</th>
+                <td><input type="text" id="name" name="name" placeholder="Your name" required></td>
+            </tr><br>
+            <tr>
+                <th scope="col">D.O.B:</th>
+                <td><input type="date" id="dob" min="2000-12-12" max="2004-01-01" name="age" placeholder="Your age" required>
+                </td>
+            </tr>
+            <tr>
+                <th scope="col">E-mail:</th>
+                <td><input type="email" id="email" name=mail placeholder="Your mail" required></td>
+            </tr>
+            <tr>
+                <th scope="col">Phone Number:</th>
+                <td><input id="phone_number" style="width:180px;" type="number" name="number" min="999999999" max="9999999999" placeholder="Your number" required></td>
+            </tr>
+            <tr>
+                <th scope="col"> State</th>
+                <td>
+                    <select id="state">
             <option value="">--Select--</option>
             <option value="Andhra Pradesh">Andhra Pradesh </option>
             <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -74,40 +73,38 @@
             <option value="West Bengal"> West Bengal</option>
             <option value="Other States">Other States</option>
           </select>
-        </td>
-      </tr>
-      <tr>
-        <th>Courses available:</th>
-        <td><select id="course" name="course">
+                </td>
+            </tr>
+            <tr>
+                <th scope="col">Courses available:</th>
+                <td><select id="course" name="course">
             <option value="tech">--Select--</option>
             <option value="B.tech">Engineering Course</option>
             <option value="B.arch">Arts Course</option>
             <option value="B.Sc">Integrated Course</option>
           </select></td>
-      </tr>
-      <tr>
-        <th>Upload 10th certificate</th>
-        <td><input id="10th_Certificate" type="file" name='10th'></td>
-        </th>
-      </tr>
-      <tr>
-        <th>Upload 12th certificate</th>
-        <td><input id="12th_Certificate" type="file" name='10th'></td>
-        </th>
-      </tr>
-      <tr>
-        <th> Address</th>
-        <td><textarea id="address" required></textarea></td>
-      </tr>
-    </table><br><br>
-    <input type="submit" name='submit' value="Submit">
-  </form>
+            </tr>
+            <tr>
+                <th scope="col">Upload 10th certificate</th>
+                <td><input id="10th_Certificate" type="file" name='10th'></td>
+                </th>
+            </tr>
+            <tr>
+                <th scope="col">Upload 12th certificate</th>
+                <td><input id="12th_Certificate" type="file" name='10th'></td>
+                </th>
+            </tr>
+            <tr>
+                <th scope="col"> Address</th>
+                <td><textarea id="address" required></textarea></td>
+            </tr>
+        </table><br><br>
+        <input type="submit" name='submit' value="Submit">
+    </form>
 
 </body>
 <!-- <script>
-  // Validation - Error Message - red
-  document.querySelector("#message").innerHTML = "<font color='red'>Invalid Name</font>";
-
+  
 Date
 let todayDateStr = new Date().toJSON().substr(0,10);//2021-12-07
 document.querySelector("#dob").setAttribute("min", todayDateStr);

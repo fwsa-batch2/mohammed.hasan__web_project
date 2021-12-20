@@ -1,25 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admission Form of Student</title>
-    
     <style>
-        body{
+        body {
             background: url('../assets/html\ images/adm2.jpg') no-repeat;
-            background-size: 100% 150% ;
+            background-size: 100% 150%;
             background-position: center;
-            color:white;
+            color: white;
         }
-        *{
-          box-sizing: border-box;
+        
+        * {
+            box-sizing: border-box;
         }
-        table{
+        
+        table {
             border: 4px solid white;
         }
-        th,td{
-            padding:15px 0px;
+        
+        th,
+        td {
+            padding: 15px 0px;
         }
-        td{
+        
+        td {
             padding: 0px 20px;
         }
     </style>
@@ -29,38 +37,38 @@
     <h1 style="font-size: 40px;">Applicant Form</h1>
     <hr color="white" width="17%">
     <br /><br />
-    <table style="text-align: center;" align="center" border="4" width="30%" height="50%" style="font-size: 23px;">
+    <table title="Admission Form" style="text-align: center;" align="center" border="4" width="30%" height="50%" style="font-size: 23px;">
         <tr>
-            <th colspan="2">
+            <th scope="col" colspan="2">
                 <h2>Personal Details</h2>
             </th>
         </tr>
         <tr>
-            <th>Name :</th>
+            <th scope="col">Name :</th>
             <td id="displayName"> </td>
         </tr>
         <tr>
-            <th> D.O.B :</th>
+            <th scope="col"> D.O.B :</th>
             <td id="displayDob"></td>
         </tr>
         <tr>
-            <th> E-mail : </th>
+            <th scope="col"> E-mail : </th>
             <td id="displayEmail"></td>
         </tr>
         <tr>
-            <th> Contact Number : </th>
+            <th scope="col"> Contact Number : </th>
             <td id="displayContact"></td>
         </tr>
         <tr>
-            <th> State : </th>
+            <th scope="col"> State : </th>
             <td id="displayState"></td>
         </tr>
         <tr>
-            <th> Course : </th>
+            <th scope="col"> Course : </th>
             <td id="displayCourse"></td>
         </tr>
         <tr>
-            <th> Address : </th>
+            <th scope="col"> Address : </th>
             <td id="displayAddress"></td>
         </tr>
     </table><br /><br />

@@ -1,6 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up Page</title>
     <link rel="stylesheet" href="../assets/css/SignUp.css">
 </head>
@@ -18,9 +22,9 @@
         <br> Eg: albert07@gmail.com
         <br><br> D.O.B :<input id="dob" type="date" min="2000-12-12" max="2004-01-01" name="dob" required>
         <br><br> Password: <input id="password" type="password" pattern="[A-Za-z0-9.+/_]{12,}" title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers" name="password" placeholder="Enter your password"
-            required> &nbsp; <img style="position:absolute;" id="images" onclick="show()" src="../assets/html images/eye-close.svg">
+            required> &nbsp; <img alt="Password Hide Image" style="position:absolute;" id="images" onclick="show()" src="../assets/html images/eye-close.svg">
         <br><br> Confirm Password: <input id="cPassword" type="password" pattern="[A-Za-z0-9]{12,}" title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers" name="pass" placeholder="Re-Enter your password"
-            required> &nbsp; <img style="position:absolute;" id="images2" onclick="show1()" src="../assets/html images/eye-close.svg">
+            required> &nbsp; <img alt="Password Hide Image" style="position:absolute;" id="images2" onclick="show1()" src="../assets/html images/eye-close.svg">
         <br><br> Phone Number: <input id="number" pattern="[0-9]{10}" title="Enter only numbers" type="tel" minlength="9" maxlength="10" name="number" placeholder="Enter your number" required>
         <br><br> Role : <select id="role">
           <option value="admin">Admin</option>

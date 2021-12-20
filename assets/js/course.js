@@ -117,15 +117,14 @@ function addingCourse() {
 
         if (oneCourseDepartment.department == "engineering") {
 
-            document.getElementById("engineerCoursesTopics").innerHTML += "<dd onclick='courses(" + i + ")'> " + oneCourseDepartment.name + " </dd>";
+            document.getElementById("engineerCoursesTopics").innerHTML += `<dd onclick='courses(${i})'> ${oneCourseDepartment.name} </dd>`;
         }
         if (oneCourseDepartment.department == "arts") {
-            document.getElementById("artsCoursesTopics").innerHTML += "<dd onclick='courses(i)'>" + oneCourseDepartment.name + " </dd>";
+            document.getElementById("artsCoursesTopics").innerHTML += `<dd onclick='courses(${i})'> ${oneCourseDepartment.name} </dd>`;
 
         }
         if (oneCourseDepartment.department == "integrated") {
-            document.getElementById("integratedCoursesTopics").innerHTML += "<dd onclick='courses(i)'>" + oneCourseDepartment.name + "</dd>"
-            oneCourseDepartment.name;
+            document.getElementById("integratedCoursesTopics").innerHTML += `<dd onclick='courses(${i})'> ${oneCourseDepartment.name} </dd>`;
 
         }
     }
