@@ -16,7 +16,7 @@
     <hr color="black"><br />
     <img src="../assets/html images/login.jpg" height=150 width=150 alt="Login" style="border-radius:15px;">
     <br /><br /><br />
-    <form onsubmit="mailCheck();">
+    <form onsubmit="mailCheck(event);">
         <table align="center" border="4" height="150px" width='500px' style="background-color:white">
             <caption></caption>
             <tr>
@@ -34,7 +34,7 @@
                 <td><input id="phoneNumber" type="tel" pattern="[0-9]{10}" title="Enter only 10 numbers" minlength="9" maxlength="10" id="number" name='number' placeholder="Your Contact number" required></td>
             </tr>
         </table><br />
-        <div align='center' id="errorMessage" style="color:red;background:white;width:220px;border-radius: 8px;"></div>
+        <div id="errorMessage"></div>
         <br />
         <a id="forgot" href="forgot.html" style="padding:5px;">Forgot Password ..?</a><br /><br />
         <span>
@@ -52,19 +52,6 @@
     </form>
     <script type="text/javascript" src="../assets/js/login.js">
     </script>
-
-    <!-- Jquery example -->
-
-    <!-- <script>
-    $("document").ready(function() {
-    $("#password").on("keypress", function(e) {
-      if (e.which == 32){
-         alert("spaces are given");
-      }
-  });
-});
-
-</script> -->
 </body>
 
 </html>

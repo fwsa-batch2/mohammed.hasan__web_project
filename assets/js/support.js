@@ -1,7 +1,7 @@
-date = new Date().toDateString().substr(4, );
+let date = new Date().toDateString().substr(4, );
 let commentsArray = [{ comment: "This is the best college in basis of Food Facilities and Cultural activities", name: "Annapoorni", date: date }];
 
-function addComments() {
+function addComments(event) {
     event.preventDefault();
     let comment = document.getElementById("comment").value;
     let name = document.getElementById("name").value;

@@ -59,7 +59,7 @@ function signUpDataGetting() {
 }
 
 
-function check() {
+function check(event) {
     event.preventDefault();
     let password = document.getElementById("password").value;
     let cpassword = document.getElementById("cPassword").value;
@@ -71,8 +71,8 @@ function check() {
 
         let isMatch = false;
 
-        for (let i = 0; i < signUpDetails.length; i++) {
-            let mailid = signUpDetails[i].mail;
+        for (let i of signUpDetails) {
+            let mailid = i.mail;
 
             if (mail == mailid) {
                 isMatch = true;
@@ -86,7 +86,6 @@ function check() {
 
         if (isMatch) {
             document.getElementById("errorMessage").innerHTML = "<font color=red> E-mail Id already exists or incorrect password details !! </font>";
-            // break;
         } else {
             signUpDataGetting();
             window.location.href = "login.html";
@@ -101,9 +100,9 @@ function check() {
 
 
 function signUpRefresh() {
-    const signUpDetails = localStorage.getItem("signUpDetails");
+    const signUpDetails = JSON.parse(localStorage.getItem("signUpDetails"));
     if (signUpDetails) {
-        signUpArray = JSON.parse(signUpDetails);
+        signUpArray = signUpDetails;
         console.table(signUpArray);
     } else {
         signUpArray = [];

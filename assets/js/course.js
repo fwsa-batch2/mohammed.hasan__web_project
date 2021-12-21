@@ -1,4 +1,4 @@
-collegeAllCourses = [];
+var collegeAllCourses = [];
 let storedData = JSON.parse(localStorage.getItem("allCourses"));
 if (storedData) {
     collegeAllCourses = storedData;

@@ -23,26 +23,10 @@ function show() {
 
     }
 }
-//New JS files
 
 let signUpArray = [];
 
-
-
-// function onRefresh() {
-//   const details = localStorage.getItem("loginInformations");
-
-//   if (details) {
-//     allLoginDetails = JSON.parse(details);
-//   }
-//   else {
-//     allLoginDetails = [];
-//   }
-// }
-// onRefresh();
-
-
-function mailCheck() {
+function mailCheck(event) {
     event.preventDefault();
     let inputMail = document.getElementById("mail").value;
     let inputPassword = document.getElementById("password").value;
@@ -56,10 +40,10 @@ function mailCheck() {
             return null;
         }
         const isAdmin = checkRole(isExist);
-        if (isAdmin == true) {
+        if (isAdmin) {
             window.location.href = "displayDetailsToAdmin.html";
         } else {
-            window.location.href = "student_admission_form.html";
+            window.location.href = "Student details.html";
 
         }
     } else {
@@ -71,10 +55,10 @@ function isUserExist(mail, password) {
 
     let isExist;
     let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
-    for (let i = 0; i < importingInfo.length; i++) {
+    for (let i of importingInfo) {
 
-        if (importingInfo[i].mail == mail && importingInfo[i].password == password) {
-            isExist = importingInfo[i];
+        if (i.mail == mail && i.password == password) {
+            isExist = i;
             break;
         } else {
             isExist = false;
@@ -84,11 +68,8 @@ function isUserExist(mail, password) {
 }
 
 function checkRole(userObject) {
-    if (userObject.role == "admin") {
-        return true;
-    } else {
-        return false;
-    }
+    return userObject.role == "admin" ? true : false;
+
 }
 
 $("document").ready(function() {

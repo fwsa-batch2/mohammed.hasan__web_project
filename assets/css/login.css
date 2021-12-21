@@ -60,3 +60,11 @@ input[type=tel] {
     width: 253px;
     vertical-align: middle;
 }
+
+#errorMessage {
+    color: red;
+    background: white;
+    width: 220px;
+    border-radius: 8px;
+    margin-left: 44%;
+}

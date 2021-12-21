@@ -3,9 +3,6 @@ alert("This is Ten Dots Official Website");
 function show() {
     document.querySelector(".hov").classList.toggle("hov-open");
 }
-var notific;
-
-
 var notific = JSON.parse(localStorage.getItem("notification"));
 var notificationIcon = document.getElementById("notification_icon");
 if (notific == "on") {
@@ -21,7 +18,7 @@ localStorage.setItem("notification", JSON.stringify(notific));
 
 function notification() {
 
-    var notificationIcon = document.getElementById("notification_icon");
+    notificationIcon = document.getElementById("notification_icon");
     let email = prompt("Enter your mail id to get notifications");
     localStorage.setItem("mailForNotifications", JSON.stringify(email));
     alert("Notifcations will be sent to " + email);

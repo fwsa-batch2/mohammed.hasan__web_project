@@ -7,71 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Page</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        
-        .head {
-            grid-area: header;
-            background-color: slategrey;
-            color: snow;
-        }
-        
-        .reviews {
-            grid-area: reviews;
-            background-color: rgb(155, 223, 223);
-            overflow-y: scroll;
-        }
-        
-        body {
-            display: grid;
-            height: 100vh;
-            grid-auto-rows: 15% auto 30% auto;
-            grid-auto-columns: auto auto auto 20%;
-            grid-template-areas: "header header header header" "reviews reviews reviews reviews" "reviews reviews reviews reviews" "reviews reviews reviews reviews";
-            font-size: 20px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        
-        body>div {
-            border: 2px solid black;
-            text-align: center;
-            padding: 10px 0px 0px 0px;
-        }
-        
-        table {
-            margin-left: 15%;
-            margin-top: 1%;
-            border-spacing: 30px 5px;
-        }
-        
-        th {
-            padding: 20px 20px;
-            background-color: transparent;
-        }
-        
-        td {
-            padding: 20px 20px;
-            background-color: rgba(218, 209, 209, 0.718);
-            border-radius: 10px;
-            margin-left: 20px;
-            border: 2px solid black;
-            z-index: 2;
-        }
-        
-        td:hover {
-            box-shadow: 0px 0px 15px teal;
-            transition: all .5s;
-            cursor: default;
-        }
-        
-        .font {
-            color: teal;
-            display: inline;
-        }
-    </style>
+    <link rel="stylesheet" href="./../assets/css/review.css">
 </head>
 
 <body>
