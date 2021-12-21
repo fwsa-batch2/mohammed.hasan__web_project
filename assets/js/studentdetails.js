@@ -1,3 +1,5 @@
+let allStudentDetails = [];
+
 function onSubmitHandler(event) {
     event.preventDefault();
     const username = document.getElementById("name").value;
@@ -7,7 +9,6 @@ function onSubmitHandler(event) {
     const state = document.getElementById("state").value;
     const course = document.getElementById("course").value;
     const address = document.getElementById("address").value;
-    let allStudentDetails = [];
 
     const studentDetails = {
         "name": username,
