@@ -46,37 +46,49 @@ function mailCheck() {
     event.preventDefault();
     let inputMail = document.getElementById("mail").value;
     let inputPassword = document.getElementById("password").value;
-    let isError = false;
     let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
 
     if (importingInfo != null) {
-        for (let i = 0; i < importingInfo.length; i++) {
+        const isExist = isUserExist(inputMail, inputPassword);
 
-            if (importingInfo[i].mail == inputMail && importingInfo[i].password == inputPassword) {
-                localStorage.setItem("loggedInUser", inputMail);
-                if (importingInfo[i].role == "admin") {
-                    window.location.href = "displayDetailsToAdmin.html";
-
-                } else {
-                    window.location.href = "Student details.html";
-                    break;
-                }
-            }
-            if (importingInfo[i].mail != inputMail || importingInfo[i].password != inputPassword) {
-                isError = true;
-
-            }
-        }
-        if (isError == true) {
+        if (isExist == false) {
             document.getElementById("errorMessage").innerHTML = "Enter valid Login Details !! ";
+            return null;
+        }
+        const isAdmin = checkRole(isExist);
+        if (isAdmin == true) {
+            window.location.href = "displayDetailsToAdmin.html";
+        } else {
+            window.location.href = "student_admission_form.html";
 
         }
-
-
     } else {
         document.getElementById("errorMessage").innerHTML = "Please Sign up first";
     }
+}
 
+function isUserExist(mail, password) {
+
+    let isExist;
+    let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
+    for (let i = 0; i < importingInfo.length; i++) {
+
+        if (importingInfo[i].mail == mail && importingInfo[i].password == password) {
+            isExist = importingInfo[i];
+            break;
+        } else {
+            isExist = false;
+        }
+    }
+    return isExist;
+}
+
+function checkRole(userObject) {
+    if (userObject.role == "admin") {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 $("document").ready(function() {
