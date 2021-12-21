@@ -1,5 +1,5 @@
-let commentsArray = [];
 date = new Date().toDateString().substr(4, );
+let commentsArray = [{ comment: "This is the best college in basis of Food Facilities and Cultural activities", name: "Annapoorni", date: date }];
 
 function addComments() {
     event.preventDefault();
@@ -12,7 +12,13 @@ function addComments() {
     }
     commentsArray.push(comments);
     localStorage.setItem("comments", JSON.stringify(commentsArray));
-    displayDetails();
+    onRefresh();
+    displaySingleDetail(comment, name);
+
+}
+
+function displaySingleDetail(comment, name) {
+    document.getElementById("addingAllComments").innerHTML += "<dl><dt><div style='float:left;margin-left:10px;color:grey;'>" + name + "&nbsp;&nbsp;| " + date + "</div></dt><br><dd><span>" + comment + "</span></dd></dl>";
 }
 let text = '';
 var allText = '';
@@ -21,9 +27,10 @@ function displayDetails() {
 
     for (let i = 0; i < commentsArray.length; i++) {
         if (i < 3) {
-            text += "<dl><dt><font color='grey' style='float:left;margin-left:10px'>" + commentsArray[i].name + "&nbsp;&nbsp;| " + commentsArray[i].date + "</font></dt><br><dd><span>" + commentsArray[i].comment + "</span></dd></dl>";
+            text += `<dl><dt><div style='float:left;margin-left:10px;color:grey;'> ${commentsArray[i].name} &nbsp;&nbsp;|  ${commentsArray[i].date} </div></dt><br><dd><span> ${commentsArray[i].comment} </span></dd></dl>`;
+
         } else {
-            allText += "<dl><dt><font color='grey' style='float:left;margin-left:10px'>" + commentsArray[i].name + "&nbsp;&nbsp;| " + commentsArray[i].date + "</font></dt><br><dd><span>" + commentsArray[i].comment + "</span></dd></dl>";
+            allText += `<dl><dt><div style='float:left;color:grey;margin-left:10px'> ${commentsArray[i].name} &nbsp;&nbsp;|  ${commentsArray[i].date} </div></dt><br><dd><span>  ${commentsArray[i].comment} </span></dd></dl>`;
         }
     }
     document.getElementById("addingComment").innerHTML = text;
@@ -35,11 +42,12 @@ function onRefresh() {
     if (getcomments) {
         commentsArray = getcomments;
     } else {
-        commentsArray = [];
+        commentsArray = [{ comment: "This is the best college in basis of Food Facilities and Cultural activities", name: "Annapoorni", date: date }];
     }
-    displayDetails();
 }
 onRefresh();
+displayDetails();
+
 
 function showMore() {
     let allComments = document.getElementById("addingAllComments");

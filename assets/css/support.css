@@ -86,7 +86,11 @@ input {
 }
 
 #addingComment font {
-    font-size: 17px;
+    font-size: 19px;
+}
+
+#addingAllComments {
+    font-size: 19px;
 }
 
 #comment {
