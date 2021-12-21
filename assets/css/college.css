@@ -38,7 +38,7 @@ header {
 
 .header a:link {
     text-decoration: none;
-    background-color: #333;
+    /* background-color: #333; */
     border: none;
 }
 
@@ -185,7 +185,16 @@ a:hover {
 
 .nav-in {
     font-size: 18px;
-    padding: 5px;
+    padding: 8px 5px;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav-in:hover {
+    background-color: black;
+    color: white;
+    border-radius: 15px;
 }
 
 h2 {
@@ -242,10 +251,11 @@ figcaption {
 .courses {
     display: flex;
     padding: 5px;
-    justify-content: left;
+    justify-content: flex-start;
 }
 
-.courses a:link {
+.courses a:link,
+.courses a:visited {
     padding: 5px;
     color: black;
     background-color: white;

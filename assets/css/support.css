@@ -93,10 +93,10 @@ input {
     vertical-align: middle;
 }
 
-.commentsHide {
-    overflow-y: scroll;
-}
-
-.overflowHidden {
-    overflow-y: hidden;
+.showing {
+    color: grey;
+    display: inline;
+    float: right;
+    margin-right: 10%;
+    cursor: pointer;
 }

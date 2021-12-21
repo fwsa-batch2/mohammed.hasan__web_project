@@ -14,13 +14,20 @@ function addComments() {
     localStorage.setItem("comments", JSON.stringify(commentsArray));
     displayDetails();
 }
+let text = '';
+var allText = '';
 
 function displayDetails() {
-    let text = '';
+
     for (let i = 0; i < commentsArray.length; i++) {
-        text += "<dl><dt><font color='grey' style='float:left;margin-left:10px'>" + commentsArray[i].name + "&nbsp;&nbsp;| " + commentsArray[i].date + "</font></dt><br><dd><span>" + commentsArray[i].comment + "</span></dd></dl>";
+        if (i < 3) {
+            text += "<dl><dt><font color='grey' style='float:left;margin-left:10px'>" + commentsArray[i].name + "&nbsp;&nbsp;| " + commentsArray[i].date + "</font></dt><br><dd><span>" + commentsArray[i].comment + "</span></dd></dl>";
+        } else {
+            allText += "<dl><dt><font color='grey' style='float:left;margin-left:10px'>" + commentsArray[i].name + "&nbsp;&nbsp;| " + commentsArray[i].date + "</font></dt><br><dd><span>" + commentsArray[i].comment + "</span></dd></dl>";
+        }
     }
     document.getElementById("addingComment").innerHTML = text;
+    document.getElementById("addingAllComments").innerHTML = allText;
 }
 
 function onRefresh() {
@@ -33,3 +40,16 @@ function onRefresh() {
     displayDetails();
 }
 onRefresh();
+
+function showMore() {
+    let allComments = document.getElementById("addingAllComments");
+    console.log(allComments.style.display);
+    if (allComments.style.display == 'none') {
+        allComments.style.display = 'block';
+        document.getElementsByClassName("showing")[0].innerHTML = "..show less";
+    } else {
+        allComments.style.display = 'none';
+        console.log('hi');
+        document.getElementsByClassName("showing")[0].innerHTML = "..show more";
+    }
+}

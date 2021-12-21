@@ -28,8 +28,8 @@ header {
     position: absolute;
     opacity: 0;
     font-size: 30px;
-    left: 36%;
-    top: 56%;
+    left: 50%;
+    top: 59%;
     z-index: 1000;
     transition: all .5s;
 }
@@ -111,6 +111,7 @@ p {
 
 .img {
     transition: all .5s;
+    /* height: 30%; */
 }
 
 .img:hover~.overwrite {
@@ -118,7 +119,7 @@ p {
 }
 
 .img:hover {
-    filter: brightness(70%);
+    filter: brightness(60%);
 }
 
 table {
