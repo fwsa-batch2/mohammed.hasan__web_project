@@ -1,11 +1,11 @@
 function show1() {
-    let pass = document.getElementById("cPassword");
-    if (pass.type === "password") {
-        pass.type = "text";
+    let password = document.getElementById("cPassword");
+    if (password.type === "password") {
+        password.type = "text";
         document.getElementById("images2").src = "../assets/html images/eye.svg";
 
     } else {
-        pass.type = "password";
+        password.type = "password";
         document.getElementById("images2").src = "../assets/html images/eye-close.svg";
 
     }
@@ -37,9 +37,9 @@ function mailCheck(event) {
 
         if (isExist == false) {
             document.getElementById("errorMessage").innerHTML = "Enter valid Login Details !! ";
-            return null;
+            return
         }
-        const isAdmin = checkRole(isExist);
+        const isAdmin = isExist.role == "admin" ? true : false;
         if (isAdmin) {
             window.location.href = "displayDetailsToAdmin.html";
         } else {
@@ -52,24 +52,17 @@ function mailCheck(event) {
 }
 
 function isUserExist(mail, password) {
-
-    let isExist;
     let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
     for (let i of importingInfo) {
 
         if (i.mail == mail && i.password == password) {
-            isExist = i;
+            isExist = i; // returns only the matching Object only not all Objects
             break;
         } else {
             isExist = false;
         }
     }
     return isExist;
-}
-
-function checkRole(userObject) {
-    return userObject.role == "admin" ? true : false;
-
 }
 
 $("document").ready(function() {
