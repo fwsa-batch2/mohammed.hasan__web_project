@@ -25,13 +25,13 @@ function show() {
 }
 
 let signUpArray = [];
+let isExist = false;
 
 function mailCheck(event) {
     event.preventDefault();
     let inputMail = document.getElementById("mail").value;
     let inputPassword = document.getElementById("password").value;
     let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
-    let isExist = false;
     if (importingInfo != null) {
         isExist = isUserExist(inputMail, inputPassword);
 
