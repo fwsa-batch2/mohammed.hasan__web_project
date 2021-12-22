@@ -31,9 +31,9 @@ function mailCheck(event) {
     let inputMail = document.getElementById("mail").value;
     let inputPassword = document.getElementById("password").value;
     let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
-
+    let isExist = false;
     if (importingInfo != null) {
-        const isExist = isUserExist(inputMail, inputPassword);
+        isExist = isUserExist(inputMail, inputPassword);
 
         if (isExist == false) {
             document.getElementById("errorMessage").innerHTML = "Enter valid Login Details !! ";
