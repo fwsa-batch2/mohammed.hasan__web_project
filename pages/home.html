@@ -9,14 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Rampart+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/college.css">
-    <title> College Details</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title> College Home Page</title>
 </head>
 
 <body align="center">
 
 
     <header>
-        <div class="header" title="Click on me; not around me">
+        <div class="nav-bar" onclick="navBar()">
+            <em id="icon" class="fas fa-bars"></em>
+            <hr>
+            <div class="nav-head" onclick="hasLoggedIn('Student details.html')">Apply For a Course</div>
+            <hr class="nav-line">
+            <div class="nav-head" onclick="hasLoggedIn('review.html')">Review Us</div>
+            <hr class="nav-line">
+            <div class="nav-head" onclick="adminError('addCourse.html')">Add Course</div>
+            <hr class="nav-line">
+            <div class="nav-head" onclick="adminError('displayDetailsToAdmin.html')">View Student Details</div>
+            <hr class="nav-line">
+            <div id="logout" class="logout" onclick="logOut()">
+                <em class="fas fa-sign-out-alt"></em> Logout
+            </div>
+        </div>&nbsp;&nbsp;
+
+        <div class="header first" title="Click on me; not around me">
             <a href='login.html'><img alt="Login Image" src="../assets/html images/login_icon.svg">LOGIN</a>
         </div>
         <div class="header" title="Click on me; not around me">
@@ -37,7 +54,7 @@
                             <dt class="courses_head"><img alt="Arrow Image" src="../assets/html images/arrow.svg"
                                     style="border:2px solid grey">Engineering Department</dt>
                         </h2><br><br><br><br>
-                        <hr color="black">
+                        <hr class="hr">
                         <dd class="courses"><a href="Fees.html">Mechanical Engineering</a></dd>
                         <dd class="courses"><a href="Fees.html">Civil Engineering</a></dd>
                         <dd class="courses"><a href="Fees.html">Computer Engineering</a></dd>
@@ -48,7 +65,7 @@
                             <dt class="courses_head"><img alt="Arrow Image" src="../assets/html images/arrow.svg"
                                     style="margin-right:10px;border:2px solid grey">Arts Department</dt>
                         </h2><br><br><br><br>
-                        <hr color="black">
+                        <hr class="hr">
                         <dd class="courses"><a href="Fees.html">Bachelor of Business Administration</a></dd>
                         <dd class="courses"><a href="Fees.html">Bachelor of Management Studies</a></dd>
 
@@ -67,6 +84,8 @@
             <span id="title">
                 TEN DOTS UNIVERSITY
             </span>
+            <div class="caption">Do Or Try Students</div>
+
         </h1>
     </div>
 
@@ -127,14 +146,15 @@
     </div>
     <br /><br /><br />
     <video src="../assets/videos/poster.mp4" poster="../assets/html images/POSTER.jpg" width='50%' height='30%' controls style="border-radius:15px;">
+        
     </video><br /><br />
-    <hr color='black'>
+    <hr class="hr-foot">
     <footer id="foot">
         Ten Dots University. © All Copyrights reserved.<br />
         <img alt="Call Icon" src="../assets/html images/call.png" width="20px" height="20px">&nbsp&nbspContact No:9876543210<br />
         <img alt="Mail Icon" src="../assets/html images/mail.jpg" width="20px" height="20px">&nbsp&nbspE-mail: tendots.univ@gmail.com
     </footer>
-    <hr color='black'>
+    <hr class="hr-foot">
 
 
     <script src="./../assets/js/home.js"></script>

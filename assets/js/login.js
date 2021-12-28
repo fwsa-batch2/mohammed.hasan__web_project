@@ -25,6 +25,7 @@ function show() {
 }
 
 let signUpArray = [];
+let loggedInUser = [];
 let isExist = false;
 
 function mailCheck(event) {
@@ -44,8 +45,10 @@ function mailCheck(event) {
             window.location.href = "displayDetailsToAdmin.html";
         } else {
             window.location.href = "Student details.html";
-
         }
+        loggedInUser = [inputMail, isExist.role];
+
+        localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
     } else {
         document.getElementById("errorMessage").innerHTML = "Please Sign up first";
     }

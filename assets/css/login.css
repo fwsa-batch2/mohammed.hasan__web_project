@@ -64,7 +64,8 @@ input[type=tel] {
 #errorMessage {
     color: red;
     background: white;
+    display: inline-flex;
     width: 220px;
     border-radius: 8px;
-    margin-left: 44%;
+    justify-content: center;
 }

@@ -7,3 +7,13 @@ function hasLoggedIn(pathOfNextPage) {
     }
 
 }
+
+function adminError(pathOfNextPage) {
+    let isAdmin = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (isAdmin[1] == "admin") {
+        window.location.href = `./${pathOfNextPage}`;
+    } else {
+        window.location.href = `./adminError.html`;
+    }
+
+}

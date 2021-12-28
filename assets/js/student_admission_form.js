@@ -11,6 +11,9 @@ function printing_all() {
     const state = studentDetail.state;
     const courses = studentDetail.course;
     const address = studentDetail.address;
+    const cutoff10 = studentDetail.cutoff10;
+    const cutoff12 = studentDetail.cutoff12;
+
     console.log(document.getElementById("displayName"));
 
     document.getElementById("displayName").innerHTML = name;
@@ -19,6 +22,8 @@ function printing_all() {
     document.getElementById("displayContact").innerHTML = contact;
     document.getElementById("displayState").innerHTML = state;
     document.getElementById("displayCourse").innerHTML = courses;
+    document.getElementById("displayCutoff10").innerHTML = cutoff10;
+    document.getElementById("displayCutoff12").innerHTML = cutoff12;
     document.getElementById("displayAddress").innerHTML = address;
 
 }

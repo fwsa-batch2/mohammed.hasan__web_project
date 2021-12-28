@@ -35,3 +35,18 @@ function notification() {
     }
     localStorage.setItem("notification", JSON.stringify(notific));
 }
+
+function navBar() {
+    document.querySelector(".nav-bar").classList.toggle("open");
+}
+
+function logOut() {
+    localStorage.setItem("loggedInUser", "");
+    alert("You have been Logged out");
+    let logOutData = localStorage.getItem("loggedInUser");
+    if (logOutData == '') {
+        document.getElementById("logout").style.display = "none";
+    } else {
+        document.getElementById("logout").style.display = "block";
+    }
+}
