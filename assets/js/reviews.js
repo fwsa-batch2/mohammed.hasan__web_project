@@ -11,6 +11,7 @@ function addComments(event) {
         name: name,
         date: date
     }
+    console.log("print");
     commentsArray.push(comments);
     localStorage.setItem("comments", JSON.stringify(commentsArray));
     getAndDisplay();
@@ -57,9 +58,11 @@ function filter() {
     switch (filterBy) {
         case "All Reviews":
             console.log("all");
+            getAndDisplay();
             break;
         case "Recently Posted":
             console.log("recent");
+
             break;
         case "Positive Reviews":
             console.log("positive");
@@ -68,6 +71,17 @@ function filter() {
             console.log("negative");
             break;
     }
-
-
+}
+const btn = document.querySelector("button");
+const post = document.querySelector(".post");
+const widget = document.querySelector(".star-widget");
+const editBtn = document.querySelector(".edit");
+btn.onclick = () => {
+    widget.style.display = "none";
+    post.style.display = "block";
+    editBtn.onclick = () => {
+        widget.style.display = "block";
+        post.style.display = "none";
+    }
+    return false;
 }

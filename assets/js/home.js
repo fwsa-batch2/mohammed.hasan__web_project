@@ -41,12 +41,14 @@ function navBar() {
 }
 
 function logOut() {
-    localStorage.setItem("loggedInUser", "");
+    localStorage.setItem("loggedInUser", null);
     alert("You have been Logged out");
+    showLogOut();
+}
+showLogOut();
+
+function showLogOut() {
     let logOutData = localStorage.getItem("loggedInUser");
-    if (logOutData == '') {
-        document.getElementById("logout").style.display = "none";
-    } else {
-        document.getElementById("logout").style.display = "block";
-    }
+    let logOutDisplay = document.getElementById("logout");
+    logOutDisplay.style.display = logOutData == "null" ? "none" : "display";
 }

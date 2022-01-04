@@ -9,8 +9,8 @@ function onSubmitHandler(event) {
     const state = document.getElementById("state").value;
     const course = document.getElementById("course").value;
     const address = document.getElementById("address").value;
-    const cutoff10 = document.getElementById("cutoff10").value;
-    const cutoff12 = document.getElementById("cutoff12").value;
+    const cutoff10 = parseInt(document.getElementById("cutoff10").value);
+    const cutoff12 = parseInt(document.getElementById("cutoff12").value);
     if (cutoff10 < 40 || cutoff12 < 40) {
         document.getElementsByClassName("error")[0].style.display = "inline";
         document.getElementsByClassName("error")[0].innerHTML = `Sorry, you do not match our required Cut-off `;

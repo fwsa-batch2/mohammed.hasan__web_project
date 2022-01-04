@@ -3,10 +3,26 @@ body {
     place-items: center;
     grid-auto-rows: 13% auto auto auto;
     grid-auto-columns: 70% auto;
-    grid-template-areas: "header header""support comments""support comments""support comments";
+    grid-template-areas: "header comments""support comments""support comments""support comments";
     text-align: center;
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.head {
+    border-radius: 10px;
+    padding: 0px 20px;
+    grid-area: header;
+    background-color: rgb(88, 88, 88);
+    color: snow;
+    font-size: 25px;
+    margin-left: 30%;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 3px;
+}
+
+.reviews h1 {
+    margin-left: 100px;
 }
 
 table {
@@ -91,6 +107,7 @@ td:hover {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 10px;
+    margin-top: 10px;
 }
 
 .comments hr {
@@ -100,13 +117,6 @@ td:hover {
 textarea {
     font-size: 15px;
     margin-bottom: 10px;
-}
-
-.head {
-    grid-area: header;
-    background-color: #333;
-    color: snow;
-    font-size: 25px;
 }
 
 .support {

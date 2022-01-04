@@ -6,90 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Details</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            margin: 1%;
-            width: 98%;
-            background-color: rgb(223, 189, 96);
-            font-size: 20px;
-        }
-        
-        tr {
-            text-align: center;
-        }
-        
-        th,
-        td {
-            padding: 20px 0px;
-        }
-        
-        .addCourse {
-            position: relative;
-            margin-top: 25px;
-            left: 42%;
-        }
-        
-        .addCourse button {
-            padding: 5px 10px;
-            font-size: 24px;
-            font-weight: 600;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="./../assets/css/displayDetailsToAdmin.css">
 </head>
 
 <body>
+    <div class="filter">
+        <h2>Sort By</h2>
+        <select onchange="filtering(event)" id="filter">
+            <option value="">--Select--</option>
+            <option value="cutoff10">10th Cut-off</option>
+            <option value="cutoff12">12th Cut-off</option>
+            <option value="new">Newest</option>
+            <option value="old">Oldest</option>
+
+        </select>
+    </div>
     <table border="4">
         <caption></caption>
-
-        <tr>
-            <th scope="col">S.No</th>
-            <th scope="col">Name</th>
-            <th scope="col">D.O.B</th>
-            <th scope="col">E-Mail Address</th>
-            <th scope="col">Phone Number</th>
-            <th scope="col">Course</th>
-            <th scope="col">State</th>
-            <th scope="col">Address</th>
-
-        </tr>
-        <tr id="table">
-
-        </tr>
-
-
-
+        <tr id="table"></tr>
     </table>
     <a class="addCourse" href="./addCourse.html">
         <img alt="Add Course" src="../assets/html images/course_icon.png" width="2%" style="vertical-align: middle;padding: 5px;">
         <button>Add Course</button></a>
     </div>
 
-
-    <script>
-        function onLoad() {
-            let details = JSON.parse(localStorage.getItem("studentDetails"));
-            let len = details.length;
-            let table = document.querySelector('table');
-            let template = '';
-
-            for (let i = 0; i < len; i++) {
-                template += "<tr><td>" + (i + 1) + "</td>";
-                template += "<td>" + details[i].name + "</td>";
-                template += "<td>" + details[i].dob + "</td>";
-                template += "<td>" + details[i].email + "</td>";
-                template += "<td>" + details[i].contactNumber + "</td>";
-                template += "<td>" + details[i].course + "</td>";
-                template += "<td>" + details[i].state + "</td>";
-                template += "<td >" + details[i].address + "</td></tr>";
-
-            }
-            table.innerHTML += template;
-        }
-        onLoad();
-    </script>
+    <script src="./../assets/js/displayDetailsToAdmin.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 function hasLoggedIn(pathOfNextPage) {
     let storedMail = localStorage.getItem("loggedInUser");
-    if (storedMail != null) {
+    if (storedMail != "null") {
         window.location.href = `./${pathOfNextPage}`;
     } else {
         window.location.href = "./errorPage.html";
@@ -10,10 +10,14 @@ function hasLoggedIn(pathOfNextPage) {
 
 function adminError(pathOfNextPage) {
     let isAdmin = JSON.parse(localStorage.getItem("loggedInUser"));
-    if (isAdmin[1] == "admin") {
-        window.location.href = `./${pathOfNextPage}`;
+    if (isAdmin) {
+        if (isAdmin[1] == "admin") {
+            window.location.href = `./${pathOfNextPage}`;
+        } else {
+            window.location.href = `./adminError.html`;
+        }
     } else {
-        window.location.href = `./adminError.html`;
+        window.location.href = "./errorPage.html";
     }
 
 }
