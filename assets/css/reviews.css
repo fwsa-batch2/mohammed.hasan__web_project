@@ -155,6 +155,18 @@ input {
     border: 2px solid black;
 }
 
+.fas {
+    color: rgb(126, 126, 126);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.fas:hover {
+    /* fill: blue; */
+    color: blue;
+    margin-left: 5px;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 .container {
     position: relative;

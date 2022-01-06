@@ -4,13 +4,13 @@ function show1() {
     let pass = document.getElementById("cPassword");
     if (pass.type === "password") {
         pass.type = "text";
-        document.getElementById("images2").src = "../assets/html images/eye.svg";
+        document.getElementById("cpShow").src = "../assets/html images/eye.svg";
         console.group("show");
         console.log("Showing password");
 
     } else {
         pass.type = "password";
-        document.getElementById("images2").src = "../assets/html images/eye-close.svg";
+        document.getElementById("cpShow").src = "../assets/html images/eye-close.svg";
         console.log("Hiding Password ");
     }
 }
@@ -20,11 +20,11 @@ function show() {
     let pass = document.getElementById("password");
     if (pass.type === "password") {
         pass.type = "text";
-        document.getElementById("images").src = "../assets/html images/eye.svg";
+        document.getElementById("pShow").src = "../assets/html images/eye.svg";
         console.log("Showing Password ");
     } else {
         pass.type = "password";
-        document.getElementById("images").src = "../assets/html images/eye-close.svg";
+        document.getElementById("pShow").src = "../assets/html images/eye-close.svg";
         console.log("Hiding Password ");
         console.groupEnd("show");
     }
@@ -59,7 +59,7 @@ function signUpDataGetting() {
 }
 
 
-function check(event) {
+function checkValidations(event) {
     event.preventDefault();
     let password = document.getElementById("password").value;
     let cpassword = document.getElementById("cPassword").value;

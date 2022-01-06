@@ -8,7 +8,7 @@ body {
     font-size: large;
 }
 
-form>input {
+form input {
     padding: 7px;
     width: 250px;
     border-radius: 10px;
@@ -41,5 +41,23 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 textarea {
+    border-radius: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+div:not(.moreInfo,
+#errorMessage) {
+    margin: 1.5% 0%;
+}
+
+.moreInfo {
+    margin-left: 45%;
+    transition: all 3s;
+}
+
+.moreInfo a {
     border-radius: 10px;
 }

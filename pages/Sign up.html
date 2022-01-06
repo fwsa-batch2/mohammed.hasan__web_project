@@ -10,35 +10,37 @@
 </head>
 
 <body>
-    <form onsubmit="check(event)" align=center>
+    <form onsubmit="checkValidations(event)" align=center>
         <br>
         <img src="../assets/html images/signup_icon_black.svg" style="vertical-align:middle;" width=70 height=70 alt="Sign up Image">&nbsp;
         <h1 style="display: inline-block;">Sign Up</h1>
         <br><br>
         <hr color='black' width='25%'>
-        <br><br><br> First Name: <input id="fname" type="text" autofocus pattern="[a-zA-Z]{3,}" title="Please enter more than 3 characters" name="fname" placeholder="First Name" required>
-        <br><br> Last Name: <input id="lname" type="text" pattern="[a-zA-Z]{3,}" title="Please enter more than 3 characters" name="lname" placeholder="Last Name" required>
-        <br><br> E-mail Id: <input id="mailid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" name="email" placeholder="Your mail Id   eg.abcd@gmail.com" required>
-        <br> Eg: albert07@gmail.com
-        <br><br> D.O.B :<input id="dob" type="date" min="2000-12-12" max="2004-01-01" name="dob" required>
-        <br><br> Password: <input id="password" type="password" pattern="[A-Za-z0-9.+/_]{12,}" title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers" name="password" placeholder="Enter your password"
-            required> &nbsp; <img alt="Password Hide Image" style="position:absolute;" id="images" onclick="show()" src="../assets/html images/eye-close.svg">
-        <br><br> Confirm Password: <input id="cPassword" type="password" pattern="[A-Za-z0-9]{12,}" title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers" name="pass" placeholder="Re-Enter your password"
-            required> &nbsp; <img alt="Password Hide Image" style="position:absolute;" id="images2" onclick="show1()" src="../assets/html images/eye-close.svg">
-        <br><br> Phone Number: <input id="number" pattern="[0-9]{10}" title="Enter only numbers" type="tel" minlength="9" maxlength="10" name="number" placeholder="Enter your number" required>
-        <br><br> Role : <select id="role">
-          <option value="admin">Admin</option>
-          <option value="user">User</option>
-
-        </select>
         <br>
+        <div><label> First Name:</label> <input id="fname" type="text" autofocus pattern="[a-zA-Z]{3,}" title="Please enter more than 3 characters" name="fname" placeholder="First Name" required></div>
+        <div><label> Last Name:</label> <input id="lname" type="text" pattern="[A-Za-z]{0,}" title="Please enter more than 3 characters" name="lname" placeholder="Last Name" required></div>
+        <div><label>E-mail Id:</label> <input id="mailid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email" name="email" placeholder="Enter your mail Id" required>
+            <br> Eg: albert07@gmail.com</div>
+        <div> <label>D.O.B :</label><input id="dob" type="date" min="1980-12-12" max="2004-01-01" name="dob" required></div>
+        <div><label> Password:</label> <input id="password" type="password" pattern="[A-Za-z0-9.+/_]{12,}" title="Your password should contain a minimum 12 characters and be a combination of Uppercase,Lowercase and Numbers" name="password" placeholder="Enter your password"
+                required> &nbsp; <img alt="Password Hide Image" style="position:absolute;" id="pShow" onclick="show()" src="../assets/html images/eye-close.svg"></div>
+        <div> <label>Confirm Password:</label> <input id="cPassword" type="password" pattern="[A-Za-z0-9]{12,}" title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers" name="pass" placeholder="Re-Enter your password"
+                required> &nbsp; <img alt="Password Hide Image" style="position:absolute;" id="cpShow" onclick="show1()" src="../assets/html images/eye-close.svg"></div>
+        <div><label>Phone Number: </label><input id="number" pattern="[0-9]{10}" title="Enter only numbers" type="tel" minlength="9" maxlength="10" name="number" placeholder="Enter your mobile number" required></div>
+        <div><label> Role :</label>
+            <select id="role" required>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
         <div id="errorMessage" style="background-color: white;padding:4px;display: inline-block;"></div><br />
-        <p><input type="submit" name="sbmit" value="Submit" style="padding:5px;border:2px solid black;">
-            <input type="reset" name="reset" value="Reset" style="padding:5px;margin-left:20px;border:2px solid black;">
+        <p><button type="submit" name="submit" value="Submit" style="padding:5px;border:2px solid black;">Submit</button>
+            <button type="reset" name="reset" value="Reset" style="padding:5px;margin-left:20px;border:2px solid black;">Reset</button>
         </p>
 
     </form>
-    <div align=center><br>
+    <br>
+    <div class="moreInfo">
         <a href="Fees.html">Click here for more info
     </a>
     </div>
