@@ -15,11 +15,9 @@
     <h2 style="color:white">
         Fill Student Details
     </h2>
-    <!-- <div id="message">
 
-    </div> -->
     <form align=center action="final.html" onsubmit="onSubmitHandler(event)">
-        <table title="User Details" style="color:white" width='500' height='500' border='2' align="center">
+        <table title="User Details" border='2'>
             <caption></caption>
             <tr>
                 <th scope="col">Student Name:</th>
@@ -86,40 +84,33 @@
             </tr>
             <tr>
                 <th scope="col">Upload 10th certificate</th>
-                <td><input id="10th_Certificate" type="file" name='10th'></td>
+                <td><input id="10th_Certificate" type="file" name='10th' required></td>
                 </th>
             </tr>
             <tr>
                 <th scope="col">Upload 12th certificate</th>
-                <td><input id="12th_Certificate" type="file" name='10th' /></td>
+                <td><input id="12th_Certificate" type="file" name='10th' required /></td>
                 </th>
             </tr>
             <tr>
                 <th scope="col">Cut-off Mark of 10th </th>
-                <td><input id="cutoff10" title="Please enter in terms of 100 %" min="2" max="100" type="number" step="0.01" /> % </td>
+                <td><input id="cutoff10" title="Please enter in terms of 100 %" min="2" max="100" type="number" step="0.01" required/> % </td>
             </tr>
             <tr>
                 <th scope="col">Cut-off Mark of 12th </th>
-                <td><input id="cutoff12" title="Please enter in terms of 100 %" min="2" max="100" type="number" step="0.01" /> % </td>
+                <td><input id="cutoff12" title="Please enter in terms of 100 %" min="2" max="100" type="number" step="0.01" required /> % </td>
             </tr>
             <tr>
                 <th scope="col"> Address</th>
                 <td><textarea id="address" required></textarea></td>
             </tr>
         </table><br>
-        <span class="error">he</span>
+        <span class="error"></span>
         <br><br>
         <input type="submit" name='submit' value="Submit">
     </form>
 
     <script src="../assets/js/studentdetails.js"></script>
-
 </body>
-<!-- <script>
-  
-Date
-let todayDateStr = new Date().toJSON().substr(0,10);//2021-12-07
-document.querySelector("#dob").setAttribute("min", todayDateStr);
-</script> -->
 
 </html>

@@ -201,3 +201,13 @@ th,
 td {
     padding: 1.75% 4%;
 }
+
+.hr {
+    border: 1px solid black;
+    width: 20%;
+}
+
+.hrFull {
+    width: 95%;
+    border: 1px solid black;
+}

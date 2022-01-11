@@ -40,6 +40,10 @@ input[type='number']::-webkit-outer-spin-button {
     vertical-align: middle;
 }
 
+.hr {
+    border: 2px solid black;
+}
+
 textarea {
     border-radius: 10px;
 }
