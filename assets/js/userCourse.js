@@ -101,10 +101,13 @@ function courses(index) {
     <tr><th>2nd Year</th><td>${allCoursesStorage[index].fee.thirdSemester}</td><td>${allCoursesStorage[index].fee.fourthSemester}</td></tr>
     <tr><th>3rd Year</th><td>${allCoursesStorage[index].fee.fifthSemester}</td><td>${allCoursesStorage[index].fee.sixthSemester}</td></tr>
     </tbody>
+
     </table>`
     } else {
         document.getElementById("feeDetails").innerHTML = '';
     }
+
+
 }
 
 function addingCourse() {
@@ -115,63 +118,17 @@ function addingCourse() {
         let oneCourseDepartment = parsedCourses[i];
 
         if (oneCourseDepartment.department == "engineering") {
-            document.getElementById("engineerCoursesTopics").innerHTML += `
-            <dd onclick="courses(${i})">
-                <p> ${oneCourseDepartment.name} </p>
-                <div class="dropdown">
-                    <label for="dd_button_${i}">
-                        <img class="forEditing" src="./../assets/html images/moreIcon.svg">
-                    </label>
-                    <input type="checkbox" id="dd_button_${i}">
-                    <div class="editContent">
-                    <a href="./addCourse.html?name=${oneCourseDepartment.name}" >Edit</a>
-                    <button type="button" onclick = "deleteCourse('${oneCourseDepartment.name}')">Delete</button>
-                    </div>
-                </div>
-            </dd>`;
+
+            document.getElementById("engineerCoursesTopics").innerHTML += `<dd onclick='courses(${i})'> ${oneCourseDepartment.name} </dd>`;
         }
         if (oneCourseDepartment.department == "arts") {
-            document.getElementById("artsCoursesTopics").innerHTML +=
-                `<dd onclick="courses(${i})">
-                <p> ${oneCourseDepartment.name} </p>
-                <div class="dropdown">
-                    <label for="dd_button_${i}">
-                        <img class="forEditing" src="./../assets/html images/moreIcon.svg">
-                    </label>
-                    <input type="checkbox" id="dd_button_${i}">
-                    <div class="editContent">
-                    <a href="./addCourse.html?name=${oneCourseDepartment.name}" >Edit</a>
-                    <button type="button" onclick = "deleteCourse(${oneCourseDepartment.name})">Delete</button>
-                    </div>
-                </div>
-            </dd>`;
+            document.getElementById("artsCoursesTopics").innerHTML += `<dd onclick='courses(${i})'> ${oneCourseDepartment.name} </dd>`;
+
         }
         if (oneCourseDepartment.department == "integrated") {
-            document.getElementById("integratedCoursesTopics").innerHTML += `
-            <dd onclick="courses(${i})">
-                <p> ${oneCourseDepartment.name} </p>
-                <div class="dropdown">
-                    <label for="dd_button_${i}">
-                        <img class="forEditing" src="./../assets/html images/moreIcon.svg">
-                    </label>
-                    <input type="checkbox" id="dd_button_${i}">
-                    <div class="editContent">
-                        <a href="./addCourse.html?name=${oneCourseDepartment.name}" >Edit</a>
-                        <button type="button" onclick = "deleteCourse(${oneCourseDepartment.name})">Delete</button>
-                    </div>
-                </div>
-            </dd>`;
+            document.getElementById("integratedCoursesTopics").innerHTML += `<dd onclick='courses(${i})'> ${oneCourseDepartment.name} </dd>`;
+
         }
     }
 }
 addingCourse();
-
-function deleteCourse(nameOfCourse) {
-    console.log(nameOfCourse);
-    for (let i in storedData) {
-        if (storedData[i].name == nameOfCourse) {
-            storedData.splice(i, i);
-        }
-    }
-    localStorage.setItem("allCourses", JSON.stringify(storedData));
-}

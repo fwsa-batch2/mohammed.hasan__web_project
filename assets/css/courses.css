@@ -45,6 +45,7 @@ header {
 
 .engineer_topic {
     width: 30%;
+    height: auto;
     background: rgba(225, 225, 225, 0.5);
     border-top-right-radius: 20px;
     padding: 10px;
@@ -67,8 +68,74 @@ a:active {
 }
 
 dd {
-    transition: all .4s;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+dd label {
+    display: none;
+}
+
+dd:hover label {
+    display: contents;
+}
+
+dd p {
+    margin: 0px;
+}
+
+dd .dropdown {
+    position: relative;
+}
+
+dd .dropdown label {
+    cursor: pointer;
+}
+
+dd .dropdown input {
+    display: none;
+}
+
+dd .dropdown .editContent {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    width: 100px;
+}
+
+dd .dropdown .editContent button,
+a {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    font-size: 15px;
+    background-color: white;
+    border: solid 0px white;
+    padding: 12px 6px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.editContent a {
+    padding-left: 29%;
+    width: 65px;
+    height: 23px;
+    margin-top: 5px;
+}
+
+dd .dropdown .editContent button:hover,
+a:hover {
+    background-color: wheat;
+}
+
+dd .dropdown input:checked~.editContent {
+    display: block;
 }
 
 dd:hover {
@@ -112,7 +179,6 @@ p {
 
 .img {
     transition: all .5s;
-    /* height: 30%; */
 }
 
 .img:hover~.overwrite {

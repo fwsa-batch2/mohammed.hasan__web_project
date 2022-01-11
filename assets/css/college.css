@@ -42,8 +42,9 @@ body {
     font-family: sans-serif;
     font-weight: 600;
     padding: 25px 0px;
-    margin-top: 70%;
+    margin-top: 30%;
     overflow: hidden;
+    display: block;
     cursor: pointer;
 }
 

@@ -1,4 +1,10 @@
 console.group("Sign Up");
+let presentYear = new Date().getFullYear();
+console.log(presentYear);
+let maxYear = presentYear - 18;
+console.log(maxYear);
+let maxDate = `${maxYear}-01-01`;
+document.getElementById("dob").setAttribute("max", maxDate);
 
 function show1() {
     let pass = document.getElementById("cPassword");

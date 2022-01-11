@@ -1,11 +1,10 @@
 function hasLoggedIn(pathOfNextPage) {
-    let storedMail = localStorage.getItem("loggedInUser");
-    if (storedMail != "null") {
+    let storedMail = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (storedMail) {
         window.location.href = `./${pathOfNextPage}`;
     } else {
         window.location.href = "./errorPage.html";
     }
-
 }
 
 function adminError(pathOfNextPage) {

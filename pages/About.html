@@ -5,10 +5,12 @@
     <meta charset="utf-8">
     <title>About us</title>
     <link rel="stylesheet" href="../assets/css/about.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+    <script src="./../assets/js/glider.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../assets/css/glider.min.css">
+
 </head>
 
-<body style="background-image:linear-gradient(to bottom,grey,white,grey)">
+<body style="background-image:linear-gradient(to bottom,rgb(102, 96, 96),white,rgb(124, 118, 118))">
     <h1 align='center'>
         <span id="about"> About Us </span>
     </h1><br />
@@ -48,109 +50,32 @@
         <span style="background-color:black;padding:5px;"> Our Food facilities:
         </span>
     </h2>
-    <!-- <center>
-
-        <div class="slide-body">
-            <div class="slider">
-                <div class="imgs_slides">
-
-                    <input type="radio" name="radio-btn" id="radio1" />
-
-                    <input type="radio" name="radio-btn" id="radio2" />
-
-                    <input type="radio" name="radio-btn" id="radio3" />
-
-                    <input type="radio" name="radio-btn" id="radio4" />
-
-                    <input type="radio" name="radio-btn" id="radio5" />
-
-                    <div class="first slide">
-                        <img src="../assets/html images/college4.jpg" />
-                    </div>
-                    <div class="slide">
-                        <img src="./../assets/html images/college3.jpg" />
-                    </div>
-                    <div class="slide">
-                        <img src="./../assets/html images/food.jpeg" />
-                    </div>
-                    <div class="slide">
-                        <img src="./../assets/html images/food1.jpeg" />
-                    </div>
-
-                </div>
-
-                <div class="navigation">
-
-                    <label for="radio1" class="navigation-btn">
-                </label>
-                    <label for="radio2" class="navigation-btn">
-                </label>
-                    <label for="radio3" class="navigation-btn">
-                </label>
-                    <label for="radio4" class="navigation-btn">
-               </label>
-                </div>
-            </div>
+    <div class="glider-contain">
+        <div class="glider">
+            <div><img src="./../assets/html images/college4.jpg" alt=""></div>
+            <div><img src="./../assets/html images/college3.jpg" alt=""></div>
+            <div><img src="./../assets/html images/food.jpeg" alt=""></div>
+            <div><img src="./../assets/html images/food1.jpeg" alt=""></div>
         </div>
-    </center> -->
-
-    <div class="slide-container">
-        <img name="slides" alt="collegeImages">
-        <div class="radios">
-            <input name="images" type="radio" id="rad1" onclick="manualChanging(1)">
-            <input name="images" type="radio" id="rad2" onclick="manualChanging(2)">
-            <input name="images" type="radio" id="rad3" onclick="manualChanging(3)">
-            <input name="images" type="radio" id="rad4" onclick="manualChanging(4)">
-
-            <label for="rad1" class="labels"></label>
-            <label for="rad2" class="labels"></label>
-            <label for="rad3" class="labels"></label>
-            <label for="rad4" class="labels"></label>
-
-        </div>
+        <button aria-label="Previous " class="glider-prev ">«</button>
+        <button aria-label="Next " class="glider-next ">»</button>
+        <div role="tablist " class="dots"></div>
     </div>
-    <br /> <br /><br />
+    <br><br>
 
     <script>
-        var i = 0;
-        var images = ["./../assets/html images/college4.jpg", "./../assets/html images/college3.jpg", "./../assets/html images/food.jpeg", "./../assets/html images/food1.jpeg"];
-
-        function manualChanging(num) {
-            let rad = document.getElementById("rad" + num);
-            if (rad.checked == true) {
-                document.slides.src = images[num - 1];
+        new Glider(document.querySelector('.glider'), {
+            slidesToShow: 1,
+            dots: '.dots',
+            draggable: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
             }
-
-        }
-
-        function changeImgAuto() {
-            document.slides.src = images[i];
-            if (i < images.length - 1) {
-                i++;
-            } else {
-                i = 0;
-            }
-            setTimeout("changeImgAuto()", 2000);
-        }
-
-        window.onload = changeImgAuto();
-    </script>
-
-    <!-- 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./../assets/js/slick.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $(".slide-container").slick({
-                autoplay: true,
-                dots: true,
-                speed: 1000,
-                arrows: false,
-
-            })
         });
-    </script> -->
+    </script>
 </body>
 
 </html>
