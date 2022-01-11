@@ -36,7 +36,7 @@ function mailCheck(event) {
     if (importingInfo != null) {
         isExist = isUserExist(inputMail, inputPassword);
 
-        if (isExist == false) {
+        if (!isExist) {
             document.getElementById("errorMessage").innerHTML = "Enter valid Login Details !! ";
             return
         }
