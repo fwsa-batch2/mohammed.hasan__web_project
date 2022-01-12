@@ -87,14 +87,20 @@ function increaseLikes(event) {
         text += `<dl><dt><div style='float:left;margin-left:10px;color:grey;'> ${getcomments[i].name} &nbsp;&nbsp;| ${getcomments[i].date} </div></dt><br><dd><span> ${getcomments[i].comment} </span></dd></dl>
         <i class="fas fa-thumbs-up" data-index="${i}" onclick="increaseLikes(event)"></i>&nbsp;${getcomments[i].likes}`
     }
-    // location.reload();
-    $("document").ready(function() {
-        $("#addingComment").click(function() {
-            $("#addingComment").load();
-        });
-    });
+    getAndDisplayComments(getcomments);
 }
 
+function getAndDisplayComments(object = getcomments) {
+    let text = '';
+    commentsArray = object;
+    for (let i = 0; i < commentsArray.length; i++) {
+        text += `<dl><dt><div style='float:left;margin-left:10px;color:grey;'> ${commentsArray[i].name} &nbsp;&nbsp;| ${commentsArray[i].date} </div></dt><br><dd><span> ${commentsArray[i].comment} </span></dd></dl>
+        <i class="fas fa-thumbs-up" data-index="${i}" onclick="increaseLikes(event)"></i>&nbsp;${commentsArray[i].likes}`
+    }
+    document.getElementById("addingComment").innerHTML = text;
+    document.getElementsByClassName("showing")[0].innerHTML = "..show less";
+
+}
 
 const btn = document.querySelector("button");
 const post = document.querySelector(".post");

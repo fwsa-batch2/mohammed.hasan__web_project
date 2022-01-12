@@ -70,11 +70,6 @@ header {
     z-index: 100;
 }
 
-
-/* .header:first {
-    margin-left: 200px;
-} */
-
 .header {
     padding-top: 27px;
     font-size: 18px;
@@ -120,7 +115,14 @@ header {
 }
 
 .gifMarquee {
-    margin-top: 20px;
+    margin-top: 15%;
+    width: 110%;
+    animation: marquee 20s infinite;
+    animation-timing-function: linear;
+}
+
+.gifMarquee img {
+    transform: scaleX(-1);
 }
 
 #title {
@@ -212,15 +214,6 @@ a:hover {
     border: 2px solid black;
 }
 
-.upGoingImage {
-    background-color: white;
-    transform: rotate(-90deg);
-    float: right;
-    position: sticky;
-    right: 3%;
-    top: 92%;
-}
-
 .hov {
     position: fixed;
     left: -140px;
@@ -246,6 +239,24 @@ a:hover {
 
 .hov-open {
     left: 0;
+}
+
+a.upGoingArrow {
+    background-color: white;
+    padding-top: 20px;
+    border-radius: 20px;
+}
+
+.upGoingArrow {
+    position: sticky;
+    top: 93%;
+    left: 90%;
+    z-index: 10;
+}
+
+.upGoingArrow img {
+    transform: rotate(-90deg);
+    z-index: -10;
 }
 
 .nav-in {
@@ -369,4 +380,31 @@ figcaption {
 .hr-foot {
     color: white;
     height: 3px;
+}
+
+#marquee1 {
+    font-style: italic;
+    z-index: -10;
+    border-radius: 10px;
+    background-color: white;
+    animation: marquee 20s infinite;
+    animation-timing-function: linear;
+    height: 30px;
+    width: 130%;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#marquee1 span {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    height: 10px;
 }
