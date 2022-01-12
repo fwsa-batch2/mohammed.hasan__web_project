@@ -88,7 +88,7 @@ function courses(index) {
     document.getElementsByClassName("overwrite")[0].innerHTML = allCoursesStorage[index].caption;
 
     if (allCoursesStorage[index].fee != undefined) {
-        document.getElementById("feeDetails").innerHTML = `   <table border="3" width='80%' align='center'>
+        document.getElementById("feeDetails").innerHTML = `<table border="3" width='80%' align='center'>
         <thead>
             <tr>
                 <th>Fee Details</th>

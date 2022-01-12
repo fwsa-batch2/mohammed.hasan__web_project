@@ -67,11 +67,3 @@ function isUserExist(mail, password) {
     }
     return isExist;
 }
-
-$("document").ready(function() {
-    $("#password").on("keypress", function(e) {
-        if (e.which == 32) {
-            alert("Contain spaces");
-        }
-    });
-});
