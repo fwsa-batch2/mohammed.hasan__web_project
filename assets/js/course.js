@@ -111,11 +111,14 @@ function addingCourse() {
     let parsedCourses = JSON.parse(localStorage.getItem("allCourses"));
     let len = parsedCourses.length;
     let i = 0;
+    let arts = ``;
+    let engineering = ``;
+    let integrated = ``;
     for (i; i < len; i++) {
         let oneCourseDepartment = parsedCourses[i];
 
         if (oneCourseDepartment.department == "engineering") {
-            document.getElementById("engineerCoursesTopics").innerHTML += `
+            engineering += `
             <dd onclick="courses(${i})">
                 <p> ${oneCourseDepartment.name} </p>
                 <div class="dropdown">
@@ -124,14 +127,14 @@ function addingCourse() {
                     </label>
                     <input type="checkbox" id="dd_button_${i}">
                     <div class="editContent">
-                    <a href="./addCourse.html?name=${oneCourseDepartment.name}" >Edit</a>
+                    <a href="./editCourse.html?name=${oneCourseDepartment.name}" >Edit</a>
                     <button type="button" onclick = "deleteCourse('${oneCourseDepartment.name}')">Delete</button>
                     </div>
                 </div>
             </dd>`;
         }
         if (oneCourseDepartment.department == "arts") {
-            document.getElementById("artsCoursesTopics").innerHTML +=
+            arts +=
                 `<dd onclick="courses(${i})">
                 <p> ${oneCourseDepartment.name} </p>
                 <div class="dropdown">
@@ -140,14 +143,14 @@ function addingCourse() {
                     </label>
                     <input type="checkbox" id="dd_button_${i}">
                     <div class="editContent">
-                    <a href="./addCourse.html?name=${oneCourseDepartment.name}" >Edit</a>
-                    <button type="button" onclick = "deleteCourse(${oneCourseDepartment.name})">Delete</button>
+                    <a href="./editCourse.html?name=${oneCourseDepartment.name}" >Edit</a>
+                    <button type="button" onclick = "deleteCourse('${oneCourseDepartment.name}')">Delete</button>
                     </div>
                 </div>
             </dd>`;
         }
         if (oneCourseDepartment.department == "integrated") {
-            document.getElementById("integratedCoursesTopics").innerHTML += `
+            integrated += `
             <dd onclick="courses(${i})">
                 <p> ${oneCourseDepartment.name} </p>
                 <div class="dropdown">
@@ -156,22 +159,26 @@ function addingCourse() {
                     </label>
                     <input type="checkbox" id="dd_button_${i}">
                     <div class="editContent">
-                        <a href="./addCourse.html?name=${oneCourseDepartment.name}" >Edit</a>
+                        <a href="./editCourse.html?name=${oneCourseDepartment.name}" >Edit</a>
                         <button type="button" onclick = "deleteCourse(${oneCourseDepartment.name})">Delete</button>
                     </div>
                 </div>
             </dd>`;
         }
     }
+    document.getElementById("artsCoursesTopics").innerHTML = arts;
+    document.getElementById("engineerCoursesTopics").innerHTML = engineering;
+    document.getElementById("integratedCoursesTopics").innerHTML = integrated;
+
 }
 addingCourse();
 
 function deleteCourse(nameOfCourse) {
-    console.log(nameOfCourse);
     for (let i in storedData) {
         if (storedData[i].name == nameOfCourse) {
-            storedData.splice(i, i);
+            storedData.splice(i, 1);
         }
     }
     localStorage.setItem("allCourses", JSON.stringify(storedData));
+    addingCourse();
 }

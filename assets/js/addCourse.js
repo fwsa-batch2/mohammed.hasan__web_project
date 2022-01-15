@@ -26,16 +26,3 @@ function onSubmitHandler() {
     localStorage.setItem("allCourses", JSON.stringify(array));
     window.location.href = "./Fees.html";
 }
-const paramsString = window.location.search;
-let searched = new URLSearchParams(paramsString);
-let nameOfCourse = searched.get("name");
-let parsedData = JSON.parse(localStorage.getItem("allCourses"));
-for (let i of parsedData) {
-    if (i.name == nameOfCourse) {
-        document.getElementById("courseName").value = i.name;
-        document.getElementById("image").value = i.image;
-        document.getElementById("caption").value = i.caption;
-        document.getElementById("details").value = i.details;
-        document.getElementById("courseDepartment").value = i.department;
-    }
-}

@@ -18,11 +18,12 @@
   
   .title {
       color: white;
-      font-size: 60px;
+      font-size: 50px;
       font-weight: bold;
       animation: mymove 5s infinite;
       padding: 10px;
       border-radius: 10px;
+      display: inline-block;
   }
   
   @keyframes mymove {
