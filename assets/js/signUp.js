@@ -1,10 +1,17 @@
-console.group("Sign Up");
+var max;
 let presentYear = new Date().getFullYear();
-console.log(presentYear);
+let presentMonth = new Date().getMonth();
+let maxDate = new Date().getDate();
+let maxMonth = (presentMonth + 1).toString();
 let maxYear = presentYear - 18;
-console.log(maxYear);
-let maxDate = `${maxYear}-01-01`;
-document.getElementById("dob").setAttribute("max", maxDate);
+if (maxMonth.length < 2) {
+    max = `${maxYear}-0${maxMonth}-${maxDate}`;
+} else {
+    max = `${maxYear}-${maxMonth}-${maxDate}`;
+
+}
+document.getElementById("dob").setAttribute("max", max);
+console.group("Sign Up");
 
 function show1() {
     let pass = document.getElementById("cPassword");
@@ -74,12 +81,9 @@ function checkValidations(event) {
     if (signUpDetails == null) {
         localStorage.setItem("signUpDetails", JSON.stringify([]));
     } else {
-
         let isMatch = false;
-
         for (let i of signUpDetails) {
             let mailid = i.mail;
-
             if (mail == mailid) {
                 isMatch = true;
                 break;
@@ -89,7 +93,6 @@ function checkValidations(event) {
                 break;
             }
         }
-
         if (isMatch) {
             document.getElementById("errorMessage").innerHTML = "<font color=red> E-mail Id already exists or incorrect password details !! </font>";
         } else {

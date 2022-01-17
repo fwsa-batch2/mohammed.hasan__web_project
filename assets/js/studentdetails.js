@@ -1,3 +1,17 @@
+var max;
+let presentYear = new Date().getFullYear();
+let presentMonth = new Date().getMonth();
+let maxDate = new Date().getDate();
+let maxMonth = (presentMonth + 1).toString();
+let maxYear = presentYear - 18;
+if (maxMonth.length < 2) {
+    max = `${maxYear}-0${maxMonth}-${maxDate}`;
+} else {
+    max = `${maxYear}-${maxMonth}-${maxDate}`;
+
+}
+document.getElementById("dob").setAttribute("max", max);
+
 let allStudentDetails = [];
 
 function onSubmitHandler(event) {

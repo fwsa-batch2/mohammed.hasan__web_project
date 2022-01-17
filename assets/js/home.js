@@ -17,13 +17,11 @@ localStorage.setItem("notification", JSON.stringify(notific));
 
 
 function notification() {
-
     notificationIcon = document.getElementById("notification_icon");
-    let email = prompt("Enter your mail id to get notifications");
-    localStorage.setItem("mailForNotifications", JSON.stringify(email));
-    alert("Notifcations will be sent to " + email);
-    console.log(email);
     if (notific == "off") {
+        let email = prompt("Enter your mail id to get notifications");
+        alert("Notifcations will be sent to " + email);
+        localStorage.setItem("mailForNotifications", JSON.stringify(email));
         notificationIcon.src = '../assets/html images/notification_on.svg';
         alert("Notifications turned on ");
         notific = "on";

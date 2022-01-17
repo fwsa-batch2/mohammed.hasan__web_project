@@ -32,9 +32,10 @@ function mailCheck(event) {
     event.preventDefault();
     let inputMail = document.getElementById("mail").value;
     let inputPassword = document.getElementById("password").value;
+    let inputNumber = document.getElementById("phoneNumber").value;
     let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
     if (importingInfo != null) {
-        isExist = isUserExist(inputMail, inputPassword);
+        isExist = isUserExist(inputMail, inputPassword, inputNumber);
 
         if (!isExist) {
             document.getElementById("errorMessage").innerHTML = "Enter valid Login Details !! ";
@@ -47,18 +48,16 @@ function mailCheck(event) {
             window.location.href = "Student details.html";
         }
         loggedInUser = [inputMail, isExist.role];
-
         localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
     } else {
         document.getElementById("errorMessage").innerHTML = "Please Sign up first";
     }
 }
 
-function isUserExist(mail, password) {
+function isUserExist(mail, password, number) {
     let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));
     for (let i of importingInfo) {
-
-        if (i.mail == mail && i.password == password) {
+        if (i.mail == mail && i.password == password && i.number == number) {
             isExist = i; // returns only the matching Object only not all Objects
             break;
         } else {

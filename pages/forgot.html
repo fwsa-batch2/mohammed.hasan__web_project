@@ -13,11 +13,15 @@
 </head>
 
 <body>
-    <form class="left" action="./OTP.html">
+    <form class="left" onsubmit="onSubmitHandler(event)">
         <h1 class="title">Forgot Password ! </h1>
         <hr class="hr" />
-        <h2> Your Mobile Number</h2>
+        <h2> E-mail Id</h2>
+        <input type="tel" id="mailId" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter proper Mail-Id" placeholder="Enter registered E-mail Id" required>
+        <h2> Mobile Number</h2>
         <input type="tel" id="num" maxlength="10" pattern="[0-9]{10}" title="Please enter only numbers and it should be 10 digits" placeholder="Enter your Mobile number" required>
+        <br>
+        <div id="error"></div>
         <br>
         <input class="submit" type="submit" />
     </form>
@@ -26,6 +30,7 @@
     <source src="../assets/html images/forgot.mp4">   
     <track kind="subtitles"></track> 
     </video>
+    <script src="./../assets/js/forgot.js"></script>
 
 </body>
 

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <form class="left" action="./">
+    <form class="left" onsubmit="onSubmitHandler()">
         <h1 class="title">OTP Verification </h1>
         <hr class="hr">
         <h2> OTP has been sent to your number</h2>
@@ -26,10 +26,7 @@
         <button type="submit" class="submit">Submit</button>
     </form>
     <img alt="Login Gif" src="../assets/html images/login.gif" width="40%" height="40%">
-    <script type="text/javascript">
-        function otp() {
-            alert("Another OTP has been sent to your mobile");
-        }
+    <script type="text/javascript" src="./../assets/js/otp.js">
     </script>
 </body>
 

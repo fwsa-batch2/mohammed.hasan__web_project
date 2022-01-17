@@ -1,7 +1,7 @@
   body {
       background-image: url('../html images/adm2.jpg');
       background-repeat: 'no-repeat';
-      background-size: 100% 150%;
+      background-size: 100% 140%;
       background-position: 'fix';
   }
   
@@ -52,10 +52,18 @@
   table {
       width: 34%;
       color: white;
+      border-color: rgb(173, 173, 173);
+      border-radius: 10px;
       margin-left: 35%;
+      font-size: 16px;
   }
   
   th,
   td {
       padding: 10px;
+  }
+  
+  input[type='submit'] {
+      cursor: pointer;
+      font-size: 17px;
   }
