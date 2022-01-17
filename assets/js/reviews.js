@@ -88,6 +88,7 @@ function increaseLikes(event) {
         <i class="fas fa-thumbs-up" data-index="${i}" onclick="increaseLikes(event)"></i>&nbsp;${getcomments[i].likes}`
     }
     getAndDisplayComments(getcomments);
+
 }
 
 function getAndDisplayComments(object = getcomments) {
