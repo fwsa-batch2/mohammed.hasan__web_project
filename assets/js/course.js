@@ -106,7 +106,7 @@ function courses(index) {
         document.getElementById("feeDetails").innerHTML = '';
     }
 }
-
+// Adding Course based on category of department
 function addingCourse() {
     let parsedCourses = JSON.parse(localStorage.getItem("allCourses"));
     let len = parsedCourses.length;
@@ -172,7 +172,7 @@ function addingCourse() {
 
 }
 addingCourse();
-
+// Deleting using name of Course passed as argument
 function deleteCourse(nameOfCourse) {
     for (let i in storedData) {
         if (storedData[i].name == nameOfCourse) {
