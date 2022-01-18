@@ -15,7 +15,8 @@ function getAndDisplay(objects) {
         template += "<td>" + objects[i].cutoff12 + "</td>";
         template += "<td>" + objects[i].course + "</td>";
         template += "<td>" + objects[i].state + "</td>";
-        template += "<td >" + objects[i].address + "</td></tr>";
+        template += "<td >" + objects[i].address + "</td>";
+        template += `<td><a href="./status.html?rollNo=${i+1}">View Status</a></td></tr>`;
 
     }
     table.innerHTML = `
@@ -30,6 +31,7 @@ function getAndDisplay(objects) {
     <th scope="col">Course</th>
     <th scope="col">State</th>
     <th scope="col">Address</th>
+    <th>Status</th>
 
 </tr>
      ${template}`;

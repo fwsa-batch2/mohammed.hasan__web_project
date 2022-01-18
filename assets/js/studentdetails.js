@@ -40,7 +40,8 @@ function onSubmitHandler(event) {
         "course": course,
         "cutoff10": cutoff10,
         "cutoff12": cutoff12,
-        "address": address
+        "address": address,
+
     }
 
     allStudentDetails.push(studentDetails);
