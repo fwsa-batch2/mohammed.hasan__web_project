@@ -30,7 +30,6 @@ function onSubmitHandler(event) {
         document.getElementsByClassName("error")[0].innerHTML = `Sorry, you do not match our required Cut-off `;
         return
     }
-
     const studentDetails = {
         "name": username,
         "dob": dob,
@@ -40,14 +39,11 @@ function onSubmitHandler(event) {
         "course": course,
         "cutoff10": cutoff10,
         "cutoff12": cutoff12,
-        "address": address,
-
+        "address": address
     }
-
     allStudentDetails.push(studentDetails);
     localStorage.setItem("studentDetails", JSON.stringify(allStudentDetails));
     window.location.href = "final.html";
-
 }
 
 function onPageLoadFunction() {
