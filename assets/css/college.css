@@ -39,6 +39,8 @@ body {
 
 .nav-head:hover+.nav-line {
     visibility: visible;
+    width: 50%;
+    transition: all 0.7s;
 }
 
 .logout {
@@ -57,7 +59,7 @@ body {
 }
 
 .nav-line {
-    width: 50%;
+    width: 0%;
     visibility: hidden;
 }
 

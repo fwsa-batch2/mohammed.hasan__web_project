@@ -59,12 +59,12 @@ select {
     margin: 20px;
 }
 
-a:link {
+td a:link {
     padding: 7px;
     border-radius: 5px;
 }
 
-a:hover {
+td a:hover {
     color: black;
     background-color: white;
     transition: all .5s;
