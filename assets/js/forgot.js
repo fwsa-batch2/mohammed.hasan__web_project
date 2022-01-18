@@ -5,7 +5,7 @@ function onSubmitHandler(event) {
     event.preventDefault();
     let number = document.getElementById("num").value;
     let mailId = document.getElementById("mailId").value;
-    let condition = doesExist(mailId, number) == false ? true : false;
+    let condition = !doesExist(mailId, number) ? true : false;
     if (condition) {
         document.getElementById("error").innerHTML = "<font color=red> Invalid E-mail or Mobile number !! </font>";
         document.getElementById("error").style.cssText = "display :contents";
