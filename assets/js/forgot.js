@@ -11,7 +11,7 @@ function onSubmitHandler(event) {
         document.getElementById("error").style.cssText = "display :contents";
     } else {
         localStorage.setItem("forgotPassword", JSON.stringify(isExist));
-        window.location.href = "./OTP.html";
+        window.location.href = "./otp.html";
     }
 }
 

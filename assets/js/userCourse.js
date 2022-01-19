@@ -1,3 +1,4 @@
+let loggedIn = JSON.parse(localStorage.getItem("loggedInUser"));
 var collegeAllCourses = [];
 let storedData = JSON.parse(localStorage.getItem("allCourses"));
 if (storedData) {

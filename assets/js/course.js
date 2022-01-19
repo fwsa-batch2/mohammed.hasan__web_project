@@ -1,3 +1,14 @@
+let loggedIn = JSON.parse(localStorage.getItem("loggedInUser"));
+if (loggedIn) {
+    if (loggedIn[1] == "admin") {
+        let head = document.getElementsByTagName("head")[0];
+        let link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.href = "./../assets/css/coursesSub.css";
+        head.appendChild(link);
+    }
+}
 var collegeAllCourses = [];
 let storedData = JSON.parse(localStorage.getItem("allCourses"));
 if (storedData) {

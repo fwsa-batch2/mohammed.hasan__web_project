@@ -79,10 +79,6 @@ dd label {
     display: none;
 }
 
-dd:hover label {
-    display: contents;
-}
-
 dd p {
     margin: 0px;
 }
