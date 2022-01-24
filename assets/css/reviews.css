@@ -157,13 +157,11 @@ input {
 .fas {
     color: rgb(126, 126, 126);
     cursor: pointer;
-    transition: all .5s;
+    transition: all .3s;
 }
 
 .fas:hover {
-    /* fill: blue; */
-    color: blue;
-    margin-left: 5px;
+    margin-left: 7px;
 }
 
 .test {

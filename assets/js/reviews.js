@@ -131,14 +131,12 @@ function increaseLikes(event, commentedMailId) { // need mailId to know who like
         document.getElementsByClassName("fas fa-thumbs-up")[index].classList.remove("test");
         allComments[index].likes -= 1;
     }
-    for (let i = 0; i < allComments.length; i++) {
-        text += `<dl><dt><div style='float:left;margin-left:10px;color:grey;'> ${allComments[i].name} &nbsp;&nbsp;| ${allComments[i].date} </div></dt><br><dd><span> ${allComments[i].comment} </span></dd></dl>
-        <i class="fas fa-thumbs-up"  data-index="${i}" onclick="increaseLikes(event,'${allComments[i].mailId}')"></i>&nbsp;${allComments[i].likes}`
-        break;
-    }
     localStorage.setItem("comments", JSON.stringify(allComments));
+    window.location.reload();
+
 }
 
+// Displays the color of like icon permanently blue, if user has liked a comment
 
 function forLikesColor() {
     let allComments = JSON.parse(localStorage.getItem("comments"));
@@ -147,8 +145,6 @@ function forLikesColor() {
             console.log(allComments[i].liked[j]);
             if (loggedInUser[0] == allComments[i].liked[j]) {
                 allComments[i].liked.push(loggedInUser[0]);
-                let a = document.getElementsByClassName("fas fa-thumbs-up");
-                console.log(a);
                 document.getElementsByClassName("fas fa-thumbs-up")[i].classList.add("test");
             }
         }
