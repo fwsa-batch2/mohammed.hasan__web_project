@@ -1,25 +1,14 @@
-function show1() {
-    let password = document.getElementById("cPassword");
-    if (password.type === "password") {
-        password.type = "text";
-        document.getElementById("images2").src = "../assets/html images/eye.svg";
-
-    } else {
-        password.type = "password";
-        document.getElementById("images2").src = "../assets/html images/eye-close.svg";
-
-    }
-}
+// Displays and veils the password entered by user on clicking the eye-icon
 
 function show() {
     let pass = document.getElementById("password");
     if (pass.type === "password") {
         pass.type = "text";
-        document.getElementById("images").src = "../assets/html images/eye.svg";
+        document.getElementById("images").src = "../assets/images/eye.svg";
 
     } else {
         pass.type = "password";
-        document.getElementById("images").src = "../assets/html images/eye-close.svg";
+        document.getElementById("images").src = "../assets/images/eye-close.svg";
 
     }
 }
@@ -27,6 +16,9 @@ function show() {
 let signUpArray = [];
 let loggedInUser = [];
 let isExist = false;
+
+// Gets all the values entered by user and checks whether the user has registered already; if not displays error message.
+// If registered then, leads to next page depending on who is logging-in(user or admin).
 
 function mailCheck(event) {
     event.preventDefault();
@@ -45,7 +37,7 @@ function mailCheck(event) {
         if (isAdmin) {
             window.location.href = "displayDetailsToAdmin.html";
         } else {
-            window.location.href = "Student details.html";
+            window.location.href = "studentDetails.html";
         }
         loggedInUser = [inputMail, isExist.role];
         localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
@@ -53,6 +45,8 @@ function mailCheck(event) {
         document.getElementById("errorMessage").innerHTML = "Please Sign up first";
     }
 }
+// Checks the mail-id, password and mobile number entered by user and checks it with registered users.
+// If exists, then leads to next page; else returns not exists
 
 function isUserExist(mail, password, number) {
     let importingInfo = JSON.parse(localStorage.getItem("signUpDetails"));

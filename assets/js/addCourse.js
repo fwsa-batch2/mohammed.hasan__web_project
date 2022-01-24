@@ -1,3 +1,5 @@
+// Gets entered values and stores it in Local Storage as a new Course
+
 function onSubmitHandler() {
     let courseName = document.getElementById("courseName").value;
     let image = document.getElementById("image").value;

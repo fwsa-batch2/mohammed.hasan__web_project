@@ -13,31 +13,16 @@ if (maxMonth.length < 2) {
 document.getElementById("dob").setAttribute("max", max);
 console.group("Sign Up");
 
-function show1() {
-    let pass = document.getElementById("cPassword");
+
+function show(inputId, imageId) {
+    let pass = document.getElementById(inputId);
     if (pass.type === "password") {
         pass.type = "text";
-        document.getElementById("cpShow").src = "../assets/html images/eye.svg";
-        console.group("show");
-        console.log("Showing password");
-
-    } else {
-        pass.type = "password";
-        document.getElementById("cpShow").src = "../assets/html images/eye-close.svg";
-        console.log("Hiding Password ");
-    }
-}
-
-
-function show() {
-    let pass = document.getElementById("password");
-    if (pass.type === "password") {
-        pass.type = "text";
-        document.getElementById("pShow").src = "../assets/html images/eye.svg";
+        document.getElementById(imageId).src = "../assets/images/eye.svg";
         console.log("Showing Password ");
     } else {
         pass.type = "password";
-        document.getElementById("pShow").src = "../assets/html images/eye-close.svg";
+        document.getElementById(imageId).src = "../assets/images/eye-close.svg";
         console.log("Hiding Password ");
         console.groupEnd("show");
     }

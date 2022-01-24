@@ -44,16 +44,17 @@ function onSubmitHandler(event) {
     allStudentDetails.push(studentDetails);
     localStorage.setItem("studentDetails", JSON.stringify(allStudentDetails));
     window.location.href = "final.html";
+
+
 }
+
+// Authentication Module
+// Authentication => register/login/forgot/otp/login
+//Authorization => You are not authorization. Only admin ...
 
 function onPageLoadFunction() {
     const studDetails = JSON.parse(localStorage.getItem("studentDetails"));
-
-    if (studDetails) {
-        allStudentDetails = studDetails;
-    } else {
-        allStudentDetails = [];
-    }
+    allStudentDetails = studDetails ? studDetails : [];
 
 }
 onPageLoadFunction();

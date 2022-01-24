@@ -12,7 +12,7 @@
 <body>
     <form onsubmit="checkValidations(event)" align=center>
         <br>
-        <img src="../assets/html images/signup_icon_black.svg" style="vertical-align:middle;" width=70 height=70 alt="Sign up Image">&nbsp;
+        <img src="../assets/images/signup_icon_black.svg" style="vertical-align:middle;" width=70 height=70 alt="Sign up Image">&nbsp;
         <h1 style="display: inline-block;">Sign Up</h1>
         <br><br>
         <hr class="hr">
@@ -23,9 +23,9 @@
             <br> Eg: albert07@gmail.com</div>
         <div> <label>D.O.B :</label><input id="dob" type="date" name="dob" required></div>
         <div><label> Password:</label> <input id="password" type="password" pattern="[A-Za-z0-9.+/_!$%&\|*()]{12,}" title="Your password should contain a minimum 12 characters and be a combination of Uppercase,Lowercase and Numbers" name="password" placeholder="Enter your password"
-                required> &nbsp; <img alt="Password Hide Image" style="position:absolute;" id="pShow" onclick="show()" src="../assets/html images/eye-close.svg"></div>
+                required> &nbsp; <img alt="Password Hide Image" style="position:absolute;" id="pShow" onclick="show('password','pShow')" src="../assets/images/eye-close.svg"></div>
         <div> <label>Confirm Password:</label> <input id="cPassword" type="password" pattern="[A-Za-z0-9]{12,}" title="Your password should contain 12 characters and be a combination of Uppercase,Lowercase and Numbers" name="pass" placeholder="Re-Enter your password"
-                required> &nbsp; <img alt="Password Hide Image" style="position:absolute;" id="cpShow" onclick="show1()" src="../assets/html images/eye-close.svg"></div>
+                required> &nbsp; <img alt="Password Hide Image" style="position:absolute;" id="cpShow" onclick="show('cPassword','cpShow')" src="../assets/images/eye-close.svg"></div>
         <div><label>Phone Number: </label><input id="number" pattern="[0-9]{10}" title="Enter only numbers" type="tel" minlength="9" maxlength="10" name="number" placeholder="Enter your mobile number" required></div>
         <div><label> Role :</label>
             <select id="role" required>
