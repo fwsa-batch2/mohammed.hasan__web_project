@@ -1,4 +1,4 @@
-// This function is to show the details of student
+// This function is to show the details of student who applied
 
 function printingAll() {
     //1. Get Student Details

@@ -1,18 +1,24 @@
-var max;
-let presentYear = new Date().getFullYear();
-let presentMonth = new Date().getMonth();
-let maxDate = new Date().getDate();
-let maxMonth = (presentMonth + 1).toString();
-let maxYear = presentYear - 18;
-if (maxMonth.length < 2) {
-    max = `${maxYear}-0${maxMonth}-${maxDate}`;
-} else {
-    max = `${maxYear}-${maxMonth}-${maxDate}`;
-
-}
-document.getElementById("dob").setAttribute("max", max);
-
 let allStudentDetails = [];
+
+// Sets the attribute of date input dynamically by getting present date
+
+function setDynamicAgeLimit() {
+    var max;
+    let presentYear = new Date().getFullYear();
+    let presentMonth = new Date().getMonth();
+    let maxDate = new Date().getDate();
+    let maxMonth = (presentMonth + 1).toString();
+    let maxYear = presentYear - 18;
+    if (maxMonth.length < 2) {
+        max = `${maxYear}-0${maxMonth}-${maxDate}`;
+    } else {
+        max = `${maxYear}-${maxMonth}-${maxDate}`;
+    }
+    document.getElementById("dob").setAttribute("max", max);
+}
+
+// Gets all the data entered by user and stores it for later use. Also checks the cut-off marks
+// of user and validates it.
 
 function onSubmitHandler(event) {
     event.preventDefault();
@@ -44,17 +50,15 @@ function onSubmitHandler(event) {
     allStudentDetails.push(studentDetails);
     localStorage.setItem("studentDetails", JSON.stringify(allStudentDetails));
     window.location.href = "final.html";
-
-
 }
 
-// Authentication Module
-// Authentication => register/login/forgot/otp/login
-//Authorization => You are not authorization. Only admin ...
+// Stores if there are any already existing students who applied and adds present user details.
+// If no users applied, then keeps empty array
 
 function onPageLoadFunction() {
     const studDetails = JSON.parse(localStorage.getItem("studentDetails"));
     allStudentDetails = studDetails ? studDetails : [];
 
 }
+setDynamicAgeLimit();
 onPageLoadFunction();

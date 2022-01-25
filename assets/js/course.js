@@ -343,7 +343,7 @@ function prerequisiteForEditing(detailsOfCourse) {
     // Change div to input type
     let input = document.createElement("textarea");
     let forModDetails = document.createTextNode(detailsOfCourse.innerText);
-    // Adding clas for 
+    // Adding class for editing content 
     input.appendChild(forModDetails);
     input.setAttribute("class", "editingCourse");
     // Replacing content with textarea

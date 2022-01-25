@@ -1,34 +1,36 @@
-var max;
-let presentYear = new Date().getFullYear();
-let presentMonth = new Date().getMonth();
-let maxDate = new Date().getDate();
-let maxMonth = (presentMonth + 1).toString();
-let maxYear = presentYear - 18;
-if (maxMonth.length < 2) {
-    max = `${maxYear}-0${maxMonth}-${maxDate}`;
-} else {
-    max = `${maxYear}-${maxMonth}-${maxDate}`;
+let signUpArray = [];
 
+// Sets the attribute of date input dynamically by getting present date
+
+function setDynamicAgeLimit() {
+    var max;
+    let presentYear = new Date().getFullYear();
+    let presentMonth = new Date().getMonth();
+    let maxDate = new Date().getDate();
+    let maxMonth = (presentMonth + 1).toString();
+    let maxYear = presentYear - 18;
+    if (maxMonth.length < 2) {
+        max = `${maxYear}-0${maxMonth}-${maxDate}`;
+    } else {
+        max = `${maxYear}-${maxMonth}-${maxDate}`;
+    }
+    document.getElementById("dob").setAttribute("max", max);
 }
-document.getElementById("dob").setAttribute("max", max);
-console.group("Sign Up");
 
+// Shows the password by getting input id and image id to change the password image icon
 
 function show(inputId, imageId) {
     let pass = document.getElementById(inputId);
     if (pass.type === "password") {
         pass.type = "text";
         document.getElementById(imageId).src = "../assets/images/eye.svg";
-        console.log("Showing Password ");
     } else {
         pass.type = "password";
         document.getElementById(imageId).src = "../assets/images/eye-close.svg";
-        console.log("Hiding Password ");
-        console.groupEnd("show");
     }
 }
 
-let signUpArray = [];
+// Gets the details, entered by user and stores it for verification later
 
 function signUpDataGetting() {
     let fname = document.getElementById("fname").value;
@@ -49,13 +51,10 @@ function signUpDataGetting() {
     }
     signUpArray.push(userDetails);
     localStorage.setItem("signUpDetails", JSON.stringify(signUpArray));
-    console.group("signUpDataGeting");
-    console.log("Saved user details to Array");
-    console.groupEnd("signUpDataGetting");
-
-
 }
 
+// Checks whether user has already registered; if already registered, then displays an error message
+// Also checks whether password and confirm passwords are identical
 
 function checkValidations(event) {
     event.preventDefault();
@@ -84,26 +83,14 @@ function checkValidations(event) {
             signUpDataGetting();
             window.location.href = "login.html";
         }
-
     }
-    console.group("check");
-    console.log("Checked Validation");
-    console.groupEnd("check");
-
 }
 
+// Invokes on refresh, and replaces the empty signed up users array with existing users data if it exists
 
 function signUpRefresh() {
     const signUpDetails = JSON.parse(localStorage.getItem("signUpDetails"));
-    if (signUpDetails) {
-        signUpArray = signUpDetails;
-        console.table(signUpArray);
-    } else {
-        signUpArray = [];
-
-    }
-    console.log("signUpRefresh");
-
+    signUpArray = signUpDetails ? signUpDetails : [];
 }
-console.groupEnd("Sign Up");
 signUpRefresh();
+setDynamicAgeLimit();
