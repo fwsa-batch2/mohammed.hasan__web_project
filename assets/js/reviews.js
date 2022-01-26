@@ -9,6 +9,8 @@ let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 function addComments(event) {
     event.preventDefault();
+    // commentsArray = JSON.parse(localStorage.getItem("comments"));
+    console.log(commentsArray);
     let comment = document.getElementById("comment").value;
     let name = document.getElementById("name").value;
     let mail = loggedInUser[0];
@@ -20,14 +22,15 @@ function addComments(event) {
             comment: comment,
             name: name,
             date: date,
-            likes: [, ],
+            likes: 0,
+            liked: [""],
             mailId: mail
         }
         if (!alreadyCommented(mail)) {
             commentsArray.push(comments);
+            console.log(commentsArray);
             localStorage.setItem("comments", JSON.stringify(commentsArray));
-            let parsedData = JSON.parse(localStorage.getItem("comments"));
-            getAndDisplay(parsedData);
+            getAndDisplay(commentsArray);
         } else {
             alert("Sorry, You have already commented");
         }
@@ -39,6 +42,7 @@ function addComments(event) {
 // click on "show more" option to show all the comments
 
 function showingAll() {
+    console.log("showing");
     if (showall) {
         document.getElementsByClassName("showing")[0].innerHTML = "..show more";
         showall = false;
@@ -47,7 +51,6 @@ function showingAll() {
         showall = true;
     }
     return showall
-
 }
 
 // Checks whether user logged-in with particular mail has already commented
@@ -67,28 +70,19 @@ function alreadyCommented(mail) {
 // Gets all comments from storage and displays it to user including likes, name and date of commented
 
 function getAndDisplay(object = getcomments) {
+    object = JSON.parse(localStorage.getItem("comments"));
     let text = '';
     if (object) {
         commentsArray = object;
         if (showingAll()) {
             for (let i = 0; i < commentsArray.length; i++) {
-                let totalLikes = commentsArray[i].liked;
-                let j = 0;
-                for (j in totalLikes) {
-                    text += `<dl><dt><div style='float:left;margin-left:10px;color:grey;'> ${object[i].name} &nbsp;&nbsp;| ${object[i].date} </div></dt><br><dd><span> ${object[i].comment} </span></dd></dl>
+                text += `<dl><dt><div style='float:left;margin-left:10px;color:grey;'> ${object[i].name} &nbsp;&nbsp;| ${object[i].date} </div></dt><br><dd><span> ${object[i].comment} </span></dd></dl>
                 <i class="fas fa-thumbs-up" data-index="${i}" onclick="increaseLikes(event,'${commentsArray[i].mailId}')"></i>&nbsp;${commentsArray[i].likes}`
-                    break;
-                }
             }
         } else {
             for (let i = 0; i < 3; i++) {
-                let totalLikes = commentsArray[i].liked;
-                let j = 0;
-                for (j in totalLikes) {
-                    text += `<dl><dt><div style='float:left;margin-left:10px;color:grey;'> ${object[i].name} &nbsp;&nbsp;| ${object[i].date} </div></dt><br><dd><span> ${object[i].comment} </span></dd></dl>
+                text += `<dl><dt><div style='float:left;margin-left:10px;color:grey;'> ${object[i].name} &nbsp;&nbsp;| ${object[i].date} </div></dt><br><dd><span> ${object[i].comment} </span></dd></dl>
                 <i class="fas fa-thumbs-up" data-index="${i}" onclick="increaseLikes(event,'${commentsArray[i].mailId}')"></i>&nbsp;${commentsArray[i].likes}`
-                    break;
-                }
             }
         }
         document.getElementById("addingComment").innerHTML = text;
@@ -96,6 +90,7 @@ function getAndDisplay(object = getcomments) {
         commentsArray = [{ comment: "This is the best college in basis of Food Facilities and Cultural activities", name: "Annapoorni", date: date, likes: 0, liked: [""], mailId: "annapurani@gmail.com" }, { comment: "Remarks : Placements are excellent. The standard of education is very good as all the teachers are well-experienced.The campus is maintained well and the food is good.The other factors are they offer all facilities i.e from bus to books to food, everything is taken care of.", name: "Ismail", date: date, likes: 0, liked: [""], mailId: "ismail@gmail.com" }, { comment: "Food inspector one of the best college in state the infrastructure were awesome more extra curricular activities. Library were extrodinary to know more abt food tech and to learn more about foood tech and to work hard in ma careers", name: "Mahalakshmi", date: date, likes: 0, liked: [""], mailId: "mahalakshmi@gmail.com" }];
         localStorage.setItem("comments", JSON.stringify(commentsArray));
     }
+    forLikesColor();
 }
 
 // Inreases the number of likes for particular comment. If already liked then another click 
@@ -132,7 +127,8 @@ function increaseLikes(event, commentedMailId) { // need mailId to know who like
         allComments[index].likes -= 1;
     }
     localStorage.setItem("comments", JSON.stringify(allComments));
-    window.location.reload();
+    // window.location.reload();
+    getAndDisplayComments(allComments);
 
 }
 
@@ -142,7 +138,6 @@ function forLikesColor() {
     let allComments = JSON.parse(localStorage.getItem("comments"));
     for (i in allComments) {
         for (j in allComments[i].liked) {
-            console.log(allComments[i].liked[j]);
             if (loggedInUser[0] == allComments[i].liked[j]) {
                 allComments[i].liked.push(loggedInUser[0]);
                 document.getElementsByClassName("fas fa-thumbs-up")[i].classList.add("test");
@@ -153,20 +148,16 @@ function forLikesColor() {
 
 // Displays all comments in storage 
 
-function getAndDisplayComments(object = getcomments) {
+function getAndDisplayComments(object) {
     let text = '';
     commentsArray = object;
     for (let i = 0; i < commentsArray.length; i++) {
-        let totalLikes = commentsArray[i].likes;
-        let j = 0;
-        for (j in totalLikes) {
-            text += `<dl><dt><div style='float:left;margin-left:10px;color:grey;'> ${commentsArray[i].name} &nbsp;&nbsp;| ${commentsArray[i].date} </div></dt><br><dd><span> ${commentsArray[i].comment} </span></dd></dl>
+        text += `<dl><dt><div style='float:left;margin-left:10px;color:grey;'> ${commentsArray[i].name} &nbsp;&nbsp;| ${commentsArray[i].date} </div></dt><br><dd><span> ${commentsArray[i].comment} </span></dd></dl>
         <i class="fas fa-thumbs-up" data-index="${i}" onclick="increaseLikes(event,'${commentsArray[i].mailId}')"></i>&nbsp;${commentsArray[i].likes}`
-            break;
-        }
     }
     document.getElementById("addingComment").innerHTML = text;
     document.getElementsByClassName("showing")[0].innerHTML = "..show less";
+    forLikesColor();
 
 }
 

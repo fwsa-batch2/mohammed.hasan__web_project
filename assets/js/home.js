@@ -8,8 +8,8 @@ function showSideBar() {
 // Checks whether notifcation are turned-on or off by getting value from local storage on refresh
 
 function onRefreshForNotification() {
-    var notific = JSON.parse(localStorage.getItem("notification"));
-    var notificationIcon = document.getElementById("notification_icon");
+    let notific = JSON.parse(localStorage.getItem("notification"));
+    let notificationIcon = document.getElementById("notification_icon");
     if (notific == "on") {
         notificationIcon.src = '../assets/images/notification_on.svg';
         notific = "on";
@@ -22,10 +22,13 @@ function onRefreshForNotification() {
 }
 
 // On clicking, changes the notfications to on and off 
+
 function notification() {
-    notificationIcon = document.getElementById("notification_icon");
+    let notificationIcon = document.getElementById("notification_icon");
+    let notific = JSON.parse(localStorage.getItem("notification"));
     if (notific == "off") {
-        let email = prompt("Enter your mail id to get notifications");
+        let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+        let email = loggedInUser ? loggedInUser[0] : prompt("Enter your mail id to get notifications");
         alert("Notifcations will be sent to " + email);
         localStorage.setItem("mailForNotifications", JSON.stringify(email));
         notificationIcon.src = '../assets/images/notification_on.svg';

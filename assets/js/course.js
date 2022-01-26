@@ -18,9 +18,10 @@ function adminView() {
 
 // Stores all Courses available in our website. If already exists, then retrieves it and displays in page
 
+let storedData = JSON.parse(localStorage.getItem("allCourses"));
+
 function displayAllCoursesAvailable() {
     var collegeAllCourses = [];
-    let storedData = JSON.parse(localStorage.getItem("allCourses"));
     if (storedData) {
         collegeAllCourses = storedData;
     } else {
@@ -243,7 +244,6 @@ function addingCourse() {
     let integrated = ``;
     for (i; i < len; i++) {
         let oneCourseDepartment = parsedCourses[i];
-
         if (oneCourseDepartment.department == "engineering") {
             engineering += ` <dd onclick = "courses(${i})">
             <p> ${ oneCourseDepartment.name } </p>
@@ -251,7 +251,7 @@ function addingCourse() {
             <label for = "dd_button_${i}">
             <img class = "forEditing" src = "./../assets/images/moreIcon.svg" >
             </label>
-             <input type = "checkbox" id = "dd_button_${i}" >
+             <input type = "checkbox" id = "dd_button_${i}" class="editOptionButton">
             <div class = "editContent">
             <button onclick = "editCourse('${oneCourseDepartment.name}')" > Edit </button>
              <button type = "button" onclick = "deleteCourse('${oneCourseDepartment.name}')" > Delete </button>
@@ -267,7 +267,7 @@ function addingCourse() {
                         <label for = "dd_button_${i}" >
                         <img class = "forEditing" src = "./../assets/images/moreIcon.svg" >
                         </label> 
-                        <input type = "checkbox" id = "dd_button_${i}" >
+                        <input type = "checkbox" id = "dd_button_${i}" class="editOptionButton">
                         <div class = "editContent">
                         <button onclick = "editCourse('${oneCourseDepartment.name}')" > Edit </button> 
                         <button type = "button" onclick = "deleteCourse('${oneCourseDepartment.name}')"> Delete </button> 
@@ -282,7 +282,7 @@ function addingCourse() {
                     <label for="dd_button_${i}">
                         <img class="forEditing" src="./../assets/images/moreIcon.svg">
                     </label>
-                    <input type="checkbox" id="dd_button_${i}">
+                    <input type="checkbox" id="dd_button_${i}" class="editOptionButton">
                     <div class="editContent">
                     <button onclick="editCourse('${oneCourseDepartment.name}')"> Edit </button>
                         <button type="button" onclick = "deleteCourse(${oneCourseDepartment.name})">Delete</button>
@@ -317,7 +317,6 @@ function editCourse(courseName) {
     let i = 0;
     let detail;
     let currentCourseIndex;
-    console.log(storedData);
     for (i in storedData) {
         if (courseName == storedData[i].name) {
             detail = document.querySelector("#details");
@@ -339,6 +338,19 @@ function editCourse(courseName) {
 
 // Replaces the "div" to "textarea" tag on content (right side) and returns the edit button
 
+window.addEventListener("click", (event) => {
+    let element = event.target;
+    let allButtons = document.getElementsByClassName("editOptionButton");
+    for (button of allButtons) {
+        if (element == button) {
+            button.checked = true;
+            break;
+        } else {
+            button.checked = false;
+        }
+    }
+});
+
 function prerequisiteForEditing(detailsOfCourse) {
     // Change div to input type
     let input = document.createElement("textarea");
@@ -349,11 +361,12 @@ function prerequisiteForEditing(detailsOfCourse) {
     // Replacing content with textarea
     let parent = document.querySelector(".content");
     parent.replaceChild(input, detailsOfCourse);
-    // Creating button
+    // Creating edit button
     let button = document.createElement("button");
     let buttonValue = document.createTextNode("Edit");
     button.setAttribute("class", "edit button");
     button.appendChild(buttonValue);
+    // Creating cancel button
     let cancelButton = document.createElement("button");
     let cancelButtonValue = document.createTextNode("Cancel");
     cancelButton.setAttribute("class", "cancel button");

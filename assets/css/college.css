@@ -35,6 +35,14 @@ h2 {
     transition: .5s;
 }
 
+.nav-bar.open {
+    width: 25%;
+}
+
+.nav-bar.open .nav-head {
+    opacity: 1;
+}
+
 .nav-head {
     display: flex;
     justify-content: center;
@@ -43,10 +51,18 @@ h2 {
     padding: 25px 0px;
     overflow: hidden;
     cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+    animation: navHead 3s;
 }
 
-.nav-head::nth-child(even) {
-    transition: 0.5s 0.3s;
+@keyframes navHead {
+    from {
+        margin-left: 0px;
+    }
+    to {
+        margin-left: 50px;
+    }
 }
 
 .nav-head:hover+.nav-line {
@@ -64,10 +80,6 @@ h2 {
     overflow: hidden;
     display: block;
     cursor: pointer;
-}
-
-.open {
-    width: 25%;
 }
 
 .nav-line {
@@ -278,6 +290,14 @@ header>.header {
 .gifMarquee img {
     transform: scaleX(-1);
 }
+
+
+/* Start of achievements */
+
+.placementsContainer {}
+
+
+/* /-End of achievements */
 
 .head_image {
     margin-top: 1%;
