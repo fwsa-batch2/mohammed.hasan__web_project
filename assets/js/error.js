@@ -4,7 +4,9 @@ function hasLoggedIn(pathOfNextPage) {
     let storedMail = JSON.parse(localStorage.getItem("loggedInUser"));
     if (storedMail) {
         window.location.href = `./${pathOfNextPage}`;
+        console.log('correct');
     } else {
+        console.log('eror');
         window.location.href = "./errorPage.html";
     }
 }
