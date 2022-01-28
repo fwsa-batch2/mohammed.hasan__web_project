@@ -59,6 +59,23 @@ function logOut() {
     }
 }
 
+function socialMedia(nameOfMedium) {
+    switch (nameOfMedium) {
+        case "facebook":
+            window.open("https://www.facebook.com/");
+            break;
+        case "twitter":
+            window.open("https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D");
+            break;
+        case "instagram":
+            window.open("https://www.instagram.com/accounts/login/");
+            break;
+        default:
+            window.open("https://www.youtube.com/");
+    }
+
+}
+
 // On refresh invokes this function, to check whether user has logged in and displays Log-out option
 // to user depending on the values from local storage.
 function showLogOut() {

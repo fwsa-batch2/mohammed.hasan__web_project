@@ -1,5 +1,9 @@
 /* Header and nav-bar css */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: url('../images/college1.jpg') no-repeat;
     background-position: center;
@@ -242,8 +246,8 @@ header>.header {
     font-family: sans-serif;
     color: rgb(131, 134, 138);
     position: absolute;
-    top: 200px;
-    left: 36%;
+    top: 210px;
+    left: 37%;
     letter-spacing: 6px;
 }
 
@@ -294,7 +298,86 @@ header>.header {
 
 /* Start of achievements */
 
-.placementsContainer {}
+.placementsContainer {
+    margin: 1% 9%;
+}
+
+.placementsContainer img {
+    width: 95%;
+    border-radius: 10px;
+}
+
+.placementsContainer span {
+    font-size: 25px;
+}
+
+.placements {
+    margin-top: 2%;
+    font-size: 35px;
+    color: white;
+    position: relative;
+}
+
+.mainPartners {
+    color: white;
+}
+
+.mainPartners p {
+    display: flex;
+    justify-content: center;
+}
+
+.mainPartners #partnersCaption {
+    font-size: 35px;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.placementsContainer .placements::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    background-color: blue;
+    bottom: -3%;
+    left: 50%;
+    height: 3px;
+    transition: 0.5s;
+}
+
+.placements:hover::before {
+    left: -7%;
+    width: 310px;
+}
+
+.mainPartners p::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    background-color: blue;
+    bottom: -3%;
+    left: 50%;
+    height: 3px;
+    transition: 0.5s;
+}
+
+.mainPartners:hover p::after {
+    left: -7%;
+    width: 310px;
+}
+
+.aboutUs {
+    font-size: 20px;
+    font-family: serif;
+}
+
+.content {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 /* /-End of achievements */

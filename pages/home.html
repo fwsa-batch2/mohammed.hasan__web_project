@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Rampart+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title> College Home Page</title>
+    <link rel="stylesheet" href="./../assets/css/slick.css">
+    <link rel="stylesheet" href="./../assets/css/slick-theme.css">
     <link rel="stylesheet" href="../assets/css/college.css">
 </head>
 
@@ -18,6 +20,8 @@
         <div class="nav-bar" onclick="navBar()">
             <em id="icon" class="fas fa-bars"></em>
             <hr>
+            <div class="nav-head" onclick="window.open('signUp.html')">Sign Up</div>
+            <hr class="nav-line">
             <div class="nav-head" onclick="hasLoggedIn('studentDetails.html')">Apply For a Course</div>
             <hr class="nav-line">
             <div class="nav-head" onclick="hasLoggedIn('reviews.html')">Review Us</div>
@@ -40,7 +44,7 @@
             <a href='login.html'><img alt="Login Image" src="../assets/images/login_icon.svg">LOGIN</a>
         </div>
         <div class="header" title="Click on me; not around me">
-            <a href='signUp.html'><img alt="Sign Up Image" src="../assets/images/sign_up_icon.svg">SIGN UP</a>
+            <a href='#placements'><img alt="Placements" src="../assets/images/placement.svg">PLACEMENTS</a>
         </div>
         <div class="header" title="Click on me; not around me" onclick="hasLoggedIn('./reviews.html')">
             <img alt="Support Image" src="../assets/images/support.svg">REVIEWS
@@ -85,7 +89,7 @@
     </header>
     <div class="heading" style="width: 100%;margin-left: 7%;">
         <h1 title='About Ten Dots University'>
-            <img alt="College Icon" src="../assets/images/university.png" class="head_image" width="60px" height="70px">
+            <img alt="College Icon" src="./../assets/images/tendots_icon.png" class="head_image" width="100px" height="80px">
             <span id="title">
                     TEN DOTS UNIVERSITY
                 </span>
@@ -120,31 +124,71 @@
         Students spend time only on Books and become stressed. So we are going to change it and make a drastic change on our students.
     </h2>
 
-    <img CLASS="gif" alt="Gif" src="../assets/gifs/college.gif">
-
+    <img CLASS="gif" alt="Gif" src="../assets/gifs/college.gif" id="placements">
+    <div class="placements">Placements</div>
     <div class="placementsContainer">
-        <img src="./../assets/images/achievements/accenture.png" alt="">
-        <img src="./../assets/images/achievements/autodesk.png" alt="">
-        <img src="./../assets/images/achievements/csc.png" alt="">
-        <img src="./../assets/images/achievements/excela.png" alt="">
-        <img src="./../assets/images/achievements/gobdTech.png" alt="">
-        <img src="./../assets/images/achievements/kaar.png" alt="">
-        <img src="./../assets/images/achievements/mindtree.png" alt="">
-        <img src="./../assets/images/achievements/scope.png" alt="">
-        <img src="./../assets/images/achievements/tcs.png" alt="">
-        <img src="./../assets/images/achievements/tychons.png" alt="">
-        <img src="./../assets/images/achievements/vernilas.png" alt="">
-        <img src="./../assets/images/achievements/wipro1.png" alt="">
-        <br>
-        <img src="./../assets/images/achievements/fresh.png" alt="" width="40%">
-        <img src="./../assets/images/achievements/zoho.png" alt="">
+        <div class="slide">
+            <img src="./../assets/images/achievements/accenture.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/autodesk.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/csc.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/excela.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/gobdTech.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/mindtree.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/scope.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/tcs.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/tychons.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/vernilas.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/wipro1.png" alt="">
+        </div>
 
+    </div>
+    <br>
+    <div class="mainPartners">
+        <p id="partnersCaption">Our Main Partners</p>
+        <p>
+            <img src="./../assets/images/achievements/fresh.png" alt="" width="40%" height="20%">
+            <img src="./../assets/images/achievements/zoho.png" alt="" width="40%">
+        </p>
     </div>
 
     <div class="gifMarquee">
         <h2 style="background:white;width:70%;border-radius: 20px;">
             <img alt="Gif" src="../assets/gifs/college2.gif" style="vertical-align:middle;background:white;"> We don't insist students to carry bag full of books. Instead we teach in such a way that they don't need books
         </h2>
+    </div>
+    <div class="aboutUs">
+        <div class="content 1">
+            <p>To make Ten DOTS University a well established world class Research and Development centre in the field of Science and Technology and to become a reputed Institution with academic excellence in the country.
+            </p>
+            <p>Magnifying the quality of education and maintaining the university as an effective technical Institution that can accommodate ever changing societal and industrial demands.Discharging duties and obligations to the students, staff, parents
+                and the society effectively.</p>
+        </div>
+        <div class="content 2">
+            <p>The right to education is not only the right to access education but also the right to receive an education of good quality. Education must be available and accessible.</p>
+            <p>To establish a centre of excellence in Technical Education. To bring out technocrats with superior skill and social commitment. To transform youth into good technologists.</p>
+        </div>
+
+        <h1 style="color: white;"> More content about us</h1>
     </div>
     <a href="#" class="upGoingArrow">
         <img src="./../assets/images/arrow.svg" alt="">
@@ -184,21 +228,21 @@
 
     <br /><br />
     <div class="toolTipContainer">
-        <div class="icon facebook">
+        <div class="icon facebook" onclick="socialMedia('facebook')">
 
-            <div class="tooltip" onclick="hasLoggedIn('#')">Facebook</div>
+            <div class="tooltip">Facebook</div>
             <span><em class="fab fa-facebook-f"></em></span>
         </div>
 
-        <div class="icon twitter">
+        <div class="icon twitter" onclick="socialMedia('twitter')">
             <div class="tooltip">Twitter</div>
             <span><em class="fab fa-twitter"></em></span>
         </div>
-        <div class="icon instagram">
+        <div class="icon instagram" onclick="socialMedia('instagram')">
             <div class="tooltip">Instagram</div>
             <span><em class="fab fa-instagram"></em></span>
         </div>
-        <div class="icon youtube">
+        <div class="icon youtube" onclick="socialMedia('youtube')">
             <div class="tooltip">YouTube</div>
             <span><em class="fab fa-youtube"></em></span>
         </div>
@@ -216,6 +260,20 @@
 
     <script src="./../assets/js/home.js"></script>
     <script src="./../assets/js/error.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./../assets/js/slick.min.js"></script>
+    <script>
+        $('.placementsContainer').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            focusOnSelect: true
+        });
+    </script>
 </body>
 
 </html>
