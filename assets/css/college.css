@@ -17,14 +17,34 @@ h2 {
     float: left;
 }
 
+.navIcons {
+    display: flex;
+    justify-content: space-between;
+}
+
 #icon {
     font-size: 40px;
     text-align: left;
-    display: flex;
     margin: 10px 20px;
     cursor: pointer;
     border-radius: 10px;
     transition: 0.5s;
+}
+
+.fas.fa-times {
+    font-size: 40px;
+    text-align: right;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.5s;
+    display: none;
+    opacity: 0;
+}
+
+.fas.fa-times.show {
+    opacity: 1;
+    display: inline;
 }
 
 .nav-bar {
@@ -36,7 +56,7 @@ h2 {
     height: 100vh;
     border-top-right-radius: 10px;
     z-index: 100;
-    transition: .5s;
+    transition: .4s ease-in-out;
 }
 
 .nav-bar.open {

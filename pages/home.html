@@ -24,7 +24,10 @@
 <body align="center">
     <header>
         <div class="nav-bar" onclick="navBar()">
-            <em id="icon" class="fas fa-bars"></em>
+            <div class="navIcons">
+                <em id="icon" class="fas fa-bars" title="Close Nav-bar"></em>
+                <em class="fas fa-times" title="Close Nav-bar"></em>
+            </div>
             <hr>
             <div class="nav-head" onclick="window.open('signUp.html')">Sign Up</div>
             <hr class="nav-line">
@@ -121,7 +124,7 @@
     </div>
     <br /><br />
 
-    <div class="hov" onclick="showSideBar()"> Apply Now <img alt="Arrow Image" src="../assets/images/arrow.svg" style="box-shadow: 0px 0px 15px;">
+    <div class="hov" onclick="showApplyCourseBar()"> Apply Now <img alt="Arrow Image" src="../assets/images/arrow.svg" style="box-shadow: 0px 0px 15px;">
         <hr>
         <p class="nav-in" onclick="hasLoggedIn('studentDetails.html');"> B.Tech / M.Tech </p>
         <hr>

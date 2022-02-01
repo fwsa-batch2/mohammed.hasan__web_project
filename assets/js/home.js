@@ -1,6 +1,6 @@
-// On clicking, opens and closes the side-bar
+// On clicking, opens and closes the side-bar of apply directly for a course
 
-function showSideBar() {
+function showApplyCourseBar() {
     document.querySelector(".hov").classList.toggle("hov-open");
 }
 // Checks whether notifcation are turned-on or off by getting value from local storage on refresh
@@ -45,6 +45,7 @@ function notification() {
 
 function navBar() {
     document.querySelector(".nav-bar").classList.toggle("open");
+    document.getElementsByClassName("fas fa-times")[0].classList.toggle("show");
 }
 
 // Gets data from storage and deletes it and makes user Logout from our website
