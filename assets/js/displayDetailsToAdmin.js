@@ -45,7 +45,6 @@ function getAndDisplay(objects) {
 function filtering(event) {
     const elem = event.target;
     const filter = elem.value;
-    console.log(filter);
     if (filter == "new") {
         getAndDisplay(details.reverse());
     } else {
@@ -53,7 +52,6 @@ function filtering(event) {
         const sortedList = details2.sort(function(a, b) {
             return b[filter] - a[filter]
         })
-        console.log(sortedList);
         getAndDisplay(sortedList);
     }
 }
