@@ -7,12 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Rampart+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title> College Home Page</title>
     <link rel="stylesheet" href="./../assets/css/slick.css">
     <link rel="stylesheet" href="./../assets/css/slick-theme.css">
     <link rel="stylesheet" href="../assets/css/college.css">
+    <script>
+        alert("Welcome to Ten Dots Unviersity");
+    </script>
 </head>
 
 <body align="center">
@@ -44,14 +50,12 @@
             <a href='login.html'><img alt="Login Image" src="../assets/images/login_icon.svg">LOGIN</a>
         </div>
         <div class="header" title="Click on me; not around me">
-            <a href='#placements'><img alt="Placements" src="../assets/images/.svg">PLACEMENTS</a>
+            <a href='about.html'><img alt="About Us" src="../assets/images/about.svg">ABOUT US</a>
         </div>
         <div class="header" title="Click on me; not around me" onclick="hasLoggedIn('./reviews.html')">
             <img alt="Support Image" src="../assets/images/support.svg">REVIEWS
         </div>
-        <div class="header" title="Click on me; not around me">
-            <a href='about.html'><img alt="About Us" src="../assets/images/about.svg">ABOUT US</a>
-        </div>
+
         <div class="header" title="Click on me; not around me">
             <div class="dropdown" id="dropdown">
                 <a href="courseDetails.html" target="_blank" title="Click me" style="cursor: pointer;;"><img alt="Course Details" src="../assets/images/courses.png" width="6%">COURSE DETAILS</a>
@@ -62,25 +66,28 @@
                                     style="border:2px solid grey">Engineering Department</dt>
                         </h2><br><br><br><br>
                         <hr class="hr">
-                        <dd class="courses"><a href="courseDetails.html">Mechanical Engineering</a></dd>
-                        <dd class="courses"><a href="courseDetails.html">Civil Engineering</a></dd>
-                        <dd class="courses"><a href="courseDetails.html">Computer Engineering</a></dd>
-                        <dd class="courses"><a href="courseDetails.html">IT Engineering</a></dd>
-                        <dd class="courses"><a href="courseDetails.html">Electrical and Electronics Engineering</a>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=0" target="_blank">Mechanical Engineering</a></dd>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=7" target="_blank">Civil Engineering</a></dd>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=3" target="_blank">Computer Engineering</a></dd>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=4" target="_blank">IT Engineering</a></dd>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=1" target="_blank">Electrical and Electronics Engineering</a>
                         </dd>
-                        <dd class="courses"><a href="courseDetails.html">Electronics and Communication
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=2" target="_blank">Electronics and Communication
                                 Engineering</a></dd>
                         <h2>
                             <dt class="courses_head"><img alt="Arrow Image" src="../assets/images/arrow.svg"
                                     style="margin-right:10px;border:2px solid grey">Arts Department</dt>
                         </h2><br><br><br><br>
                         <hr class="hr">
-                        <dd class="courses"><a href="courseDetails.html">Bachelor of Business Administration</a>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=8" target="_blank">Bachelor of Business Administration</a>
                         </dd>
-                        <dd class="courses"><a href="courseDetails.html">Bachelor of Management Studies</a></dd>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=9" target="_blank">Bachelor of Management Studies</a></dd>
                     </dl>
                 </div>
             </div>
+        </div>
+        <div class="header" title="Click on me; not around me">
+            <a href='#placements'><img alt="Placements" src="../assets/images/placement.svg">PLACEMENTS</a>
         </div>
         <div class="header"><img alt="Newsletter" src="../assets/images/newsletter.png" width="7%">ACHIEVEMENTS
         </div>
@@ -167,32 +174,32 @@
         <p id="partnersCaption">Our Main Partners</p>
         <p>
             <img src="./../assets/images/achievements/fresh.png" alt="" width="40%" height="20%">
-            <img src="./../assets/images/achievements/zoho.png" alt="" width="40%">
+            <img src="./../assets/images/achievements/zoho.png" alt="" width="40%" height="20%">
         </p>
     </div>
-
+    <a href="#" class="upGoingArrow">
+        <img src="./../assets/images/arrow.svg" alt="">
+    </a>
     <div class="gifMarquee">
         <h2 style="background:white;width:70%;border-radius: 20px;">
             <img alt="Gif" src="../assets/gifs/college2.gif" style="vertical-align:middle;background:white;"> We don't insist students to carry bag full of books. Instead we teach in such a way that they don't need books
         </h2>
     </div>
-    <div class="aboutUs">
-        <div class="content 1">
-            <p>To make Ten DOTS University a well established world class Research and Development centre in the field of Science and Technology and to become a reputed Institution with academic excellence in the country.
-            </p>
-            <p>Magnifying the quality of education and maintaining the university as an effective technical Institution that can accommodate ever changing societal and industrial demands.Discharging duties and obligations to the students, staff, parents
-                and the society effectively.</p>
-        </div>
-        <div class="content 2">
-            <p>The right to education is not only the right to access education but also the right to receive an education of good quality. Education must be available and accessible.</p>
-            <p>To establish a centre of excellence in Technical Education. To bring out technocrats with superior skill and social commitment. To transform youth into good technologists.</p>
-        </div>
 
-        <h1 style="color: white;"> More content about us</h1>
+    <div class="aboutUs">
+        <div class="content one">
+            <p><img src="./../assets/images/vision.png" alt="" width="15%"> To make Ten DOTS University a well established world class Research and Development centre in the field of Science and Technology and to become a reputed Institution with academic
+                excellence in the country.
+            </p>
+            <p><img src="./../assets/images/mission.png" alt="" width="15%"> Magnifying the quality of education and maintaining the university as an effective technical Institution that can accommodate ever changing societal and industrial demands.Discharging
+                duties and obligations to the students, staff, parents and the society effectively.</p>
+        </div><br>
+        <div class="content two">
+            <p><img src="./../assets/images/quality.png" alt="" width="15%"> The right to education is not only the right to access education but also the right to receive an education of good quality. Education must be available and accessible.</p>
+            <p><img src="./../assets/images/service.png" alt="" width="15%"> To establish a centre of excellence in Technical Education. To bring out technocrats with superior skill and social commitment. To transform youth into good technologists.</p>
+        </div>
     </div>
-    <a href="#" class="upGoingArrow">
-        <img src="./../assets/images/arrow.svg" alt="">
-    </a>
+
     <div id="collegeImages" title="Hover over images">
         <table>
             <caption></caption>
@@ -260,7 +267,6 @@
 
     <script src="./../assets/js/home.js"></script>
     <script src="./../assets/js/error.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./../assets/js/slick.min.js"></script>
     <script>

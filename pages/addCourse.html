@@ -14,7 +14,7 @@
         <img alt="Add Course" src="./../assets/images/course_icon.png" width='3%' height="3%">
         <h2>Add Course</h2>
     </div>
-    <form align='center' onsubmit="onSubmitHandler()">
+    <form align='center' onsubmit="onSubmitHandler(event)">
         <table>
             <caption></caption>
             <tr>
@@ -96,6 +96,8 @@
                 </tbody>
             </table>
         </div>
+        <br>
+        <div id="errorMessage"></div>
         <br>
         <button class="submit">Add Course</button>
 

@@ -1,7 +1,15 @@
 let loggedIn = JSON.parse(localStorage.getItem("loggedInUser"));
 
-// If the logged-in person is admin, then extra css file will be appended
+// Displays particular course which user clicked on home page
 
+function displayCourseFromURL() {
+    let searched = new URLSearchParams(location.search);
+    let searchedCourseIndex = searched.get("courseIndex");
+    if (searchedCourseIndex) {
+        courses(searchedCourseIndex);
+    }
+}
+// If the logged-in person is admin, then extra css file will be appended
 function adminView() {
     if (loggedIn) {
         if (loggedIn[1] == "admin") {
@@ -381,4 +389,5 @@ function prerequisiteForEditing(detailsOfCourse) {
 
 adminView();
 displayAllCoursesAvailable();
+displayCourseFromURL();
 addingCourse();

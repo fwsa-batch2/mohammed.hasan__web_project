@@ -1,5 +1,3 @@
-alert("This is Ten Dots Official Website");
-
 // On clicking, opens and closes the side-bar
 
 function showSideBar() {

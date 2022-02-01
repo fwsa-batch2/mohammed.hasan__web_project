@@ -287,7 +287,7 @@ header>.header {
 .gifMarquee {
     margin-top: 3%;
     width: 110%;
-    animation: marquee 20s infinite;
+    animation: marquee 17s infinite;
     animation-timing-function: linear;
 }
 
@@ -312,7 +312,7 @@ header>.header {
 }
 
 .placements {
-    margin-top: 2%;
+    margin-top: 10%;
     font-size: 35px;
     color: white;
     position: relative;
@@ -320,6 +320,7 @@ header>.header {
 
 .mainPartners {
     color: white;
+    margin-top: 3%;
 }
 
 .mainPartners p {
@@ -370,13 +371,33 @@ header>.header {
 .aboutUs {
     font-size: 20px;
     font-family: serif;
+    margin-top: 20%;
 }
 
 .content {
-    background-color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    margin: 0% 2%;
+}
+
+.content p {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 45%;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    line-height: 30px;
+    text-indent: 100px;
+    width: 40%;
+}
+
+.content p img {
+    float: left;
 }
 
 
@@ -394,13 +415,15 @@ header>.header {
 
 #mainImageCaption {
     color: white;
+    background-color: rgba(63, 62, 62, 0.8);
+    padding: 5px;
     font-size: 27px;
-    font-weight: bold;
+    border-radius: 5px;
     position: absolute;
     top: 100%;
     right: 27%;
     opacity: 0;
-    transition: 0.3s 0.1s;
+    transition: 0.3s;
     z-index: 1;
 }
 

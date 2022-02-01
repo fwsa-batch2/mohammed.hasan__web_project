@@ -72,3 +72,11 @@ video {
     width: 50%;
     margin-right: 5%;
 }
+
+
+/* why height is not changing even in inline styling  */
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
