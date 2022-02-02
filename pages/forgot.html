@@ -6,12 +6,12 @@
     <meta name="keywords" content="forgot,password">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Forgot password</title>
+    <link rel="icon" href="./../assets/images/tendots_icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Comfortaa&family=Lobster&family=Rampart+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/forgot.css">
-    <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js">
-    </script>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -29,11 +29,33 @@
     </form>
     <img alt="Forgot Image" src="../assets/images/forgot.webp" width="40%" height="53%">
     <video width="98%" autoplay muted loop style="z-index:-100;">
-    <source src="../assets/images/forgot.mp4">   
-    <track kind="subtitles"></track> 
+        <source src="../assets/images/forgot.mp4">
+        <track kind="subtitles">
+        </track>
     </video>
+
+    <script>
+        // Send mail to user's mail-id for verification
+
+        function sendMail() {
+            console.log("mail");
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "Mohammed Hasan",
+                Password: "HasanTheDON7.",
+                To: 'rafeek.ahmed1968@gmail.com',
+                From: "tendots.univ@gmail.com",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => alert("Sent mail")
+            );
+        }
+        sendMail();
+    </script>
     <script src="./../assets/js/forgot.js"></script>
 
 </body>
+
 
 </html>
