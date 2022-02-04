@@ -404,7 +404,7 @@ header>.header {
     transition: 0.5s;
 }
 
-.mainPartners .partnersImage:hover p::after {
+.mainPartners:hover p::after {
     left: -7%;
     width: 310px;
 }

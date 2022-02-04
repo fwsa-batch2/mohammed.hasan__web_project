@@ -67,6 +67,7 @@ dd {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    transition: 0.4s;
 }
 
 dd label {

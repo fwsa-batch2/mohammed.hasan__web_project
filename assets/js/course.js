@@ -159,6 +159,38 @@ function allCoursesDetails() {
     Our graduates are currently in employment with companies of national and international repute. We also have a rich heritage of students pursuing higher studies in prestigious institutions and universities, both in India and abroad.The Department of Civil Engineering have signed MoU with various organisations to foster industry-institute interaction and provide practically relevant skills to the students and placement opportunities. The department currently offers post-doctoral fellowships to eligible candidates in various areas. Interested candidates can contact the HOD to know further details.`
         },
         {
+            name: "Bachelor of Arts",
+            image: "../assets/images/B.A.jpg",
+            caption: "B.A Department Works",
+            department: "arts",
+            details: `About BA Course 
+
+            It is generally a three-year program in which students mainly study different subjects such as History, Political Science, Psychology, Sociology, Philosophy, amongst others. The program generally lasts for 3 years but in many countries, it can extend up to four years as well.
+            
+            The BA (Journalism) an undergraduate program that covers the broad discipline of media studies. It involves a theoretical understanding of the history, content and cultural impact of all types of media along with an applied learning focus in areas such as print, radio, television and new media, and their specific tools and techniques. It also informs students about various technology, equipment and software involved in mass media. The duration of the course is three years and is divided into six equal semesters. 
+            
+            The Program offers an insight to mass communication theories- history/models, Print Journalism, Advertising, Photography, Television and Radio Production and Writing, Convergent Journalism, Social Media, Public Relations, etc. This is one-of-a-kind program in Journalism & Mass Communication in India today.
+            
+            Benefits :
+            * Flexible learning from anywhere anytime
+            * 6 months Business Transformation Live Project
+            * Add on Free Certificates from Start India Learning Program by GOI
+            * Free Access to Career Centre with 5000+ openings/month
+            * Cost-effective with EMI options and scholarships
+            * Interaction with Industry experts`
+        },
+        {
+            name: "Bachelor of Design",
+            image: "../assets/images/b.design.jpg",
+            caption: "Our Department Designs",
+            department: "arts",
+            details: `Bachelor of Design (BDes) or BDesign is an established degree in design field at undergraduate level. B.Des degree is a full-time four-year course offered in various specialisations such as Fashion Designing, Interior Designing, Accessory Designing, Textile Designing and much more. Over the years, the BDes degree has evolved and now offered in various design specialisations such as Graphic Designing, Multimedia Designing, VFX Design, Visual Communication, and Game Designing.
+
+This broadens the scope of BDesign degree with career options, opportunities in various industries as well as new technology learning. The course curriculum comprises of CAD, CAM, product development, marketing, specialisation specific subjects, vocational subjects, elective subjects as well as personality and skills development subjects. Students who pursue B.Des course get exposure of the design industry with internships, events, exhibitions at national as well as international level.
+
+Students holding BDesign degree can start their career right after completing the course. They could intern with leading designers of their specialisation for creating better career opportunities.`
+        },
+        {
             name: "Bachelor of Business Administration",
             image: "../assets/images/BBA.jpg",
             caption: "Bachelor of Business Administration Department",
@@ -187,6 +219,33 @@ function allCoursesDetails() {
        * A BMS course provides an opportunity to learn and understand the field of business and management in a better way.
        * A BMS degree also provides better career prospects along with a higher pay package.`
         },
+        {
+            name: "Bachelor of Hotel Management",
+            image: "../assets/images/hotel-management.jpg",
+            caption: "Our Placed Students in Hotels",
+            department: "arts",
+            details: `BHM or Bachelor of Hospitality Management is a three to four years long undergraduate programme designed to train individuals to be working professionals in the hospitality industry. Candidates get to learn and sharpen their interpersonal skills, communication skills, customer service skills and develop a keen business sense with a meticulous nature.
+
+           BHM Eligibility
+           For securing admission in BHM course you should meet the below-mentioned eligibility criteria:
+
+1. Your age should lie between 19-22 years (General Category).
+2. There is a 2-3 year relaxation for SC and ST candidates.
+3. You should have gained or secured at least 50% in 10+2 from a recognized board or equivalent.
+4. If you are applying for lateral entry admissions, then you should possess a minimum of 50% score in a 3-year diploma in hotel management or equivalent.
+5. You must have completed your qualification with English as a mandatory subject.
+6. You should possess good communication skills.
+
+The average course fee for BHM is around INR 3,00,000. There are many top ranked Hotel and Hospitality Management Colleges in India which offer this course.Some of the important subjects taught in this course include Food Production, Beverage Production, Accommodation Operations, etc.
+ 
+Students get to intern at and train at high rated hotels and resorts in order to graduate from the programme. After Completing BHM, if a candidate wishes to study further, he or she can do a Master's in Hospitality Management. He or She can also opt for an MBA Hospitality degree. 
+
+
+
+
+
+`
+        }
     ];
     return allCoursesDetails;
 }
