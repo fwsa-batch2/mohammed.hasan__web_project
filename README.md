@@ -9,6 +9,7 @@
 ### Sonar Cloud Link :
   * Link : https://sonarcloud.io/project/overview?id=fwsa-batch2_mohammed.hasan__web_project
   
+  
 ### Features :
    * Login
    * Register
