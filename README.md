@@ -18,7 +18,7 @@
    * Update Course
    * Delete Course
    * Forgot Password
-   * Filter
+   * Athentication and Authorization
 
 ### Login
    As a user, I should be able to login in a proper way for applying for a course in this website. User can only be able to login if the user has already signed up in this website. User should enter the correct Mail Id and Password to go to next page; else display error message. If a user logs-in, then head to the page of Application for a Course. If an admin logs-in, then head to the page that lists the details of students who applied for particular course in this website.
@@ -47,3 +47,8 @@
 ### Filter 
    (In displayDetailsToAdmin.html)
    As an admin, I should be able to filter the page(mentioned) as given.
+
+### Authentication and Authorization
+   In some pages, only admins can access. Users also can access only few pages without logging-in.
+Only after logging-in, user can experience full experience of our website. Even for applying for a course
+student need to log-in.
