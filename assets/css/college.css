@@ -183,14 +183,13 @@ header>.header {
 
 .dropdown-content {
     display: none;
-    margin: 2%;
+    margin: 7%;
     width: 600px;
     height: 600px;
     background-color: white;
     position: absolute;
-    right: 5%;
+    left: -65%;
     z-index: 100;
-    top: 10;
     box-shadow: 0px 0px 20px;
     border-radius: 3px;
 }
@@ -203,7 +202,23 @@ header>.header {
 .courses {
     display: flex;
     padding: 5px;
+    align-items: flex-start;
     justify-content: flex-start;
+    color: black;
+    font-size: 19px;
+    font-weight: 800;
+    flex-direction: column;
+}
+
+.courses span {
+    padding: 5px;
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+.courses:hover span {
+    background-color: black;
+    color: white;
 }
 
 .courses a:link,
@@ -323,8 +338,14 @@ header>.header {
 }
 
 .placementsContainer img {
-    width: 95%;
-    border-radius: 10px;
+    width: 80%;
+    border-radius: 7px;
+    object-fit: contain;
+    transition: 0.4s;
+}
+
+.placementsContainer img:hover {
+    transform: scale(1.1);
 }
 
 .placementsContainer span {
@@ -383,7 +404,7 @@ header>.header {
     transition: 0.5s;
 }
 
-.mainPartners:hover p::after {
+.mainPartners .partnersImage:hover p::after {
     left: -7%;
     width: 310px;
 }
@@ -399,6 +420,25 @@ header>.header {
     align-items: center;
     justify-content: space-around;
     margin: 0% 2%;
+    position: relative;
+    cursor: default;
+}
+
+.aboutUs .captionOfContent {
+    color: white;
+    font-size: 25px;
+    font-family: monospace;
+    font-weight: 600;
+    position: absolute;
+    top: -10%;
+}
+
+.aboutUs .captionOfContent.one {
+    left: 15%;
+}
+
+.aboutUs .captionOfContent.two {
+    left: 65%;
 }
 
 .content p {
@@ -520,7 +560,7 @@ a:hover {
     height: 170px;
     font-size: 25px;
     text-align: center;
-    background-color: orange;
+    background-image: linear-gradient(45deg, rgb(253, 173, 24), rgb(250, 217, 155));
     color: black;
     padding: 10px;
     border-radius: 10px 10px 0px 0px;

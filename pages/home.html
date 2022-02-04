@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="./../assets/css/slick.css">
     <link rel="stylesheet" href="./../assets/css/slick-theme.css">
     <link rel="stylesheet" href="../assets/css/college.css">
-    <script>
+    <!-- <script>
         alert("Welcome to Ten Dots Unviersity");
-    </script>
+    </script> -->
 </head>
 
 <body align="center">
@@ -38,9 +38,9 @@
             <hr class="nav-line">
             <div class="nav-head" onclick="adminError('addCourse.html')">Add Course</div>
             <hr class="nav-line">
-            <div class="nav-head" onclick="adminError('courseDetails.html')">Edit Course</div>
+            <div class="nav-head" onclick="adminError('courseDetailsAdmin.html')">Edit Course</div>
             <hr class="nav-line">
-            <div class="nav-head" onclick="adminError('courseDetails.html')">Delete Course</div>
+            <div class="nav-head" onclick="adminError('courseDetailsAdmin.html')">Delete Course</div>
             <hr class="nav-line">
             <div class="nav-head" onclick="adminError('displayDetailsToAdmin.html')">View Student Details</div>
             <hr class="nav-line">
@@ -69,22 +69,31 @@
                                     style="border:2px solid grey">Engineering Department</dt>
                         </h2><br><br><br><br>
                         <hr class="hr">
-                        <dd class="courses"><a href="courseDetails.html?courseIndex=0" target="_blank">Mechanical Engineering</a></dd>
-                        <dd class="courses"><a href="courseDetails.html?courseIndex=7" target="_blank">Civil Engineering</a></dd>
-                        <dd class="courses"><a href="courseDetails.html?courseIndex=3" target="_blank">Computer Engineering</a></dd>
-                        <dd class="courses"><a href="courseDetails.html?courseIndex=4" target="_blank">IT Engineering</a></dd>
-                        <dd class="courses"><a href="courseDetails.html?courseIndex=1" target="_blank">Electrical and Electronics Engineering</a>
+                        <dd class="courses"><span onclick="isAdminCoursePage('0')"> Mechanical Engineering</span>
+
                         </dd>
-                        <dd class="courses"><a href="courseDetails.html?courseIndex=2" target="_blank">Electronics and Communication
-                                Engineering</a></dd>
+                        <dd class="courses"><span onclick="isAdminCoursePage('7')">Civil Engineering</span>
+                        </dd>
+                        <dd class="courses"><span onclick="isAdminCoursePage('3')">Computer
+                                Engineering</span></dd>
+                        <dd class="courses"><span onclick="isAdminCoursePage('4')">IT
+                                Engineering</span></dd>
+                        <dd class="courses"><span onclick="isAdminCoursePage('1')">Electrical and
+                                Electronics Engineering</span>
+                        </dd>
+                        <dd class="courses"><span onclick="isAdminCoursePage('2')">Electronics and
+                                Communication
+                                Engineering</span></dd>
                         <h2>
                             <dt class="courses_head"><img alt="Arrow Image" src="../assets/images/arrow.svg"
                                     style="margin-right:10px;border:2px solid grey">Arts Department</dt>
                         </h2><br><br><br><br>
                         <hr class="hr">
-                        <dd class="courses"><a href="courseDetails.html?courseIndex=8" target="_blank">Bachelor of Business Administration</a>
+                        <dd class="courses"><span onclick="isAdminCoursePage('8')">Bachelor of
+                                Business Administration</span>
                         </dd>
-                        <dd class="courses"><a href="courseDetails.html?courseIndex=9" target="_blank">Bachelor of Management Studies</a></dd>
+                        <dd class="courses"><span onclick="isAdminCoursePage('9')">Bachelor of
+                                Management Studies</span></dd>
                     </dl>
                 </div>
             </div>
@@ -101,17 +110,17 @@
         <h1 title='About Ten Dots University'>
             <img alt="College Icon" src="./../assets/images/tendots_icon.png" class="head_image" width="100px" height="80px">
             <span id="title">
-                    TEN DOTS UNIVERSITY
-                </span>
+                TEN DOTS UNIVERSITY
+            </span>
             <div class="caption">Do Or Try, Students</div>
         </h1>
     </div>
     <h2>
         <div id="marquee1">
             <span>
-                    Admissions for 2021-2022 has been started from October 1st. If you want to join our college, then go
-                    to the college and meet the officials
-             </span>
+                Admissions for 2021-2022 has been started from October 1st. If you want to join our college, then go
+                to the college and meet the officials
+            </span>
         </div>
     </h2>
     <br /><br />
@@ -176,8 +185,8 @@
     <div class="mainPartners">
         <p id="partnersCaption">Our Main Partners</p>
         <p>
-            <img src="./../assets/images/achievements/fresh.png" alt="" width="40%" height="20%">
-            <img src="./../assets/images/achievements/zoho.png" alt="" width="40%" height="20%">
+            <img class="partnersImage" src="./../assets/images/achievements/fresh.png" alt="" width="40%" height="20%">
+            <img class="partnersImage" src="./../assets/images/achievements/zoho.png" alt="" width="40%" height="15%">
         </p>
     </div>
     <a href="#" class="upGoingArrow">
@@ -191,15 +200,25 @@
 
     <div class="aboutUs">
         <div class="content one">
-            <p><img src="./../assets/images/vision.png" alt="" width="15%"> To make Ten DOTS University a well established world class Research and Development centre in the field of Science and Technology and to become a reputed Institution with academic
+            <div class="captionOfContent one">Vision</div>
+            <p>
+                <img src="./../assets/images/vision.png" alt="" width="15%"> To make Ten DOTS University a well established world class Research and Development centre in the field of Science and Technology and to become a reputed Institution with academic
                 excellence in the country.
             </p>
-            <p><img src="./../assets/images/mission.png" alt="" width="15%"> Magnifying the quality of education and maintaining the university as an effective technical Institution that can accommodate ever changing societal and industrial demands.Discharging
-                duties and obligations to the students, staff, parents and the society effectively.</p>
+            <div class="captionOfContent two">Team work</div>
+            <p>
+                <img src="./../assets/images/mission.png" alt="" width="15%"> Magnifying the quality of education and maintaining the university as an effective technical Institution that can accommodate ever changing societal and industrial demands.Discharging
+                duties and obligations to the students, staff, parents and the society effectively.
+            </p>
         </div><br>
         <div class="content two">
-            <p><img src="./../assets/images/quality.png" alt="" width="15%"> The right to education is not only the right to access education but also the right to receive an education of good quality. Education must be available and accessible.</p>
-            <p><img src="./../assets/images/service.png" alt="" width="15%"> To establish a centre of excellence in Technical Education. To bring out technocrats with superior skill and social commitment. To transform youth into good technologists.</p>
+            <div class="captionOfContent one">Educate properly</div>
+            <p>
+                <img src="./../assets/images/quality.png" alt="" width="15%"> The right to education is not only the right to access education but also the right to receive an education of good quality. Education must be available and accessible.
+            </p>
+            <div class="captionOfContent two">Excellence</div>
+            <p>
+                <img src="./../assets/images/service.png" alt="" width="15%"> To establish a centre of excellence in Technical Education. To bring out technocrats with superior skill and social commitment. To transform youth into good technologists.</p>
         </div>
     </div>
 
