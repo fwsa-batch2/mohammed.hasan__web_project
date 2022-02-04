@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #about {
     background-color: aqua;
     border-radius: 10px;
@@ -73,10 +77,32 @@ video {
     margin-right: 5%;
 }
 
+a.upGoingArrow {
+    background-color: white;
+    padding: 10px;
+    padding-top: 20px;
+    border-radius: 20px;
+}
 
-/* why height is not changing even in inline styling  */
+.upGoingArrow:hover {
+    border: 2px solid black;
+}
 
-.slide img {
-    width: 100%;
-    height: 100%;
+.upGoingArrow {
+    position: sticky;
+    top: 93%;
+    left: 90%;
+    z-index: 10;
+}
+
+.upGoingArrow img {
+    transform: rotate(-90deg);
+    z-index: -10;
+}
+
+
+/*Changing height of images  */
+
+.slick-track {
+    height: 370px;
 }
