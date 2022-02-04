@@ -12,8 +12,12 @@
 </head>
 
 <body>
+    <a href="./home.html" target="_blank">
+        <img src="./../assets/images/home.jpg" width="5%" height="10%" alt="home_icon">
+    </a>
     <div class="filter">
-        <h2>Sort By</h2>
+        <h1>Applied Student Details</h1>
+        <h2 style="padding-left: 20px;"> Sort By </h2>
         <select onchange="filtering(event)" id="filter">
             <option value="">--Select--</option>
             <option value="cutoff10">10th Cut-off</option>
@@ -25,7 +29,8 @@
     </div>
     <table border="4">
         <caption></caption>
-        <th scope="col"></th>
+        <th scope="col"> No Student Details available
+        </th>
         <tr id="table"></tr>
     </table>
     <a class="addCourse" href="./addCourse.html">

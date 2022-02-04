@@ -10,8 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Comfortaa&family=Lobster&family=Rampart+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/otp.css">
-    <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js">
-    </script>
 </head>
 
 <body>
@@ -19,10 +17,10 @@
         <h1 class="title">OTP Verification </h1>
         <hr class="hr">
         <h2> OTP has been sent to your number</h2>
-        <input type="tel" maxlength="1" required>&nbsp;&nbsp;
-        <input type="tel" maxlength="1" required>&nbsp;&nbsp;
-        <input type="tel" maxlength="1" required>&nbsp;&nbsp;
-        <input type="tel" maxlength="1" required>&nbsp;&nbsp;
+        <input type="tel" maxlength="1" value="" id="otpNum1" required>&nbsp;&nbsp;
+        <input type="tel" maxlength="1" value="" id="otpNum2" required>&nbsp;&nbsp;
+        <input type="tel" maxlength="1" value="" id="otpNum3" required>&nbsp;&nbsp;
+        <input type="tel" maxlength="1" value="" id="otpNum4" required>&nbsp;&nbsp;
         <br>
         <div style="color:purple;cursor:pointer;margin-top:15px;text-decoration:underline;" id="resendOtp"> Resend OTP.?
         </div>
@@ -30,6 +28,14 @@
         <button type="submit" class="submit">Submit</button>
     </form>
     <img alt="Login Gif" src="../assets/images/login.gif" width="40%" height="40%">
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_str4I9mVP6DG7g6A93L0a");
+        })();
+    </script>
     <script type="text/javascript" src="./../assets/js/otp.js">
     </script>
 </body>

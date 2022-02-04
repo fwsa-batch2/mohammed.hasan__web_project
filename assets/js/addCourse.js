@@ -23,12 +23,12 @@ function onSubmitHandler(event) {
         details: details,
         fee: fees
     }
-    let array = [];
-    array = JSON.parse(localStorage.getItem("allCourses"));
-    let i = 0;
+    let allCourses = [];
+    allCourses = JSON.parse(localStorage.getItem("allCourses"));
+    let course = 0;
     let isExist;
-    for (i of array) {
-        if (i.name.toLowerCase() == courseName.toLowerCase()) {
+    for (course of allCourses) {
+        if (course.name.toLowerCase() == courseName.toLowerCase()) {
             isExist = true;
             break;
         } else {
@@ -36,8 +36,8 @@ function onSubmitHandler(event) {
         }
     }
     if (!isExist) {
-        array.push(courseDetails);
-        localStorage.setItem("allCourses", JSON.stringify(array));
+        allCourses.push(courseDetails);
+        localStorage.setItem("allCourses", JSON.stringify(allCourses));
         window.location.href = "./courseDetails.html";
     } else {
         document.querySelector("#errorMessage").innerHTML = `<font color=red>Sorry, this course already exists  !!</font>`;

@@ -1,5 +1,6 @@
 let isExist = false;
 let parsedData = JSON.parse(localStorage.getItem("signUpDetails"));
+var otp = "";
 
 // Checks the mail-id and number entered with registered users and heads to next page if exists.
 // Else displays an error message to user.
@@ -13,10 +14,18 @@ function onSubmitHandler(event) {
         document.getElementById("error").innerHTML = "<font color=red> Invalid E-mail or Mobile number !! </font>";
         document.getElementById("error").style.cssText = "display :contents";
     } else {
+        for (i = 0; i < 4; i++) {
+            otp += " " + Math.floor(Math.random(1, 9) * 10);
+        }
+        const emailBody = {
+            to_email: mailId, // replace it with the receiver's email address
+            message: "Your One-Time Password is :" + otp
+        }
+        sendEmailNotification(emailBody);
+        isExist.push(otp);
         localStorage.setItem("forgotPassword", JSON.stringify(isExist));
         window.location.href = "./otp.html";
     }
-    // sendMail(mailId);
 }
 
 // Returns whether the entered details are already registered and returns "isExist"
@@ -35,19 +44,20 @@ function doesExist(mail, number) {
     }
     return isExist;
 }
+
 // Send mail to user's mail-id for verification
-function sendMail() {
-    console.log("sent mail");
-    Email.send({
-        Host: "smtp.gmail.com",
-        Username: "ten dots",
-        Password: "HasanTheDON7.",
-        To: 'rafeek.ahmed1968@gmail.com',
-        From: "tendots.univ@gmail.com",
-        Subject: "This is the subject",
-        Body: "And this is the body"
-    }).then(function() {
-        alert("Sent mail");
-    });
+
+function sendEmailNotification(body) {
+    emailjs.send(
+        "service_7njccgr",
+        "template_dajj7dj",
+        body
+    ).then(
+        function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+        },
+        function(error) {
+            console.log('FAILED...', error);
+        }
+    );
 }
-sendMail();

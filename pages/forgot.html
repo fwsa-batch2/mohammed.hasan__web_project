@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Comfortaa&family=Lobster&family=Rampart+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/forgot.css">
-    <script src=" https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -34,24 +33,11 @@
         </track>
     </video>
 
-    <script>
-        // Send mail to user's mail-id for verification
-
-        function sendMail() {
-            console.log("mail");
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "Mohammed Hasan",
-                Password: "HasanTheDON7.",
-                To: 'rafeek.ahmed1968@gmail.com',
-                From: "tendots.univ@gmail.com",
-                Subject: "This is the subject",
-                Body: "And this is the body"
-            }).then(
-                message => alert("Sent mail")
-            );
-        }
-        sendMail();
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_str4I9mVP6DG7g6A93L0a");
+        })();
     </script>
     <script src="./../assets/js/forgot.js"></script>
 

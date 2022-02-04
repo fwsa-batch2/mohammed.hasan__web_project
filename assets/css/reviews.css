@@ -74,11 +74,13 @@ td:hover {
     border-bottom-left-radius: 5px;
     border-top-right-radius: 5px;
     font-size: 17px;
+    margin-left: 18%;
 }
 
 .addComment:hover {
     transform: translateY(4px);
     transition: all .5S;
+    cursor: pointer;
 }
 
 .resetComment {
@@ -88,6 +90,7 @@ td:hover {
     border-bottom-left-radius: 5px;
     border-top-right-radius: 5px;
     font-size: 17px;
+    cursor: pointer;
 }
 
 .resetComment:hover {

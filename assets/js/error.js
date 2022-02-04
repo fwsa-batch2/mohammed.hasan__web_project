@@ -25,3 +25,16 @@ function adminError(pathOfNextPage) {
     }
 
 }
+
+// Checks whether user is admin; if yes, then leads to admin page, else leads to user page
+
+function isAdminCoursePage(index) {
+    let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    console.log(index);
+    if (loggedInUser && loggedInUser[1] == "admin") {
+        window.open(`courseDetailsAdmin.html?courseIndex=${index}`);
+
+    } else {
+        window.open(`./courseDetails.html?courseIndex=${index}`);
+    }
+}

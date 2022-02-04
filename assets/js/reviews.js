@@ -9,8 +9,6 @@ let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 function addComments(event) {
     event.preventDefault();
-    // commentsArray = JSON.parse(localStorage.getItem("comments"));
-    console.log(commentsArray);
     let comment = document.getElementById("comment").value;
     let name = document.getElementById("name").value;
     let mail = loggedInUser[0];
@@ -42,7 +40,6 @@ function addComments(event) {
 // click on "show more" option to show all the comments
 
 function showingAll() {
-    console.log("showing");
     if (showall) {
         document.getElementsByClassName("showing")[0].innerHTML = "..show more";
         showall = false;
@@ -70,24 +67,21 @@ function alreadyCommented(mail) {
 // Gets all comments from storage and displays it to user including likes, name and date of commented
 
 function getAndDisplay(object = getcomments) {
-    object = JSON.parse(localStorage.getItem("comments"));
     let text = '';
     if (object) {
-        commentsArray = object;
         if (showingAll()) {
-            for (let i = 0; i < commentsArray.length; i++) {
+            for (let i = 0; i < object.length; i++) {
                 text += `<dl><dt><div style='float:left;margin-left:10px;color:grey;'> ${object[i].name} &nbsp;&nbsp;| ${object[i].date} </div></dt><br><dd><span> ${object[i].comment} </span></dd></dl>
-                <i class="fas fa-thumbs-up" data-index="${i}" onclick="increaseLikes(event,'${commentsArray[i].mailId}')"></i>&nbsp;${commentsArray[i].likes}`
+                <i class="fas fa-thumbs-up" data-index="${i}" onclick="increaseLikes(event,'${object[i].mailId}')"></i>&nbsp;${object[i].likes}`
             }
         } else {
             for (let i = 0; i < 3; i++) {
                 text += `<dl><dt><div style='float:left;margin-left:10px;color:grey;'> ${object[i].name} &nbsp;&nbsp;| ${object[i].date} </div></dt><br><dd><span> ${object[i].comment} </span></dd></dl>
-                <i class="fas fa-thumbs-up" data-index="${i}" onclick="increaseLikes(event,'${commentsArray[i].mailId}')"></i>&nbsp;${commentsArray[i].likes}`
+                <i class="fas fa-thumbs-up" data-index="${i}" onclick="increaseLikes(event,'${object[i].mailId}')"></i>&nbsp;${object[i].likes}`
             }
         }
         document.getElementById("addingComment").innerHTML = text;
     } else {
-        commentsArray = [{ comment: "This is the best college in basis of Food Facilities and Cultural activities", name: "Annapoorni", date: date, likes: 0, liked: [""], mailId: "annapurani@gmail.com" }, { comment: "Remarks : Placements are excellent. The standard of education is very good as all the teachers are well-experienced.The campus is maintained well and the food is good.The other factors are they offer all facilities i.e from bus to books to food, everything is taken care of.", name: "Ismail", date: date, likes: 0, liked: [""], mailId: "ismail@gmail.com" }, { comment: "Food inspector one of the best college in state the infrastructure were awesome more extra curricular activities. Library were extrodinary to know more abt food tech and to learn more about foood tech and to work hard in ma careers", name: "Mahalakshmi", date: date, likes: 0, liked: [""], mailId: "mahalakshmi@gmail.com" }];
         localStorage.setItem("comments", JSON.stringify(commentsArray));
     }
     forLikesColor();
@@ -110,7 +104,7 @@ function increaseLikes(event, commentedMailId) { // need mailId to know who like
         }
     }
     for (i in likesOfComment) {
-        if (loggedInUser[0] == likesOfComment[i]) { // User who logged has logged-in is checked with list of array of users who liked that comment
+        if (loggedInUser[0] == likesOfComment[i]) { // User who has logged-in is checked with list of array of users who liked that comment
             liked = true;
             break;
         } else {
@@ -127,7 +121,6 @@ function increaseLikes(event, commentedMailId) { // need mailId to know who like
         allComments[index].likes -= 1;
     }
     localStorage.setItem("comments", JSON.stringify(allComments));
-    // window.location.reload();
     getAndDisplayComments(allComments);
 
 }
@@ -158,7 +151,6 @@ function getAndDisplayComments(object) {
     document.getElementById("addingComment").innerHTML = text;
     document.getElementsByClassName("showing")[0].innerHTML = "..show less";
     forLikesColor();
-
 }
 
 // Avails a star rating option for user to rate our website
