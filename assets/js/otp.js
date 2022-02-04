@@ -12,8 +12,9 @@ function onSubmitHandler() {
     if (enteredOtp == userDetail[2]) {
         userDetail.pop();
         localStorage.setItem("loggedInUser", JSON.stringify(userDetail));
+        window.location.replace("home.html");
         alert("You have been logged in");
-        window.location.href = "./home.html";
+        console.log("HOME");
     } else {
         alert("Incorrect OTP entered");
     }
@@ -29,6 +30,8 @@ function sendEmailNotification(body) {
     ).then(
         function(response) {
             console.log('SUCCESS!', response.status, response.text);
+            userDetail[2] = otp;
+            localStorage.setItem("forgotPassword", JSON.stringify(userDetail));
         },
         function(error) {
             console.log('FAILED...', error);
@@ -44,4 +47,4 @@ const emailBody = {
     message: "Your One-Time Password is :" + otp
 }
 let resendOTP = document.getElementById("resendOtp");
-resendOTP.addEventListener("click", sendEmailNotification(emailBody));
+resendOTP.addEventListener("click", () => { sendEmailNotification(emailBody) });
