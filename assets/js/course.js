@@ -239,12 +239,29 @@ Students holding BDesign degree can start their career right after completing th
 The average course fee for BHM is around INR 3,00,000. There are many top ranked Hotel and Hospitality Management Colleges in India which offer this course.Some of the important subjects taught in this course include Food Production, Beverage Production, Accommodation Operations, etc.
  
 Students get to intern at and train at high rated hotels and resorts in order to graduate from the programme. After Completing BHM, if a candidate wishes to study further, he or she can do a Master's in Hospitality Management. He or She can also opt for an MBA Hospitality degree. 
-
-
-
-
-
 `
+        },
+        {
+            name: "B.A Psychology(Hons)",
+            image: "../assets/images/psychology.jpg",
+            caption: "Our Students giving Counselling",
+            department: "arts",
+            details: `About BA Psychology
+            
+            Encompassing the study of the human mind and behaviour, BA Psychology is a 3-year undergraduate course that aims to provide students with an interdisciplinary understanding of the biological structure of the human mind, its behaviours, as well as cognitive based-psychology.
+            
+            Things we will learn :
+
+            • Apply Psychology across diverse areas like Clinical, Counselling, Industrial, Organizational, Education, Sports and Health.
+            • Solve problems in areas that affect healthy lifestyles, abnormal behavior and psychological principles to drive social change
+            
+            Candidates with BA Psychology have opportunities to work for top recruiters like Apollo Hospitals, Fortis, Max Insurance, etc. The average annual salary package ranges between INR 1.2 – INR 3 LPA
+
+            Who should pursue a BA Psychology? 
+            
+Post Completing BA in Psychology, various job opportunities like Researchers, Associates, Writers, Social Workers, Teachers & many more are available for a Candidate. After B.A in Psychology, candidates can go for further higher education in the same specialization which will develop their
+ knowledge regarding the subject as well as increase job opportunities. Candidates can get placed in Top-Notch Private companies Post Graduation in BA arts [Psychology]. Candidates can also prepare for Government Jobs after completing BA in Psychology
+ `
         }
     ];
     return allCoursesDetails;
@@ -305,7 +322,7 @@ function showingCourse() {
     let integrated = ``;
     for (i; i < len; i++) {
         let oneCourseDepartment = parsedCourses[i];
-        if (oneCourseDepartment.department == "engineering") {
+        if (oneCourseDepartment.department == "engineering") { // Storing in separate variable to display in different tags of html
             engineering += ` <dd onclick = "courses(${i})">
             <p> ${ oneCourseDepartment.name } </p>
              <div class = "dropdown" >
