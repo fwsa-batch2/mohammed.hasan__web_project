@@ -15,6 +15,7 @@
    * Register
    * List of Courses
    * Apply for a Course
+   * View Student Details
    * Add Course
    * Update Course
    * Delete Course
@@ -33,6 +34,8 @@
 ### Apply for a Course
    As a user, I should be able to apply for a course after logging-in in this website. When user provides proper details, then go ahead to next page.
 
+### View Student Details
+   As an admin, I should be able to view the list of students who applied in our website.
 ### Add Course
    As an admin, I should be able to add a course to the list of already availabe courses. Admin should give proper details of the Course, he is adding, so that user can experience a trouble-free experience in this website.
 
