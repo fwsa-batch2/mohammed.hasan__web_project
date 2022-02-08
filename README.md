@@ -43,7 +43,7 @@
    As an admin, I should be able to delete a particular course.
 
 ### Forgot Password
-   User can login only if user has an account already logged-in in our website with his/her mobile number and corresponding Mail-Id. As an user, I should be able to login if I enter the correct OTP number sent to user's mobile. After that I should be able to change password after that.
+   User can login only if user has an account already logged-in in our website with his/her mobile number and corresponding Mail-Id. As an user, I should be able to login if I enter the correct OTP number sent to user's Mail-Id. After that I should be able to change password.
 
 ### Filter 
    (In displayDetailsToAdmin.html)
