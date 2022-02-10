@@ -5,10 +5,16 @@ body {
     background-size: 100% 110%;
 }
 
+h1 {
+    font-size: 33px;
+    font-family: monospace;
+    margin-left: 5%;
+}
+
 .home {
     float: left;
     border-radius: 10px;
-    margin-left: 3%;
+    margin-left: 1%;
 }
 
 #signup {
@@ -84,6 +90,8 @@ input[type=tel] {
 table {
     margin-left: 37%;
     width: 30%;
+    border-radius: 10px;
+    background-color: snow;
 }
 
 th,
