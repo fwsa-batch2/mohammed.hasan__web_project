@@ -22,9 +22,7 @@ function onSubmitHandler(event) {
             message: "Your One-Time Password is :" + otp
         }
         sendEmailNotification(emailBody);
-        isExist.push(otp);
-        localStorage.setItem("forgotPassword", JSON.stringify(isExist));
-        window.location.href = "./otp.html";
+
     }
 }
 
@@ -55,6 +53,9 @@ function sendEmailNotification(body) {
     ).then(
         function(response) {
             console.log('SUCCESS!', response.status, response.text);
+            isExist.push(otp);
+            localStorage.setItem("forgotPassword", JSON.stringify(isExist));
+            window.location.href = "./otp.html";
         },
         function(error) {
             console.log('FAILED...', error);

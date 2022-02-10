@@ -12,9 +12,10 @@ function onSubmitHandler() {
     if (enteredOtp == userDetail[2]) {
         userDetail.pop();
         localStorage.setItem("loggedInUser", JSON.stringify(userDetail));
-        window.location.replace("home.html");
+        // location.replace("./home.html");
+        window.history.pushState("", "", "home.html");
+        window.location.reload();
         alert("You have been logged in");
-        console.log("HOME");
     } else {
         alert("Incorrect OTP entered");
     }
@@ -47,4 +48,4 @@ const emailBody = {
     message: "Your One-Time Password is :" + otp
 }
 let resendOTP = document.getElementById("resendOtp");
-resendOTP.addEventListener("click", () => { sendEmailNotification(emailBody) });
+resendOTP.addEventListener("click", () => { sendEmailNotification(emailBody) }); // To make func. invoke only after clicking the button.
