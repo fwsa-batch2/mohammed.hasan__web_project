@@ -2,11 +2,20 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    margin-top: 6%;
+    margin-left: 2%;
+}
+
 #about {
+    display: inline-block;
+    margin: 10px 0px;
     background-color: aqua;
     border-radius: 10px;
     color: black;
-    padding: 5px 10px;
+    padding: 10px 25px;
+    font-family: monospace;
+    font-size: 35px;
 }
 
 body {
@@ -31,15 +40,14 @@ p {
     font-size: 19px;
     line-height: 1.5;
     float: left;
-    animation: mymove 3s infinite;
     text-align: center;
     padding: 15px;
+    transition: 0.6s;
 }
 
-@keyframes mymove {
-    30% {
-        box-shadow: 10px 10px 20px black;
-    }
+p:hover {
+    margin-left: 10px;
+    box-shadow: -10px 10px 20px black;
 }
 
 div img:not(.glider-contain img) {
@@ -104,5 +112,5 @@ a.upGoingArrow {
 /*Changing height of images  */
 
 .slick-track {
-    height: 370px;
+    height: 380px;
 }
