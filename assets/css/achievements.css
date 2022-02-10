@@ -1,0 +1,29 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.glider-contain {
+    margin-top: 5%;
+}
+
+.slick-track {
+    height: 400px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    background-color: black;
+    border-radius: 5px;
+}
+
+.achievement {
+    background-color: rgb(9, 49, 160);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.achievement p {
+    font-size: 25px;
+    color: white;
+}
