@@ -66,7 +66,9 @@ function alreadyCommented(mail) {
 
 // Gets all comments from storage and displays it to user including likes, name and date of commented
 
-function getAndDisplay(object = getcomments) {
+function getAndDisplay(object) {
+    getcomments = JSON.parse(localStorage.getItem("comments"));
+    object = object ? object : getcomments;
     let text = '';
     if (object) {
         if (showingAll()) {

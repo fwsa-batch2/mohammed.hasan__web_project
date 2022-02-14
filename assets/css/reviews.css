@@ -3,7 +3,7 @@ body {
     place-items: center;
     grid-auto-rows: 13% auto auto auto;
     grid-auto-columns: 70% auto;
-    grid-template-areas: "header comments""support comments""support comments""support comments";
+    grid-template-areas: "header header""support comments""support comments""support comments";
     text-align: center;
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -16,7 +16,6 @@ body {
     background-color: rgb(98, 98, 98);
     color: snow;
     font-size: 25px;
-    margin-left: 35%;
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 3px;
 }
@@ -100,7 +99,7 @@ td:hover {
 
 .comments {
     grid-area: comments;
-    height: 102vh;
+    height: 120vh;
     overflow-y: scroll;
     background-color: blanchedalmond;
 }
