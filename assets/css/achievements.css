@@ -2,6 +2,40 @@ html {
     scroll-behavior: smooth;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0 0;
+    width: 100%;
+    height: 100%;
+    background: url('./../images/achievements/achievementBg.jpg') no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: brightness(70%);
+}
+
+.title {
+    text-align: center;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: snow;
+    text-decoration: underline;
+    font-size: 35px;
+    animation: textShadow 5s linear 2s 3;
+}
+
+.title img {
+    vertical-align: middle;
+}
+
+@keyframes textShadow {
+    30% {
+        text-shadow: 5px 3px 5px;
+    }
+    60% {
+        text-shadow: 3px -3px 5px;
+    }
+}
+
 .glider-contain {
     margin-top: 5%;
 }
@@ -10,20 +44,129 @@ html {
     height: 400px;
 }
 
+.slide img:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+}
+
 .slick-prev:before,
 .slick-next:before {
-    background-color: black;
-    border-radius: 5px;
+    background-color: rgb(98, 97, 97);
+    border: 3px solid grey;
+    border-radius: 60px;
 }
 
 .achievement {
-    background-color: rgb(9, 49, 160);
+    background-color: navy;
     display: flex;
     text-align: center;
-    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    border-radius: 10px;
+    padding: 1.5%;
+    transition: 0.5s;
+    position: relative;
 }
 
-.achievement p {
-    font-size: 25px;
+.achievement:hover {
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+}
+
+.achievement:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.achievement .knw:nth-child(even) {
+    flex-basis: 250px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    background-color: rgb(23, 207, 207);
+    color: black;
+    padding: 7px;
+    font-size: 20px;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+.achievement .knw:hover {
+    background-color: black;
+    color: snow;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.topic:nth-child(even) {
+    color: aliceblue;
+    font-family: sans;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+}
+
+.topic:nth-child(odd) {
+    color: aliceblue;
+    font-family: sans;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+}
+
+.achievement .subTopic {
+    color: aliceblue;
+    font-family: sans;
+    position: absolute;
+    top: 27%;
+    left: 53%;
+}
+
+.achievement .hr {
+    width: 0%;
+    left: 40%;
+    top: 25%;
+}
+
+.achievement:hover>.hr {
+    position: absolute;
+    left: 48%;
+    width: 24%;
+    color: aliceblue;
+    transition: 0.3s;
+}
+
+.achievement div {
+    width: 50%;
+    height: 80%;
+}
+
+.achievement div .image {
+    transition: 0.5s;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.achievement div .image:nth-child(odd):hover {
+    transform: scale(1.05);
+    box-shadow: -10px 10px 10px;
+    margin-left: 7px;
+    margin-bottom: 10px;
+}
+
+.achievement div .image:nth-child(even):hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px;
+    margin-left: 7px;
+    margin-bottom: 10px;
+}
+
+.achievement>p {
+    position: relative;
+    top: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
     color: white;
+    padding: 5px;
+    font-family: 'Mochiy Pop P One', sans-serif;
 }
