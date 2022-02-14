@@ -128,8 +128,7 @@ header {
 header>.header {
     padding-top: 27px;
     font-size: 18px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 15px;
     cursor: pointer;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -266,7 +265,6 @@ header>.header {
     border-radius: 20px;
     color: aliceblue;
     top: 0;
-    animation: mymove 7s;
     font-family: 'Barlow Condensed', sans-serif;
     font-family: 'Rampart One', cursive;
     border: 2px solid white;
@@ -274,6 +272,7 @@ header>.header {
     font-size: 75px;
     padding: 10px;
     text-shadow: 0px 0px 10px white;
+    animation: mymove 7s 2s;
 }
 
 .caption {
@@ -550,6 +549,7 @@ a:hover {
 .contentOfPage.two {
     height: 70px;
     float: right;
+    margin-right: 5%;
 }
 
 .hov {
@@ -759,26 +759,26 @@ th {
     color: white;
 }
 
-.facebook:hover .tooltip,
-.facebook:hover span,
+.facebook:hover :is(.tooltip,
+span),
 .facebook:hover .tooltip::before {
     background-color: #4b74cc;
 }
 
-.twitter:hover .tooltip,
-.twitter:hover span,
+.twitter:hover :is(.tooltip,
+span),
 .twitter:hover .tooltip::before {
     background-color: #46C1F6;
 }
 
-.instagram:hover .tooltip,
-.instagram:hover span,
+.instagram:hover :is(.tooltip,
+span),
 .instagram:hover .tooltip::before {
     background-color: #e1306c;
 }
 
-.youtube:hover .tooltip,
-.youtube:hover span,
+.youtube:hover :is(.tooltip,
+span),
 .youtube:hover .tooltip::before {
     background-color: #DE463B;
 }
