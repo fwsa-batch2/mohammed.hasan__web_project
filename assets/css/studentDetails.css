@@ -1,8 +1,12 @@
-  body {
-      background-image: url('../images/adm2.jpg');
-      background-repeat: 'no-repeat';
-      background-size: 100% 140%;
-      background-position: 'fix';
+  body::before {
+      content: "";
+      position: fixed;
+      inset: 0 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url('../images/blackBoard.png');
+      filter: brightness(90%);
   }
   
   input[type='number']::-webkit-outer-spin-button,
@@ -17,7 +21,7 @@
   }
   
   .title {
-      color: white;
+      font-family: monospace;
       font-size: 50px;
       font-weight: bold;
       animation: mymove 5s infinite;
@@ -28,7 +32,7 @@
   
   @keyframes mymove {
       50% {
-          box-shadow: 0px 0px 50px yellow;
+          box-shadow: 0px 0px 30px rgb(0, 0, 0);
       }
   }
   
@@ -36,6 +40,7 @@
       padding: 3px 10px;
       border-radius: 5px;
       transition: .3s;
+      font-size: 15px;
   }
   
   input:not(input[type='file']):focus {
@@ -66,4 +71,11 @@
   input[type='submit'] {
       cursor: pointer;
       font-size: 17px;
+      font-weight: 600;
+      border: 2px solid rgb(148, 145, 145);
+  }
+  
+  input[type='submit']:hover {
+      background-color: #ACEBF2;
+      border: 2px solid black;
   }
