@@ -26,12 +26,15 @@ function notification() {
     let notific = JSON.parse(localStorage.getItem("notification"));
     if (notific == "off") {
         let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-        let email = loggedInUser ? loggedInUser[0] : prompt("Enter your mail id to get notifications");
-        alert("Notifcations will be sent to " + email);
-        localStorage.setItem("mailForNotifications", JSON.stringify(email));
-        notificationIcon.src = '../assets/images/notification_on.svg';
-        alert("Notifications turned on ");
-        notific = "on";
+        let mailId = prompt("Enter your mail id to get notifications");
+        if (mailId) {
+            let email = loggedInUser ? loggedInUser[0] : mailId;
+            alert("Notifcations will be sent to " + email);
+            localStorage.setItem("mailForNotifications", JSON.stringify(email));
+            notificationIcon.src = '../assets/images/notification_on.svg';
+            alert("Notifications turned on ");
+            notific = "on";
+        }
     } else {
         notificationIcon.src = '../assets/images/notification_off.svg';
         alert(" Notifications turned off");
