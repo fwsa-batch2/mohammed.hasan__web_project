@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     overflow: auto;
-    font-family: sans-serif;
+    font-family: monospace;
 }
 
 img {

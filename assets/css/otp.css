@@ -39,6 +39,17 @@ body {
     font-size: 20px;
 }
 
+#password {
+    width: 400px;
+    border: none;
+    transition: 0.2s;
+}
+
+#password:focus {
+    outline: none;
+    border-bottom: 3px solid black;
+}
+
 .title::first-letter {
     font-size: 60px;
     animation: mymove 3s infinite;
@@ -54,6 +65,10 @@ body {
     100% {
         transform: rotate(180deg);
     }
+}
+
+h2 {
+    letter-spacing: 2px;
 }
 
 input {
