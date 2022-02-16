@@ -21,8 +21,13 @@ table {
     border-collapse: collapse;
     margin: 1%;
     width: 98%;
-    background-color: rgb(240, 213, 138);
+    background-color: rgb(253, 219, 24);
     font-size: 20px;
+    cursor: default;
+}
+
+tr:hover {
+    background-color: rgb(255, 234, 114);
 }
 
 tr {
