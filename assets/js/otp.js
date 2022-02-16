@@ -12,8 +12,8 @@ function onSubmitHandler() {
     if (enteredOtp == userDetail[2]) {
         userDetail.pop();
         localStorage.setItem("loggedInUser", JSON.stringify(userDetail));
-        // location.replace("./home.html");
-        window.history.pushState("", "", "home.html");
+        // location.replace("./setPassword.html");
+        window.history.pushState("", "", "setPassword.html");
         window.location.reload();
         alert("You have been logged in");
     } else {
