@@ -89,10 +89,15 @@ h2 {
     }
 }
 
+.nav-line {
+    width: 0%;
+    visibility: hidden;
+}
+
 .nav-head:hover+.nav-line {
     visibility: visible;
     width: 50%;
-    transition: all 0.7s;
+    transition: all 0.5s;
 }
 
 .logout {
@@ -104,11 +109,6 @@ h2 {
     overflow: hidden;
     display: block;
     cursor: pointer;
-}
-
-.nav-line {
-    width: 0%;
-    visibility: hidden;
 }
 
 header {
@@ -319,9 +319,8 @@ header>.header {
 }
 
 .gifMarquee {
-    margin-top: 3%;
     width: 110%;
-    animation: marquee 17s infinite;
+    animation: marquee 16s infinite;
     animation-timing-function: linear;
 }
 
