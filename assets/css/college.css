@@ -514,25 +514,10 @@ header>.header {
     }
 }
 
-a:link {
-    background-color: black;
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-    border: 2px solid white;
-    font-weight: 500;
-}
-
 a:visited {
     background-color: black;
     color: white;
     border: 2px solid white;
-}
-
-a:hover {
-    color: black;
-    background-color: white;
-    border: 2px solid black;
 }
 
 .contentOfPage {
