@@ -45,6 +45,7 @@ input:focus {
     background: white;
     color: red;
     border-radius: 10px;
+    transition: 0.3s;
 }
 
 #signup:hover {
@@ -52,16 +53,16 @@ input:focus {
     background: white;
     color: red;
     border-radius: 10px;
+    transition: 0.3s;
 }
 
 input[type=email] {
     width: 257px;
-    padding: 5px;
 }
 
 input {
     border-radius: 15px;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 input[type=tel] {
@@ -88,7 +89,7 @@ input[type=tel] {
 }
 
 table {
-    margin-left: 37%;
+    margin-left: 36%;
     width: 30%;
     border-radius: 10px;
     background-color: snow;
@@ -97,4 +98,10 @@ table {
 th,
 td {
     padding: 1%;
+}
+
+input[type='submit'] {
+    border-radius: 5px;
+    border: 3px solid black;
+    cursor: pointer;
 }

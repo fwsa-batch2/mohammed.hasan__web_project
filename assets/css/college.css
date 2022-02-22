@@ -564,11 +564,8 @@ a:visited {
 
 a.upGoingArrow {
     background-color: white;
-    padding-top: 20px;
     border-radius: 20px;
-}
-
-.upGoingArrow {
+    padding: 20px 10px 8px 10px;
     position: sticky;
     top: 93%;
     left: 90%;
@@ -578,6 +575,10 @@ a.upGoingArrow {
 .upGoingArrow img {
     transform: rotate(-90deg);
     z-index: -10;
+}
+
+.upGoingArrow:hover {
+    border: 2px solid black;
 }
 
 .nav-in {

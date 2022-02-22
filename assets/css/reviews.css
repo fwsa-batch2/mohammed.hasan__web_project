@@ -18,6 +18,7 @@ body {
     font-size: 25px;
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 3px;
+    background: url("./../images/review.jpg") no-repeat 20% 20%;
 }
 
 .reviews h1 {
@@ -52,7 +53,7 @@ td:hover {
 
 .reviews {
     grid-area: reviews;
-    background-color: rgb(155, 223, 223);
+    background-color: rgb(172, 255, 255);
 }
 
 .filter h3 {
@@ -101,7 +102,7 @@ td:hover {
     grid-area: comments;
     height: 120vh;
     overflow-y: scroll;
-    background-color: blanchedalmond;
+    background-color: rgb(255, 248, 155);
 }
 
 .comments>span {
@@ -125,7 +126,7 @@ textarea {
 
 .support {
     grid-area: support;
-    background-color: rgb(155, 223, 223);
+    background-color: rgb(179, 255, 255);
 }
 
 input {
