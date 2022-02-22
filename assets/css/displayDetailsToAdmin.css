@@ -42,7 +42,7 @@ td {
 .addCourse {
     position: relative;
     margin-top: 25px;
-    left: 42%;
+    left: 36%;
 }
 
 .addCourse button {
@@ -63,20 +63,24 @@ td {
 }
 
 .filter {
-    margin-left: 30%;
+    margin-left: 25%;
     padding: 10px;
     transition: all 2s;
     display: inline-block;
+    font-size: 17px;
 }
 
 select {
     padding: 5px;
+    margin-left: 50%;
     font-size: 18px;
+    font-weight: 600;
 }
 
 select option {
     background-color: black;
     color: snow;
+    font-weight: inherit;
 }
 
 select option:hover {
@@ -85,7 +89,7 @@ select option:hover {
 }
 
 .filter :is(h2, select) {
-    margin-left: 100px;
+    margin-left: 150px;
 }
 
 td a:link {
