@@ -1,324 +1,333 @@
-html {
-    scroll-behavior: smooth;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0 0;
-    width: 100%;
-    height: 100%;
-    background: url('./../images/achievements/achievementBg.jpg') no-repeat;
-    background-size: cover;
-    z-index: -1;
-    filter: brightness(70%);
-}
-
-.title {
-    text-align: center;
-    font-family: 'Mochiy Pop P One', sans-serif;
-    color: black;
-    text-decoration: underline;
-    font-size: 38px;
-    animation: textShadow 5s linear 2s 3;
-    padding: 0;
-    margin: 0;
-    -webkit-text-stroke: 2px white;
-}
-
-.title img {
-    vertical-align: middle;
-}
-
-@keyframes textShadow {
-    30% {
-        text-shadow: 5px 3px 5px white;
+    html {
+        scroll-behavior: smooth;
     }
-    60% {
-        text-shadow: 3px -3px 5px white;
+    
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0 0;
+        width: 100%;
+        height: 100%;
+        background: url('./../images/achievements/achievementBg.jpg') no-repeat;
+        background-size: cover;
+        z-index: -1;
+        filter: brightness(70%);
     }
-}
-
-.glider-contain {
-    margin-top: 5%;
-}
-
-.slick-track {
-    height: 400px;
-}
-
-.slide img:hover {
-    transform: scale(1.3);
-    transition: 0.5s;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    background-color: rgb(98, 97, 97);
-    border: 3px solid grey;
-    border-radius: 60px;
-}
-
-.achievement {
-    background-color: navy;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    margin: 5%;
-    border-radius: 10px;
-    padding: 1.5%;
-    transition: 0.5s;
-    position: relative;
-}
-
-.achievement:hover {
-    box-shadow: 0px 0px 20px rgb(0, 0, 0);
-}
-
-.achievement:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.achievement .knw:nth-child(even) {
-    flex-basis: 250px;
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    background-color: rgb(23, 207, 207);
-    color: black;
-    padding: 7px;
-    font-size: 20px;
-    border: 2px solid black;
-    transition: 0.3s;
-}
-
-.achievement .knw:hover {
-    background-color: black;
-    color: snow;
-    cursor: pointer;
-    border: 2px solid white;
-}
-
-.topic:nth-child(even) {
-    color: aliceblue;
-    font-family: sans;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-}
-
-.achievement .topic:nth-child(odd) {
-    color: aliceblue;
-    font-family: sans;
-    position: absolute;
-    top: 10%;
-    left: 40%;
-}
-
-.achievement .subTopic {
-    color: aliceblue;
-    font-family: sans;
-    position: absolute;
-    top: 27%;
-    left: 53%;
-}
-
-.achievement .hr {
-    width: 0%;
-    left: 40%;
-    top: 25%;
-}
-
-.achievement:hover>.hr {
-    position: absolute;
-    left: 48%;
-    width: 24%;
-    color: aliceblue;
-    transition: 0.3s;
-}
-
-.achievement div {
-    width: 50%;
-    height: 80%;
-}
-
-.achievement div .image {
-    transition: 0.5s;
-    border-radius: 5px;
-    margin: 5px;
-}
-
-.achievement div .image:nth-child(odd):hover {
-    transform: scale(1.05);
-    box-shadow: -10px 10px 10px;
-    margin-left: 7px;
-    margin-bottom: 10px;
-}
-
-.achievement div .image:nth-child(even):hover {
-    transform: scale(1.1);
-    box-shadow: 10px 10px 10px;
-    margin-left: 7px;
-    margin-bottom: 10px;
-}
-
-.achievement>p {
-    position: relative;
-    top: 30px;
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    color: white;
-    padding: 5px;
-    font-family: 'Mochiy Pop P One', sans-serif;
-}
-
-.sports {
-    color: aliceblue;
-    font-family: sans;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    font-size: 33px;
-    text-decoration: underline 3px white;
-    -webkit-text-stroke: 1.5px black;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 450px);
-    gap: 2%;
-    align-items: center;
-    margin: 5% 10%;
-}
-
-.portfolio {
-    overflow: hidden;
-    position: relative;
-}
-
-.portfolio.more {
-    display: none;
-}
-
-.portfolio img {
-    transition: 0.4s all;
-}
-
-.portfolio:hover img {
-    margin-left: 25%;
-}
-
-.portfolio:hover .portfolio-caption {
-    transform: rotateY(0deg);
-    left: 0;
-}
-
-.portfolio-caption {
-    line-height: 30px;
-    position: absolute;
-    left: -70px;
-    transform: rotateY(-90deg);
-    height: 100%;
-    width: 46%;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    color: white;
-    padding: 0px 6px 0px 20px;
-    font-family: 'Mochiy Pop P One', sans-serif;
-    transition: 0.4s;
-}
-
-.moreOption {
-    grid-column: 1/span 3;
-    text-align: center;
-    margin: 5% 0 0 0;
-}
-
-.moreOption button {
-    padding: 5px;
-    font-size: 17px;
-    cursor: pointer;
-    font-family: 'Mochiy Pop P One', sans-serif;
-    background-color: navy;
-    color: aliceblue;
-    border: 2px solid white;
-    border-radius: 5px;
-    transition: 0.4s;
-}
-
-.moreOption button:hover {
-    background-color: aliceblue;
-    color: black;
-    border: 2px solid black;
-}
-
-.portfolio-caption a {
-    color: aliceblue;
-    text-decoration: none;
-}
-
-.portfolio-caption.brown {
-    background-color: rgb(251, 173, 70);
-}
-
-.portfolio-caption.blue {
-    background-color: rgb(80, 217, 235);
-}
-
-.portfolio-caption.darkBlue {
-    background-color: rgb(52, 140, 255);
-}
-
-.portfolio-caption.red {
-    background-color: rgb(255, 103, 76);
-}
-
-.portfolio-caption.yellow {
-    background-color: rgb(230, 202, 47);
-}
-
-.portfolio-caption.green {
-    background-color: rgb(166, 245, 102);
-}
-
-.portfolio-caption h2 {
-    font-size: 25px;
-    width: 9ch;
-}
-
-.portfolio-caption h4 {
-    font-size: 15px;
-    width: 10ch;
-}
-
-.back {
-    font-size: 20px;
-    background-color: rgb(199, 134, 59);
-    color: aliceblue;
-    align-items: center;
-    cursor: pointer;
-    margin: 4% 0;
-    padding: 7px;
-    border-radius: 10px;
-    transition: 0.4s;
-    border: 2px solid white;
-    overflow: hidden;
-}
-
-.back:hover {
-    color: black;
-    background-color: aliceblue;
-}
-
-.back img {
-    vertical-align: text-top;
-    transform: rotate(180deg);
-    margin-left: -25px;
-    transition: 0.4s;
-}
-
-.back:hover img {
-    margin-left: 0;
-}
+    
+    .title {
+        text-align: center;
+        font-family: 'Mochiy Pop P One', sans-serif;
+        color: black;
+        text-decoration: underline;
+        font-size: 43px;
+        animation: textShadow 5s linear 2s 3;
+        padding: 0;
+        margin: 0;
+        -webkit-text-stroke: 2px white;
+    }
+    
+    .title img {
+        vertical-align: middle;
+    }
+    
+    @keyframes textShadow {
+        30% {
+            text-shadow: 5px 3px 5px white;
+        }
+        60% {
+            text-shadow: 3px -3px 5px white;
+        }
+    }
+    
+    .glider-contain {
+        margin-top: 5%;
+    }
+    
+    .slick-track {
+        height: 400px;
+    }
+    
+    .slide img:hover {
+        transform: scale(1.3);
+        transition: 0.5s;
+    }
+    
+    .slick-prev:before,
+    .slick-next:before {
+        background-color: rgb(98, 97, 97);
+        border: 3px solid grey;
+        border-radius: 60px;
+    }
+    
+    .achievement {
+        background-color: rgb(17, 17, 151);
+        display: flex;
+        text-align: center;
+        align-items: center;
+        margin: 5%;
+        border-radius: 10px;
+        padding: 1.5%;
+        transition: 0.5s;
+        position: relative;
+    }
+    
+    .achievement:nth-child(1) {
+        margin: 2% 5%;
+    }
+    
+    .achievement:hover {
+        box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    }
+    
+    .achievement:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    
+    .achievement .knw:nth-child(even) {
+        flex-basis: 250px;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        background-color: rgb(23, 207, 207);
+        color: black;
+        padding: 7px;
+        font-size: 20px;
+        border: 2px solid black;
+        transition: 0.3s;
+    }
+    
+    .achievement .knw:hover {
+        background-color: black;
+        color: snow;
+        cursor: pointer;
+        border: 2px solid white;
+    }
+    
+    .topic:nth-child(even) {
+        color: aliceblue;
+        font-family: sans;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+    }
+    
+    .achievement .topic:nth-child(odd) {
+        color: aliceblue;
+        font-family: sans;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+    }
+    
+    .achievement .subTopic {
+        color: aliceblue;
+        font-family: sans;
+        position: absolute;
+        top: 27%;
+        left: 53%;
+    }
+    
+    .achievement .hr {
+        width: 0%;
+        left: 40%;
+        top: 25%;
+    }
+    
+    .achievement:hover>.hr {
+        position: absolute;
+        left: 48%;
+        width: 24%;
+        color: aliceblue;
+        transition: 0.3s;
+    }
+    
+    .achievement div {
+        width: 50%;
+        height: 80%;
+    }
+    
+    .achievement div .image {
+        transition: 0.5s;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    
+    .achievement div .image:nth-child(odd):hover {
+        transform: scale(1.05);
+        box-shadow: -10px 10px 10px;
+        margin-left: 7px;
+        margin-bottom: 10px;
+    }
+    
+    .achievement div .image:nth-child(even):hover {
+        transform: scale(1.1);
+        box-shadow: 10px 10px 10px;
+        margin-left: 7px;
+        margin-bottom: 10px;
+    }
+    
+    .achievement>p {
+        position: relative;
+        top: 30px;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        color: white;
+        padding: 5px;
+        font-family: 'Mochiy Pop P One', sans-serif;
+    }
+    
+    .mainTopic {
+        color: aliceblue;
+        font-family: sans;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-size: 33px;
+        text-decoration: underline 3px white;
+        -webkit-text-stroke: 1.5px black;
+    }
+    
+    .mainTopic.topic-gallery {
+        margin-top: 5%;
+        font-size: 38px;
+    }
+    
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 450px);
+        gap: 2%;
+        align-items: center;
+        margin: 5% 10%;
+    }
+    
+    .portfolio {
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .portfolio.more {
+        display: none;
+    }
+    
+    .portfolio img {
+        transition: 0.4s all;
+    }
+    
+    .portfolio:hover img {
+        margin-left: 25%;
+    }
+    
+    .portfolio:hover .portfolio-caption {
+        transform: rotateY(0deg);
+        left: 0;
+    }
+    
+    .portfolio-caption {
+        line-height: 30px;
+        position: absolute;
+        left: -50px;
+        transform: rotateY(-90deg);
+        height: 100%;
+        width: 46%;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        color: white;
+        padding: 0px 6px 0px 20px;
+        font-family: 'Mochiy Pop P One', sans-serif;
+        transition: 0.4s;
+    }
+    
+    .moreOption {
+        grid-column: 1/span 3;
+        text-align: center;
+        margin: 5% 0 0 0;
+    }
+    
+    .moreOption button {
+        padding: 5px;
+        font-size: 17px;
+        cursor: pointer;
+        font-family: 'Mochiy Pop P One', sans-serif;
+        background-color: navy;
+        color: aliceblue;
+        border: 2px solid white;
+        border-radius: 5px;
+        transition: 0.4s;
+    }
+    
+    .moreOption button:hover {
+        background-color: aliceblue;
+        color: black;
+        border: 2px solid black;
+    }
+    
+    .portfolio-caption a {
+        color: aliceblue;
+        text-decoration: none;
+    }
+    
+    .portfolio-caption.brown {
+        background-color: rgb(251, 173, 70);
+    }
+    
+    .portfolio-caption.blue {
+        background-color: rgb(80, 217, 235);
+    }
+    
+    .portfolio-caption.darkBlue {
+        background-color: rgb(52, 140, 255);
+    }
+    
+    .portfolio-caption.red {
+        background-color: rgb(255, 103, 76);
+    }
+    
+    .portfolio-caption.yellow {
+        background-color: rgb(230, 202, 47);
+    }
+    
+    .portfolio-caption.green {
+        background-color: rgb(166, 245, 102);
+    }
+    
+    .portfolio-caption h2 {
+        font-size: 25px;
+        width: 9ch;
+    }
+    
+    .portfolio-caption h4 {
+        font-size: 15px;
+        width: 10ch;
+    }
+    
+    .back {
+        font-size: 20px;
+        background-color: rgb(199, 134, 59);
+        color: aliceblue;
+        align-items: center;
+        cursor: pointer;
+        margin: 4% 0;
+        padding: 7px;
+        border-radius: 10px;
+        transition: 0.4s;
+        border: 2px solid white;
+        overflow: hidden;
+    }
+    
+    .back:hover {
+        color: black;
+        background-color: aliceblue;
+    }
+    
+    .back img {
+        vertical-align: text-top;
+        transform: rotate(180deg);
+        margin-left: -25px;
+        transition: 0.4s;
+    }
+    
+    .back:hover img {
+        margin-left: 0;
+    }
