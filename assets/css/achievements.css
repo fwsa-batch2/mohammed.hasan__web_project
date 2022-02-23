@@ -60,7 +60,7 @@
     }
     
     .achievement {
-        background-color: rgb(17, 17, 151);
+        background-color: rgba(17, 17, 151, 0.85);
         display: flex;
         text-align: center;
         align-items: center;
@@ -86,7 +86,7 @@
     .achievement .knw:nth-child(even) {
         flex-basis: 250px;
         position: absolute;
-        bottom: 10%;
+        bottom: 5%;
         left: 50%;
         background-color: rgb(23, 207, 207);
         color: black;
@@ -174,7 +174,7 @@
         letter-spacing: 1px;
         word-spacing: 2px;
         color: white;
-        padding: 5px;
+        margin: 5%;
         font-family: 'Mochiy Pop P One', sans-serif;
     }
     
