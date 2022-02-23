@@ -49,6 +49,7 @@ function notification() {
 function navBar() {
     document.querySelector(".nav-bar").classList.toggle("open");
     document.getElementsByClassName("fas fa-times")[0].classList.toggle("show");
+
 }
 
 // Gets data from storage and deletes it and makes user Logout from our website
