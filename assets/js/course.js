@@ -405,7 +405,7 @@ function editCourse(courseName) {
         let editedValue = document.querySelector(".editingCourse").value;
         storedData[currentCourseIndex].details = editedValue;
         console.log(storedData);
-        window.location.reload();
+        window.location.href = "./courseDetailsAdmin.html";
         localStorage.setItem("allCourses", JSON.stringify(storedData));
     }
 

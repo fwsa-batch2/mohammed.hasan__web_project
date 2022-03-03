@@ -26,7 +26,7 @@ body {
 }
 
 table {
-    margin-left: 15%;
+    margin-left: 4%;
     margin-top: 1%;
     border-spacing: 30px 5px;
 }
@@ -127,6 +127,7 @@ textarea {
 .support {
     grid-area: support;
     background-color: rgb(179, 255, 255);
+    height: 120vh;
 }
 
 input {

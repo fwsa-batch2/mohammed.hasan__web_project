@@ -32,10 +32,10 @@ body::before {
 
 @keyframes textShadow {
     30% {
-        text-shadow: 5px 3px 5px white;
+        text-shadow: 5px 5px 5px white;
     }
     60% {
-        text-shadow: 3px -3px 5px white;
+        text-shadow: 5px -5px 5px white;
     }
 }
 

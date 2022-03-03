@@ -51,19 +51,13 @@ body {
 }
 
 .title::first-letter {
-    font-size: 60px;
     animation: mymove 3s infinite;
+    font-size: 60px;
 }
 
 @keyframes mymove {
-    0% {
-        transform: rotate(0deg);
-    }
     50% {
         transform: rotate(90deg);
-    }
-    100% {
-        transform: rotate(180deg);
     }
 }
 
