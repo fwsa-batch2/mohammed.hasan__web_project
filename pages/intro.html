@@ -25,7 +25,7 @@
             </a>
         </span>
         <div class="searchBox">
-            <input type="search" id="searched">
+            <input type="search" onchange="search()" id="searched">
             <img id="searchBtn" onclick="search()" src="./../assets/images/search.jpg" alt="">
         </div>
         <ul>
@@ -40,6 +40,7 @@
             </li>
         </ul>
     </nav>
+
     <main>
         <div>We Learn </div>
         <div class="words">
@@ -54,21 +55,41 @@
             </span>
         </div>
     </main>
+
     <article>
         <a class="learnWithUs" href="./home.html">Learn With Us
             <img src="./../assets/images/arrow.svg" alt="">
         </a>
-        <img class="bulb" src="./../assets/images/indexPage/bulb-removebg-preview.png" width="5%" alt="">
-        <img class="main-img" src="./../assets/images/indexPage/education.jpg" width="40%" height="35%" alt="">
+        <img class="bulb" src="./../assets/images/indexPage/bulb-off.png" width="4%" alt="">
         <img class="tree-img" src="./../assets/images/indexPage/edu.tree-removebg-preview.png" alt="">
     </article>
-    <div class="alert">
-        <img class="close-icon" onclick="hideAlert()" src="./../assets/images/indexPage/close-icon.svg" alt="">
-        <div class="alert-content">
-            <img class="alert-image" src="./../assets/images/oops.jpeg" width="30%" alt="">
-            <p class="alert-message"> Sorry, your request was unable to process..!!</p>
+    <aside>
+        <div class="how-learn">
+            <img class="main-img" src="./../assets/images/indexPage/education.jpg" width="47%" height="40%" alt="">
+            <div class="content">
+                <h2>How we Learn ?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam deleniti temporibus minus quibusdam. Mollitia illo corporis, ad fugit minima ea quae delectus debitis, perspiciatis sapiente obcaecati officiis labore quo reprehenderit?</p>
+            </div>
         </div>
-    </div>
+        <div class="textContainer">
+            <img src="./../assets/images/indexPage/brain-removebg-preview.png" width="30%" height="10%" alt="">
+            <div class="text">
+                <img src="./../assets/images/indexPage/text-1646386944593.png" width="70%" alt="">
+                <img src="./../assets/images/indexPage/text-1646386974726.png" width="70%" alt="">
+                <img src="./../assets/images/indexPage/text-1646387031774.png" width="70%" alt="">
+                <img src="./../assets/images/indexPage/text-1646387043050.png" width="25%" alt="">
+            </div>
+        </div>
+    </aside>
+    <footer>
+        <div class="alert">
+            <img class="close-icon" onclick="hideAlert()" src="./../assets/images/indexPage/close-icon.svg" alt="">
+            <div class="alert-content">
+                <img class="alert-image" src="./../assets/images/oops.jpeg" width="30%" alt="">
+                <p class="alert-message"> Sorry, your request was unable to process..!!</p>
+            </div>
+        </div>
+    </footer>
     <script src="./../assets/js/intro.js"></script>
 </body>
 
