@@ -1,3 +1,5 @@
+let alert = document.querySelector(".alert");
+
 function search() {
     const searchInput = document.querySelector("#searched");
     let searched = searchInput.value.replace(/\s+/g, '').toLowerCase();
@@ -26,7 +28,12 @@ function search() {
                 window.open("./reviews.html");
                 break;
             default:
-                alert("Sorry could not find your request");
+                alert.style.opacity = "1";
         }
     }
+}
+
+function hideAlert() {
+    alert.style.opacity = "0";
+    document.getElementById("searched").value = "";
 }

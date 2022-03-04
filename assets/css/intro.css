@@ -114,8 +114,8 @@ main {
     position: absolute;
     padding: 2% 2% 3% 2%;
     border-radius: 5px;
-    top: 50%;
-    left: 25%;
+    top: 53%;
+    left: 28%;
     transform: translate(-50%, -50%);
     background-color: snow;
     box-shadow: 5px 5px 10px snow;
@@ -131,8 +131,9 @@ main div {
 main .words {
     display: flex;
     flex-direction: column;
+    transform: translateY(-40%);
     padding-left: 15px;
-    animation: scroll 5s infinite;
+    animation: scroll 5s 1s infinite;
 }
 
 .words span {
@@ -144,10 +145,7 @@ main .words {
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateY(-70%);
-    }
-    15% {
+    25% {
         transform: translateY(-40%);
     }
     35% {
@@ -156,13 +154,13 @@ main .words {
     55% {
         transform: translateY(-270%);
     }
-    75% {
+    65% {
         transform: translateY(-540%);
     }
-    95% {
+    85% {
         transform: translateY(-500%);
     }
-    100% {
+    90% {
         transform: translateY(-70%);
     }
 }
@@ -173,8 +171,8 @@ main .words {
     padding: 10px 50px;
     width: 14%;
     height: 3%;
-    top: 67%;
-    left: 15%;
+    top: 72%;
+    left: 18%;
     background-color: rgb(0, 0, 0, 0.2);
     color: rgb(255, 255, 255);
     border: 3px solid snow;
@@ -193,31 +191,93 @@ main .words {
     border: 3px solid snow;
 }
 
+.learnWithUs:hover~.bulb {
+    box-shadow: 0px 0px 40px yellow;
+}
+
 .learnWithUs:hover img {
     margin-right: 0px;
 }
 
-.main-img {
+.tree-img {
     position: absolute;
-    top: 33%;
-    right: 5%;
-    border-radius: 50px;
-    transition: 0.4s;
+    inset: 26% 0% 50% 55%;
+    width: 34%;
+    height: 73%;
+    transition: 1s;
 }
 
-.main-img:hover {
-    top: 32%;
+.tree-img:hover {
+    transform: scale(1.07);
 }
 
 .bulb {
     position: absolute;
     top: 30%;
-    left: 23%;
-    border-radius: 100%;
+    left: 25%;
+    border-radius: 1000px;
     display: inline;
     transition: 0.4s;
 }
 
 .bulb:hover {
-    box-shadow: 10px 10px 20px yellow;
+    box-shadow: 0px 0px 40px yellow;
+}
+
+.main-img {
+    position: absolute;
+    top: 108%;
+    left: 7%;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
+.main-img::after {
+    content: "jnadk";
+    position: absolute;
+    display: block;
+    color: snow;
+    bottom: -300px;
+    left: 0%;
+    width: 90%;
+    height: 10px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.alert {
+    background-color: rgb(212, 212, 212);
+    position: absolute;
+    inset: 35% 35% 35% 35%;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.3s;
+    opacity: 0;
+    border: 3px solid black;
+}
+
+.alert .alert-content {
+    margin: 15% 3%;
+}
+
+.alert .close-icon {
+    cursor: pointer;
+    float: right;
+    margin: 3%;
+    width: 6%;
+}
+
+.alert .close-icon:hover {
+    opacity: 0.7;
+}
+
+.alert .alert-message {
+    padding-top: 10%;
+}
+
+.alert .alert-image {
+    float: left;
+    border-radius: 100%;
+    margin: 2%;
 }
