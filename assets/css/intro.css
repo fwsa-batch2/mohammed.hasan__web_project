@@ -9,7 +9,7 @@ body::before {
     inset: 0 0 0 0;
     background: url('./../images/collegeHome.jpeg') no-repeat;
     background-size: 100% 100%;
-    filter: brightness(70%);
+    filter: brightness(60%);
     z-index: -1;
 }
 
@@ -169,8 +169,7 @@ main .words {
     position: absolute;
     font-size: 1.25rem;
     padding: 10px 50px;
-    width: 14%;
-    height: 3%;
+    overflow: hidden;
     top: 72%;
     left: 18%;
     background-color: rgb(0, 0, 0, 0.2);
@@ -182,6 +181,7 @@ main .words {
 .learnWithUs img {
     margin-right: -30%;
     transition: 0.3s;
+    opacity: 0;
 }
 
 .learnWithUs:hover {
@@ -192,11 +192,13 @@ main .words {
 }
 
 .learnWithUs:hover~.bulb {
-    box-shadow: 0px 0px 40px yellow;
+    content: url("./../images/indexPage/bulb-removebg-preview.png");
+    animation: glow 0.5s infinite alternate;
 }
 
 .learnWithUs:hover img {
     margin-right: 0px;
+    opacity: 1;
 }
 
 .tree-img {
@@ -215,19 +217,67 @@ main .words {
     position: absolute;
     top: 30%;
     left: 25%;
-    border-radius: 1000px;
-    display: inline;
-    transition: 0.4s;
+    transition: 0.5s;
+    border-radius: 35px;
 }
 
 .bulb:hover {
-    box-shadow: 0px 0px 40px yellow;
+    content: url("./../images/indexPage/bulb-removebg-preview.png");
+    animation: glow 0.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        border-top: 4px dotted rgb(255, 208, 0);
+    }
+    to {
+        border-top: 6px dotted rgb(255, 208, 0);
+    }
+}
+
+.how-learn {
+    position: absolute;
+    inset: 110% auto auto auto;
+    display: flex;
+    place-content: center space-around;
+    margin: 2%;
+}
+
+.how-learn .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how-learn .content p {
+    text-align: center;
+    color: aliceblue;
+    margin: 2% 5%;
+    line-height: 30px;
+}
+
+.how-learn .content h2 {
+    font-size: 2rem;
+    color: aliceblue;
+    position: relative;
+}
+
+.how-learn .content h2::after {
+    content: "";
+    display: block;
+    font-weight: bold;
+    height: 3px;
+    width: 0%;
+    margin: auto;
+    background-image: linear-gradient(90deg, rgb(143, 255, 240) 30%, #5cfa96 80%);
+    transition: 0.5s;
+}
+
+.how-learn:hover h2::after {
+    width: 100%;
 }
 
 .main-img {
-    position: absolute;
-    top: 108%;
-    left: 7%;
     border-radius: 50px;
     transition: 0.4s;
 }
@@ -244,6 +294,49 @@ main .words {
     background-color: aliceblue;
     border-radius: 50%;
     z-index: 10;
+}
+
+.textContainer {
+    position: absolute;
+    inset: 175% auto auto 2%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 0% 3%;
+    flex-direction: row-reverse;
+}
+
+.textContainer img {
+    background-color: rgba(233, 233, 233, 0.582);
+}
+
+.text {
+    background-color: #d8d8d898;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 280px;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.text::after {
+    content: "";
+    position: absolute;
+    inset: 50% -1.75% auto auto;
+    background-color: #d8d8d898;
+    padding: 20px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.text img {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: aliceblue;
 }
 
 .alert {
