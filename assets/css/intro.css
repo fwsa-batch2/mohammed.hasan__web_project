@@ -13,6 +13,10 @@ body::before {
     z-index: -1;
 }
 
+body {
+    height: 275vh;
+}
+
 header {
     text-align: center;
 }
@@ -114,7 +118,7 @@ main {
     position: absolute;
     padding: 2% 2% 3% 2%;
     border-radius: 5px;
-    top: 53%;
+    top: 58%;
     left: 28%;
     transform: translate(-50%, -50%);
     background-color: snow;
@@ -170,7 +174,7 @@ main .words {
     font-size: 1.25rem;
     padding: 10px 50px;
     overflow: hidden;
-    top: 72%;
+    top: 77%;
     left: 18%;
     background-color: rgb(0, 0, 0, 0.2);
     color: rgb(255, 255, 255);
@@ -203,7 +207,7 @@ main .words {
 
 .tree-img {
     position: absolute;
-    inset: 26% 0% 50% 55%;
+    inset: 31% 0% 0% 55%;
     width: 34%;
     height: 73%;
     transition: 1s;
@@ -215,7 +219,7 @@ main .words {
 
 .bulb {
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 25%;
     transition: 0.5s;
     border-radius: 35px;
@@ -228,7 +232,7 @@ main .words {
 
 @keyframes glow {
     from {
-        border-top: 4px dotted rgb(255, 208, 0);
+        border-top: 3px dotted rgb(255, 208, 0);
     }
     to {
         border-top: 6px dotted rgb(255, 208, 0);
@@ -237,7 +241,7 @@ main .words {
 
 .how-learn {
     position: absolute;
-    inset: 110% auto auto auto;
+    inset: 116% auto auto auto;
     display: flex;
     place-content: center space-around;
     margin: 2%;
@@ -298,7 +302,7 @@ main .words {
 
 .textContainer {
     position: absolute;
-    inset: 170% auto auto 2%;
+    inset: 180% auto auto 2%;
     padding: 1%;
     display: flex;
     align-items: center;
@@ -337,6 +341,25 @@ main .words {
     border-radius: 10px;
     padding: 10px;
     background-color: aliceblue;
+}
+
+.moreAboutUs {
+    position: absolute;
+    font-size: 1.25rem;
+    padding: 10px 50px;
+    top: 248%;
+    left: 40%;
+    background-color: rgb(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+    border: 3px solid snow;
+    transition: 0.4s;
+}
+
+.moreAboutUs:hover {
+    cursor: pointer;
+    background-color: rgba(36, 255, 244, 0.7);
+    color: black;
+    border: 3px solid snow;
 }
 
 .alert {
