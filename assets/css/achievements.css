@@ -106,7 +106,7 @@ body::before {
 
 .topic:nth-child(even) {
     color: aliceblue;
-    font-family: sans;
+    font-family: cursive;
     position: absolute;
     top: 10%;
     left: 50%;
@@ -131,7 +131,7 @@ body::before {
 .achievement .hr {
     width: 0%;
     left: 40%;
-    top: 25%;
+    top: 27%;
 }
 
 .achievement:hover>.hr {
@@ -187,7 +187,7 @@ body::before {
     padding: 0;
     font-size: 33px;
     text-decoration: underline 3px white;
-    -webkit-text-stroke: 1.5px black;
+    -webkit-text-stroke: 1px black;
 }
 
 .mainTopic.topic-gallery {
@@ -197,7 +197,7 @@ body::before {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 450px);
+    grid-template-columns: repeat(auto-fit, 426px);
     gap: 2%;
     align-items: center;
     margin: 5% 10%;
@@ -295,7 +295,7 @@ body::before {
 
 .portfolio-caption h2 {
     font-size: 25px;
-    width: 9ch;
+    width: 8ch;
 }
 
 .portfolio-caption h4 {

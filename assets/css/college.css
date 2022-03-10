@@ -303,7 +303,7 @@ header>.header {
     animation: marquee 20s infinite;
     animation-timing-function: linear;
     height: 30px;
-    width: 130%;
+    width: 140%;
 }
 
 #marquee1 span {

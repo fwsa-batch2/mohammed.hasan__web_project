@@ -28,14 +28,14 @@ body {
 }
 
 form {
-    border: 2px solid black;
+    border: 4px solid black;
     width: 60%;
     margin-left: 20%;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     border-radius: 10px;
     padding: 15px;
-    background-color: palegoldenrod;
+    background-color: transparent;
 }
 
 form table {
@@ -72,11 +72,14 @@ input[type="file"]:focus {
     background-color: black;
     color: white;
     cursor: pointer;
+    transition: all .5s;
 }
 
 .submit:hover {
-    transition: all .5s;
     transform: translateY(5px);
+    background-color: aliceblue;
+    color: black;
+    border: 3px solid black;
 }
 
 .label4 {
@@ -121,4 +124,5 @@ input[type='number']::-webkit-outer-spin-button {
 
 .label5 table {
     margin-left: 5%;
+    border-color: black;
 }

@@ -58,7 +58,6 @@ input:focus {
 }
 
 .submit {
-    margin-left: 2%;
     font-size: 20px;
     padding: 10px 40px;
     border-radius: 5px;
@@ -67,7 +66,7 @@ input:focus {
 }
 
 .reset {
-    margin-left: 2%;
+    margin-left: 1%;
     font-size: 20px;
     padding: 10px;
     border-radius: 5px;
@@ -82,7 +81,7 @@ img {
 
 .card {
     position: absolute;
-    top: 13%;
+    top: 15%;
     left: 57%;
     color: white;
     border-radius: 10px;
@@ -96,13 +95,14 @@ img {
 }
 
 .card:hover {
-    top: 12%;
+    top: 13.7%;
 }
 
-.card h2 {
+.card h3 {
     margin-left: 75%;
     display: inline;
     font-family: fantasy;
+    font-weight: 500;
 }
 
 .card .sticker {
@@ -119,15 +119,15 @@ img {
 }
 
 .displayCardNumber {
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 100;
     font-family: fantasy;
     letter-spacing: 3px;
 }
 
 #displayName {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 100;
     font-family: fantasy;
     width: 73%;
     overflow-x: auto;
@@ -140,5 +140,5 @@ img {
 }
 
 .gif {
-    margin: 3% 5%;
+    margin: 0% 1%;
 }

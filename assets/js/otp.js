@@ -8,13 +8,13 @@ function onSubmitHandler() {
     let otpNum2 = document.getElementById("otpNum2").value;
     let otpNum3 = document.getElementById("otpNum3").value;
     let otpNum4 = document.getElementById("otpNum4").value;
-    let enteredOtp = ` ${otpNum1} ${otpNum2} ${otpNum3} ${otpNum4}`;
+    let enteredOtp = `${otpNum1} ${otpNum2} ${otpNum3} ${otpNum4}`;
     if (enteredOtp == userDetail[2]) {
         userDetail.pop();
         localStorage.setItem("loggedInUser", JSON.stringify(userDetail));
-        // location.replace("./setPassword.html");
-        window.history.pushState("", "", "setPassword.html");
-        window.location.reload();
+        // window.history.pushState("", "", "setPassword.html");
+        // window.location.reload();
+        location.replace("./setPassword.html");
         alert("You have been logged in");
     } else {
         alert("Incorrect OTP entered");

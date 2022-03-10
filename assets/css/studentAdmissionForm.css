@@ -1,8 +1,8 @@
 body {
-    background: url('../images/adm2.jpg');
+    background: url("../images/adm2.jpg");
     background-repeat: no-repeat;
     background-size: 100% 150%;
-    background-position: 'fix';
+    background-position: "fix";
     color: white;
 }
 
@@ -29,4 +29,18 @@ td {
 
 .hr {
     border: 1px solid white;
+}
+
+.print {
+    font-size: 25px;
+    cursor: pointer;
+    font-family: cursive;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.print:hover {
+    background-color: black;
+    color: aliceblue;
+    border: 2px solid white;
 }
