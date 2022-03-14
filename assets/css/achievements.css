@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body::before {
     content: "";
     position: fixed;
@@ -13,6 +12,15 @@ body::before {
     background-size: cover;
     z-index: -1;
     filter: brightness(70%);
+}
+
+body {
+    cursor: url('./../images/lavaCursor.png'), auto;
+}
+
+:is(a,
+button):hover {
+    cursor: url('./../images/lava-custom-cursor-removebg-preview.png'), auto;
 }
 
 .title {
@@ -100,7 +108,7 @@ body::before {
 .achievement .knw:hover {
     background-color: black;
     color: snow;
-    cursor: pointer;
+    cursor: url('./../images/lava-custom-cursor-removebg-preview.png'), auto;
     border: 2px solid white;
 }
 
@@ -249,7 +257,7 @@ body::before {
 .moreOption button {
     padding: 5px;
     font-size: 17px;
-    cursor: pointer;
+    cursor: url('./../images/lava-custom-cursor-removebg-preview.png'), auto;
     font-family: 'Mochiy Pop P One', sans-serif;
     background-color: navy;
     color: aliceblue;
@@ -308,7 +316,7 @@ body::before {
     background-color: rgb(199, 134, 59);
     color: aliceblue;
     align-items: center;
-    cursor: pointer;
+    cursor: url('./../images/lava-custom-cursor-removebg-preview.png'), auto;
     margin: 4% 0;
     padding: 7px;
     border-radius: 10px;
