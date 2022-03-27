@@ -371,6 +371,7 @@ main .words {
     transition: 0.3s;
     opacity: 0;
     border: 3px solid black;
+    z-index: -10;
 }
 
 .alert .alert-content {

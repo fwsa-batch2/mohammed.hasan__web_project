@@ -28,12 +28,12 @@ function search() {
                 window.open("./reviews.html");
                 break;
             default:
-                alert.style.opacity = "1";
+                alert.setAttribute("style", "z-index : 10;opacity:1");
         }
     }
 }
 
 function hideAlert() {
-    alert.style.opacity = "0";
+    alert.setAttribute("style", "z-index:-10; opacity:0");
     document.getElementById("searched").value = "";
 }
