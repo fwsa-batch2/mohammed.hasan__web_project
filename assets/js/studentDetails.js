@@ -6,14 +6,20 @@ function setDynamicAgeLimit() {
     var max;
     let presentYear = new Date().getFullYear();
     let presentMonth = new Date().getMonth();
-    let maxDate = new Date().getDate();
+    let maxDate = new Date().getDate().toString();
     let maxMonth = (presentMonth + 1).toString();
     let maxYear = presentYear - 18;
-    if (maxMonth.length < 2) {
+    console.log(maxDate.length);
+    if (maxDate.length < 2 && maxMonth.length < 2) {
+        max = `${maxYear}-0${maxMonth}-0${maxDate}`;
+    } else if (maxDate.length < 2) {
+        max = `${maxYear}-${maxMonth}-0${maxDate}`;
+    } else if (maxMonth.length < 2) {
         max = `${maxYear}-0${maxMonth}-${maxDate}`;
     } else {
         max = `${maxYear}-${maxMonth}-${maxDate}`;
     }
+    console.log(max);
     document.getElementById("dob").setAttribute("max", max);
 }
 
@@ -36,7 +42,9 @@ function onSubmitHandler(event) {
         document.getElementsByClassName("error")[0].innerHTML = `Sorry, you do not match our required Cut-off `;
         return
     }
+    let len = allStudentDetails.length;
     const studentDetails = {
+        "id": len + 1,
         "name": username,
         "dob": dob,
         "email": email,
@@ -45,7 +53,8 @@ function onSubmitHandler(event) {
         "course": course,
         "cutoff10": cutoff10,
         "cutoff12": cutoff12,
-        "address": address
+        "address": address,
+        "status": "notPaid"
     }
     allStudentDetails.push(studentDetails);
     localStorage.setItem("studentDetails", JSON.stringify(allStudentDetails));

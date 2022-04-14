@@ -49,6 +49,8 @@ function notification() {
 function navBar() {
     document.querySelector(".nav-bar").classList.toggle("open");
     document.getElementsByClassName("fas fa-times")[0].classList.toggle("show");
+    document.querySelector("main").classList.toggle("blur");
+    document.querySelector("footer").classList.toggle("blur");
 
 }
 

@@ -105,6 +105,12 @@ td:hover {
     height: 120vh;
     overflow-y: scroll;
     background-color: rgb(255, 248, 155);
+    border-left: 4px solid black;
+}
+
+:is(.comments,
+.reviews)::-webkit-scrollbar {
+    display: none;
 }
 
 .comments>span {

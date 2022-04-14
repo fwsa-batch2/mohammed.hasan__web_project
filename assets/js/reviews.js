@@ -12,7 +12,7 @@ function addComments(event) {
     let comment = document.getElementById("comment").value;
     let name = document.getElementById("name").value;
     let mail = loggedInUser[0];
-    let confirmation = confirm("You can add only once. Are you sure to comment this");
+    let confirmation = confirm("You can add only once. Are you sure to comment this ?");
     if (!confirmation) {
         return
     } else {
