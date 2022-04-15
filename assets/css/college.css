@@ -1,3 +1,62 @@
+/* Loading Css */
+
+.load {
+    position: fixed;
+    top: 50%;
+    left: 42%;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    z-index: 100;
+}
+
+.circle {
+    position: absolute;
+    left: 100%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: ring 2s linear infinite;
+    box-shadow: 1px 5px 2px white;
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto auto 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, .3);
+}
+
+.load span {
+    position: absolute;
+    left: 100%;
+    color: aliceblue;
+    transform: translateX(15px);
+    font-size: 30px;
+    letter-spacing: 2px;
+    line-height: 50px;
+}
+
+.allContent {
+    filter: blur(40px);
+}
+
+
 /* Header and nav-bar css */
 
 html {
@@ -323,7 +382,7 @@ header>.header {
 }
 
 .gifMarquee {
-    width: 110%;
+    width: 115%;
     animation: marquee 16s infinite;
     animation-timing-function: linear;
 }
