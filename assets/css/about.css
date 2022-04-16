@@ -98,27 +98,25 @@ video {
     margin-right: 5%;
 }
 
-a.upGoingArrow {
+.upGoingArrow {
     background-color: white;
     padding: 10px;
     padding-top: 20px;
     border-radius: 20px;
+    position: sticky;
+    top: 93%;
+    left: 90%;
+    z-index: 10;
+    /* width: 10px; */
 }
 
 .upGoingArrow:hover {
     border: 2px solid black;
 }
 
-.upGoingArrow {
-    position: sticky;
-    top: 93%;
-    left: 90%;
-    z-index: 10;
-}
-
 .upGoingArrow img {
     transform: rotate(-90deg);
-    z-index: -10;
+    z-index: -1;
 }
 
 

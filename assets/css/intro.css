@@ -211,6 +211,7 @@ main .words {
     width: 34%;
     height: 73%;
     transition: 1s;
+    border-radius: 100%;
 }
 
 .tree-img:hover {
