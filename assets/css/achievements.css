@@ -92,11 +92,15 @@ button):hover {
     flex-direction: row-reverse;
 }
 
-.achievement .knw:nth-child(even) {
+.achievement>.knw:nth-child(odd) {
+    left: 40%;
+}
+
+.achievement>.knw:nth-child(even) {
     flex-basis: 250px;
     position: absolute;
     bottom: 5%;
-    left: 50%;
+    left: 55%;
     background-color: rgb(23, 207, 207);
     color: black;
     padding: 7px;
@@ -195,7 +199,7 @@ button):hover {
     padding: 0;
     font-size: 33px;
     text-decoration: underline 3px white;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: .5px black;
 }
 
 .mainTopic.topic-gallery {

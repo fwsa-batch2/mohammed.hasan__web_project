@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: url('../images/college1.jpg') no-repeat;
+    background: url('../images/bg.webp') no-repeat right;
     background-position: center;
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -57,6 +57,7 @@ h2 {
     border-top-right-radius: 10px;
     z-index: 100;
     transition: .4s ease-in-out;
+    font-family: monospace;
 }
 
 .nav-bar.open {
@@ -64,7 +65,7 @@ h2 {
 }
 
 .blur {
-    filter: blur(4px);
+    filter: blur(10px), brightness(80%);
 }
 
 .nav-bar.open .nav-head {
@@ -75,7 +76,6 @@ h2 {
     display: flex;
     justify-content: center;
     font-size: 20px;
-    font-family: sans-serif;
     padding: 25px 0px;
     overflow: hidden;
     cursor: pointer;
@@ -106,7 +106,6 @@ h2 {
 
 .logout {
     font-size: 20px;
-    font-family: sans-serif;
     font-weight: 600;
     padding: 25px 0px;
     overflow: hidden;
@@ -130,10 +129,9 @@ header {
 
 header>.header {
     padding-top: 27px;
-    font-size: 18px;
+    font-size: 17px;
     padding-right: 15px;
     cursor: pointer;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .header.first {
@@ -195,6 +193,8 @@ header>.header {
     z-index: 100;
     box-shadow: 0px 0px 20px;
     border-radius: 3px;
+    font-family: 'Courier New';
+    letter-spacing: 0px;
 }
 
 .header:hover .dropdown-content {
@@ -251,6 +251,7 @@ header>.header {
 
 .courses_head img {
     vertical-align: middle;
+    margin-right: 13px;
 }
 
 
@@ -284,8 +285,8 @@ header>.header {
     font-family: sans-serif;
     color: rgb(131, 134, 138);
     position: absolute;
-    top: 210px;
-    left: 37%;
+    top: 26%;
+    left: 36%;
     letter-spacing: 6px;
 }
 
@@ -323,9 +324,18 @@ header>.header {
 }
 
 .gifMarquee {
-    width: 115%;
+    width: 135%;
     animation: marquee 16s infinite;
     animation-timing-function: linear;
+}
+
+.gifMarquee h2 {
+    font-family: 'Courier New', Courier, monospace;
+    background: white;
+    width: 70%;
+    border-radius: 20px;
+    letter-spacing: 0px;
+    font-size: 20px;
 }
 
 .gifMarquee img {
@@ -359,6 +369,7 @@ header>.header {
     font-size: 35px;
     color: white;
     position: relative;
+    font-family: monospace;
 }
 
 .mainPartners {
@@ -543,19 +554,22 @@ a:visited {
     position: fixed;
     left: -140px;
     top: 50%;
-    width: 160px;
+    width: 180px;
     height: 170px;
     font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0px;
     text-align: center;
-    background-color: rgb(253, 198, 95);
+    background-color: rgb(245, 186, 76);
     color: black;
     padding: 10px;
     border-radius: 10px 10px 0px 0px;
     border: 2px solid black;
     transform: rotate(90deg);
     z-index: 10;
-    transition: all .5s;
+    transition: all .4s;
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .hov img {
@@ -591,6 +605,7 @@ a.upGoingArrow {
     color: black;
     background-color: transparent;
     cursor: pointer;
+    transition: 0.2s all;
 }
 
 .nav-in:hover {
@@ -624,17 +639,18 @@ th {
 #collegeImages img:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 20px white;
-    transition: .5s;
+    transition: .4s all;
 }
 
 #collegeImages figcaption {
     opacity: 0;
     color: white;
     position: absolute;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 25px;
     transform: translateY(-50px);
-    transition: 0.4s;
+    transition: 0.4s all;
+    font-family: 'Source Sans Pro';
 }
 
 #collegeImages figure img:hover~figcaption {

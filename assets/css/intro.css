@@ -153,19 +153,19 @@ main .words {
         transform: translateY(-40%);
     }
     35% {
-        transform: translateY(-300%);
+        transform: translateY(-340%);
     }
     55% {
-        transform: translateY(-270%);
+        transform: translateY(-310%);
     }
     65% {
-        transform: translateY(-540%);
+        transform: translateY(-620%);
     }
     85% {
-        transform: translateY(-500%);
+        transform: translateY(-580%);
     }
     90% {
-        transform: translateY(-70%);
+        transform: translateY(-100%);
     }
 }
 

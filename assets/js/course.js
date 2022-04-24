@@ -413,19 +413,6 @@ function editCourse(courseName) {
 
 // Replaces the "div" to "textarea" tag on content (right side) and returns the edit button
 
-window.addEventListener("click", (event) => {
-    let element = event.target;
-    let allButtons = document.getElementsByClassName("editOptionButton");
-    for (button of allButtons) {
-        if (element == button) {
-            button.checked = true;
-            break;
-        } else {
-            button.checked = false;
-        }
-    }
-});
-
 function prerequisiteForEditing(detailsOfCourse) {
     // Change div to input type
     let input = document.createElement("textarea");
@@ -436,6 +423,7 @@ function prerequisiteForEditing(detailsOfCourse) {
     // Replacing content with textarea
     let parent = document.querySelector(".content");
     parent.replaceChild(input, detailsOfCourse);
+    input.focus();
     // Creating edit button
     let button = document.createElement("button");
     let buttonValue = document.createTextNode("Edit");
@@ -453,6 +441,20 @@ function prerequisiteForEditing(detailsOfCourse) {
     }
     return button
 }
+
+// If clicked outside of more option, then dialogue box closes
+window.addEventListener("click", (event) => {
+    let element = event.target;
+    let allButtons = document.getElementsByClassName("editOptionButton");
+    for (button of allButtons) {
+        if (element == button) {
+            button.checked = true;
+            break;
+        } else {
+            button.checked = false;
+        }
+    }
+});
 
 displayAllCoursesAvailable();
 displayCourseFromURL();
