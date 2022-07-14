@@ -1,6 +1,6 @@
 // This function is to show the details of student who applied
 
-function printingAll() {
+function printAll() {
     //1. Get Student Details
     let studDetails = JSON.parse(localStorage.getItem("studentDetails"));
     //2. Find Student Detail 
@@ -18,4 +18,4 @@ function printingAll() {
     document.getElementById("displayCutoff12").innerHTML = cutoff12;
     document.getElementById("displayAddress").innerHTML = address;
 }
-printingAll();
+printAll();
